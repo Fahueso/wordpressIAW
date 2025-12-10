@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Apuntes Administración y Usuario/b) Terminología.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "b) Terminología"
+              "title": "index"
             }
           }
         ]
@@ -186,9 +186,9 @@
   },
   "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
+    "docs/Apuntes Administración y Usuario/b) Terminología.md",
     "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
     "docs/Apuntes Administración y Usuario/c) Backend y Frontend.md",
-    "docs/Apuntes Administración y Usuario/b) Terminología.md",
     "docs/Apuntes Sistemas/a) Instalación.md",
     "docs/index.md",
     "docs/Index.md",

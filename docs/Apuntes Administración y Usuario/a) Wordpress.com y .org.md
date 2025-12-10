@@ -11,26 +11,26 @@ WordPress.com es una plataforma de alojamiento gestionado, propiedad de Automatt
 
 ### Características
 
--**Alojamiento incluido**:
-  - No necesitas un servidor externo; WordPress.com proporciona el hosting.
+**Alojamiento incluido**:
+- No necesitas un servidor externo; WordPress.com proporciona el hosting.
 
--**Planes gratuitos y de pago**:
-  - Hasta el 2024 había un plan gratuito incluía un subdominio como `tusitio.wordpress.com`. Ahora el plan más básico es el `starter`, que cuesta unos 3€ al mes. El plan gratuito solo está disponible para sitios activos que ya lo tenían activado.
-  - Los planes premium permiten personalización avanzada, dominios propios y más almacenamiento.
+**Planes gratuitos y de pago**:
+- Hasta el 2024 había un plan gratuito incluía un subdominio como `tusitio.wordpress.com`. Ahora el plan más básico es el `starter`, que cuesta unos 3€ al mes. El plan gratuito solo está disponible para sitios activos que ya lo tenían activado.
+- Los planes premium permiten personalización avanzada, dominios propios y más almacenamiento.
 
--**Actualizaciones automáticas**:
-  - El CMS y sus complementos están siempre actualizados.
+**Actualizaciones automáticas**:
+- El CMS y sus complementos están siempre actualizados.
 
 **Limitaciones de personalización**:
-  - Temas y plugins restringidos a los disponibles en la plataforma para los planes más bajos. Desde 2023-2024, WordPress.com permite instalar plugins y temas personalizados en los planes Business y superiores (no solo en eCommerce). Esto reduce mucho la brecha con .org, aunque sigue siendo más caro.
-  - Acceso limitado al código del sitio.
+- Temas y plugins restringidos a los disponibles en la plataforma para los planes más bajos. Desde 2023-2024, WordPress.com permite instalar plugins y temas personalizados en los planes Business y superiores (no solo en eCommerce). Esto reduce mucho la brecha con .org, aunque sigue siendo más caro.
+- Acceso limitado al código del sitio.
 
--**Anuncios**:
-  - En los planes actuales (Starter, Explorer, etc.), ya no se muestran anuncios de WordPress.com, incluso en los más básicos. 
+**Anuncios**:
+- En los planes actuales (Starter, Explorer, etc.), ya no se muestran anuncios de WordPress.com, incluso en los más básicos. 
 
- **Ideal para:**
-  - Usuarios sin conocimientos técnicos que necesitan una solución rápida y sencilla.
-  - Usuarios que no poseen un CPD.
+**Ideal para:**
+- Usuarios sin conocimientos técnicos que necesitan una solución rápida y sencilla.
+- Usuarios que no poseen un CPD.
 
 ### Ventajas
 
@@ -53,23 +53,23 @@ WordPress.org es la versión autogestionada del CMS. Descargas el software y lo 
 
 ### Características
 
--**Alojamiento propio**:
-  - Necesitas contratar un hosting externo y un dominio propio.
+**Alojamiento propio**:
+- Necesitas contratar un hosting externo y un dominio propio.
 
--**Descarga gratuita**:
-  - El software de WordPress es de código abierto y gratuito.
+**Descarga gratuita**:
+- El software de WordPress es de código abierto y gratuito.
 
--**Personalización total**:
-  - Puedes instalar cualquier tema o plugin, modificar el código fuente y personalizar tu sitio completamente.
+**Personalización total**:
+- Puedes instalar cualquier tema o plugin, modificar el código fuente y personalizar tu sitio completamente.
 
--**Responsabilidad de mantenimiento**:
-  - Tú gestionas las actualizaciones, la seguridad y los backups.
+**Responsabilidad de mantenimiento**:
+- Tú gestionas las actualizaciones, la seguridad y los backups.
 
--**Sin anuncios**:
-  - Eres dueño completo del contenido y no se incluyen anuncios no deseados.
+**Sin anuncios**:
+- Eres dueño completo del contenido y no se incluyen anuncios no deseados.
 
--**Ideal para:**
-  - Usuarios y empresas que necesitan flexibilidad y tienen conocimientos técnicos o acceso a soporte técnico.
+**Ideal para:**
+- Usuarios y empresas que necesitan flexibilidad y tienen conocimientos técnicos o acceso a soporte técnico.
 
 ### Ventajas
 
