@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "f484bd94cc21c88f",
+    "type": "split",
+    "children": [
+      {
+        "id": "0adcff3c8eed2010",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b3d5b28c376fed49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "a) Wordpress.com y .org"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "584bba6d611d05de",
+    "type": "split",
+    "children": [
+      {
+        "id": "acb9f20de45eed26",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "67b79ffd1baea192",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "afaa3ab0831a1d3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f249b47df5b305ce",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b4158c14008efad7",
+    "type": "split",
+    "children": [
+      {
+        "id": "32044f927e0c79f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36f35678ab6715a0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Apuntes Administración y Usuario/c) Backend y Frontend.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for c) Backend y Frontend"
+            }
+          },
+          {
+            "id": "d0a9d374ff6b25d2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Apuntes Administración y Usuario/c) Backend y Frontend.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from c) Backend y Frontend"
+            }
+          },
+          {
+            "id": "b65c7cbf3446f92d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "694cd1650df71fe1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "45ea0b231286ed1a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Apuntes Administración y Usuario/c) Backend y Frontend.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of c) Backend y Frontend"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b3d5b28c376fed49",
+  "lastOpenFiles": [
+    "Index.md",
+    "Apuntes Administración y Usuario/i) Roles y capacidades.md",
+    "Apuntes Sistemas/b) Sistema de archivos.md",
+    "Apuntes Sistemas/a) Instalación.md",
+    "Apuntes Sistemas/g) Internacionalización.md",
+    "Apuntes Administración y Usuario/h) Contenido multilingüe.md",
+    "Apuntes Administración y Usuario/f) Menús Wordpress.md",
+    "attachments/Pasted image 20251210231415.png",
+    "attachments/Pasted image 20251210231347.png",
+    "attachments/Pasted image 20251210231318.png",
+    "Apuntes Administración y Usuario/e) Workflow de publicación.md",
+    "Apuntes Administración y Usuario/d) Editor Gutenberg.md",
+    "attachments/Pasted image 20251210230101.png",
+    "attachments/Pasted image 20251210230010.png",
+    "attachments/Pasted image 20251210225847.png",
+    "attachments",
+    "Pasted image 20251210225813.png",
+    "Apuntes Administración y Usuario/c) Backend y Frontend.md",
+    "Apuntes Administración y Usuario/b) Terminología.md",
+    "Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
+    "Apuntes Sistemas/k) Copias de seguridad.md",
+    "Apuntes Sistemas/j) WP-CLI.md",
+    "Apuntes Sistemas/h) TODO Requisitos hardware.md",
+    "Apuntes Sistemas/i) TODO Licencias.md",
+    "Apuntes Sistemas/g) Actualizaciones wordpress.md",
+    "Apuntes Sistemas/f) Estructura BD.md",
+    "Apuntes Sistemas/e) Crons.md",
+    "Apuntes Sistemas/d) Configuración inicial.md",
+    "Apuntes Sistemas/c) El htaccess.md",
+    "Apuntes Sistemas",
+    "Apuntes Administración y Usuario"
+  ]
+}
