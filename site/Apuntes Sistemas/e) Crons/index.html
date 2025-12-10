@@ -1,0 +1,1273 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../d%29%20Configuraci%C3%B3n%20inicial/">
+      
+      
+        <link rel="next" href="../f%29%20Estructura%20BD/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Crons en WordPress: WP-Cron y Crontab del Sistema - Repositorio materiales Wordpress de IAW ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#crons-en-wordpress-wp-cron-y-crontab-del-sistema" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-header__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Repositorio materiales Wordpress de IAW ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Crons en WordPress: WP-Cron y Crontab del Sistema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-nav__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Repositorio materiales Wordpress de IAW ASIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Administración y Usuario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Administración y Usuario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/a%29%20Wordpress.com%20y%20.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diferencias entre WordPress.com y WordPress.org
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/b%29%20Terminolog%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminología Común en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/c%29%20Backend%20y%20Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprendiendo el Backend y Frontend en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/d%29%20Editor%20Gutenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El Editor Gutenberg en WordPress (2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/e%29%20Workflow%20de%20publicaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow de Publicación de Entradas en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/f%29%20Men%C3%BAs%20Wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de Menús en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/h%29%20Contenido%20multiling%C3%BCe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Polylang en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/i%29%20Roles%20y%20capacidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles y Capacidades en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a%29%20Instalaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación de WordPress en un Servidor Debian/Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../b%29%20Sistema%20de%20archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Archivos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c%29%20El%20htaccess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de .htaccess en Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d%29%20Configuraci%C3%B3n%20inicial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Inicial de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crons en WordPress: WP-Cron y Crontab del Sistema
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crons en WordPress: WP-Cron y Crontab del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-wp-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué es WP-Cron?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ¿Qué es WP-Cron?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-wp-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas de WP-Cron:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-de-wp-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones de WP-Cron:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas-comunes-gestionadas-por-wp-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas comunes gestionadas por WP-Cron:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-configuracion-de-wp-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configuración de WP-Cron
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deshabilitar-wp-cron-y-usar-crontab-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Deshabilitar WP-Cron y Usar Crontab del Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Deshabilitar WP-Cron y Usar Crontab del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasos-para-configurar-crontab-en-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasos para Configurar Crontab en Debian
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-comparacion-wp-cron-vs-crontab-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Comparación: WP-Cron vs. Crontab del Sistema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mejores-practicas-para-gestionar-crons-en-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mejores Prácticas para Gestionar Crons en WordPress
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../f%29%20Estructura%20BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura Básica de la Base de Datos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g%29%20Actualizaciones%20wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Actualización de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g%29%20Internacionalizaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Internacionalización en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h%29%20TODO%20Requisitos%20hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos de Hardware para WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../i%29%20TODO%20Licencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencias de Uso en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../j%29%20WP-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de WP-CLI en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k%29%20Copias%20de%20seguridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copias de Seguridad en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="crons-en-wordpress-wp-cron-y-crontab-del-sistema">Crons en WordPress: WP-Cron y Crontab del Sistema<a class="headerlink" href="#crons-en-wordpress-wp-cron-y-crontab-del-sistema" title="Permanent link">&para;</a></h1>
+<p>En WordPress, los cron jobs se utilizan para programar tareas como la publicación de entradas, limpieza de revisiones antiguas, envíos de correos electrónicos, entre otros. Este documento explica las diferencias entre WP-Cron (cron interno de WordPress) y los crontabs del sistema, además de cómo configurarlos.</p>
+<hr />
+<h2 id="1-que-es-wp-cron">1. <strong>¿Qué es WP-Cron?</strong><a class="headerlink" href="#1-que-es-wp-cron" title="Permanent link">&para;</a></h2>
+<p>WP-Cron es un sistema de programación interno que WordPress utiliza para simular un cron job. Sin embargo, no es un cron real, ya que depende de las visitas al sitio para ejecutarse.</p>
+<h3 id="ventajas-de-wp-cron">Ventajas de WP-Cron:<a class="headerlink" href="#ventajas-de-wp-cron" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No requiere acceso al servidor para configurarlo.</li>
+<li>Fácil de usar para sitios con tráfico constante.</li>
+</ul>
+<h3 id="limitaciones-de-wp-cron">Limitaciones de WP-Cron:<a class="headerlink" href="#limitaciones-de-wp-cron" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dependencia del tráfico:</strong> Si no hay visitas, las tareas programadas no se ejecutan.</li>
+<li><strong>Carga del servidor:</strong> En sitios con alto tráfico, WP-Cron puede generar demasiadas solicitudes.</li>
+</ul>
+<h3 id="tareas-comunes-gestionadas-por-wp-cron">Tareas comunes gestionadas por WP-Cron:<a class="headerlink" href="#tareas-comunes-gestionadas-por-wp-cron" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Publicación de entradas programadas.</li>
+<li>Envío de correos automáticos.</li>
+<li>Limpieza de archivos temporales y revisiones.</li>
+</ul>
+<hr />
+<h2 id="2-configuracion-de-wp-cron">2. <strong>Configuración de WP-Cron</strong><a class="headerlink" href="#2-configuracion-de-wp-cron" title="Permanent link">&para;</a></h2>
+<p>WP-Cron está habilitado por defecto. Para asegurarte de que funciona correctamente:</p>
+<ol>
+<li>
+<p>Verifica que el archivo <code>wp-config.php</code> no tenga la línea que desactiva WP-Cron:
+   <div class="highlight"><pre><span></span><code><span class="x">define(&#39;DISABLE_WP_CRON&#39;, true);</span>
+</code></pre></div>
+   Si existe, elimínala o cámbiala a <code>false</code>.</p>
+</li>
+<li>
+<p>Realiza pruebas programando una publicación futura y verifica si se ejecuta a tiempo.</p>
+</li>
+</ol>
+<hr />
+<h2 id="3-deshabilitar-wp-cron-y-usar-crontab-del-sistema">3. <strong>Deshabilitar WP-Cron y Usar Crontab del Sistema</strong><a class="headerlink" href="#3-deshabilitar-wp-cron-y-usar-crontab-del-sistema" title="Permanent link">&para;</a></h2>
+<p>En servidores donde WP-Cron no es eficiente (por ejemplo, sitios con poco o mucho tráfico), es mejor usar crontab del sistema para gestionar las tareas de WordPress.</p>
+<h3 id="pasos-para-configurar-crontab-en-debian">Pasos para Configurar Crontab en Debian<a class="headerlink" href="#pasos-para-configurar-crontab-en-debian" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Deshabilitar WP-Cron:</strong></li>
+<li>
+<p>Edita el archivo <code>wp-config.php</code>:
+     <div class="highlight"><pre><span></span><code><span class="x">define(&#39;DISABLE_WP_CRON&#39;, true);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configurar un Cron Job en el Sistema:</strong></p>
+</li>
+<li>Abre el archivo crontab:
+     <div class="highlight"><pre><span></span><code>crontab<span class="w"> </span>-e
+</code></pre></div></li>
+<li>Añade la siguiente línea para ejecutar WP-Cron cada 5 minutos:
+     <div class="highlight"><pre><span></span><code>*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>https://tusitio.com/wp-cron.php?doing_wp_cron<span class="w"> </span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div></li>
+<li>
+<p>Guarda los cambios.</p>
+</li>
+<li>
+<p><strong>Verificar la Configuración:</strong></p>
+</li>
+<li>Asegúrate de que el cron job está activo:
+     <div class="highlight"><pre><span></span><code>crontab<span class="w"> </span>-l
+</code></pre></div></li>
+</ol>
+<hr />
+<h2 id="4-comparacion-wp-cron-vs-crontab-del-sistema">4. <strong>Comparación: WP-Cron vs. Crontab del Sistema</strong><a class="headerlink" href="#4-comparacion-wp-cron-vs-crontab-del-sistema" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>WP-Cron</th>
+<th>Crontab del Sistema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Requiere tráfico</strong></td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Precisión</strong></td>
+<td>Baja, depende de visitas</td>
+<td>Alta, basado en el tiempo real</td>
+</tr>
+<tr>
+<td><strong>Configuración</strong></td>
+<td>Fácil, no requiere servidor</td>
+<td>Requiere acceso al servidor</td>
+</tr>
+<tr>
+<td><strong>Carga del servidor</strong></td>
+<td>Alta en sitios con tráfico</td>
+<td>Más eficiente</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-mejores-practicas-para-gestionar-crons-en-wordpress">5. <strong>Mejores Prácticas para Gestionar Crons en WordPress</strong><a class="headerlink" href="#5-mejores-practicas-para-gestionar-crons-en-wordpress" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Monitoriza las tareas programadas:</strong></li>
+<li>
+<p>Usa plugins como <a href="https://wordpress.org/plugins/wp-crontrol/">WP Crontrol</a> para gestionar y depurar tareas programadas.</p>
+</li>
+<li>
+<p><strong>Prueba la configuración:</strong></p>
+</li>
+<li>
+<p>Programa publicaciones futuras y verifica su ejecución.</p>
+</li>
+<li>
+<p><strong>Optimiza el rendimiento:</strong></p>
+</li>
+<li>
+<p>Para sitios grandes, combina crontab del sistema con herramientas de cacheo para reducir la carga del servidor.</p>
+</li>
+<li>
+<p><strong>Configura alertas:</strong></p>
+</li>
+<li>Usa herramientas externas como monitoreo de uptime para recibir notificaciones si las tareas no se ejecutan.</li>
+</ol>
+<hr />
+<p>Con estos mecanismos, puedes garantizar que las tareas programadas en WordPress se ejecuten de manera confiable y eficiente, adaptándose a las necesidades de tu sitio.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1579 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/i%29%20Roles%20y%20capacidades/">
+      
+      
+        <link rel="next" href="../b%29%20Sistema%20de%20archivos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Instalación de WordPress en un Servidor Debian/Ubuntu - Repositorio materiales Wordpress de IAW ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instalacion-de-wordpress-en-un-servidor-debianubuntu" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-header__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Repositorio materiales Wordpress de IAW ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Instalación de WordPress en un Servidor Debian/Ubuntu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-nav__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Repositorio materiales Wordpress de IAW ASIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Administración y Usuario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Administración y Usuario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/a%29%20Wordpress.com%20y%20.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diferencias entre WordPress.com y WordPress.org
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/b%29%20Terminolog%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminología Común en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/c%29%20Backend%20y%20Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprendiendo el Backend y Frontend en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/d%29%20Editor%20Gutenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El Editor Gutenberg en WordPress (2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/e%29%20Workflow%20de%20publicaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow de Publicación de Entradas en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/f%29%20Men%C3%BAs%20Wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de Menús en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/h%29%20Contenido%20multiling%C3%BCe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Polylang en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/i%29%20Roles%20y%20capacidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles y Capacidades en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación de WordPress en un Servidor Debian/Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación de WordPress en un Servidor Debian/Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-preparativos-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Preparativos Iniciales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Preparativos Iniciales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-verificacion-del-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Verificación del Entorno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-creacion-de-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Creación de la Base de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-no-usar-el-usuario-root-en-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué no usar el usuario root en MySQL?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-descarga-e-instalacion-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Descarga e Instalación de WordPress
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Descarga e Instalación de WordPress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-descarga-de-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Descarga de WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuracion-de-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Configuración de Permisos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-configuracion-del-archivo-wp-configphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Configuración del Archivo wp-config.php
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuracion-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Configuración en el Navegador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-post-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Post-Instalación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Post-Instalación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-configuracion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Configuración Básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-copias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Copias de Seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-despliegue-en-xampp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Despliegue en XAMPP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Despliegue en XAMPP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-preparar-el-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Preparar el Entorno
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-crear-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Crear la Base de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-instalar-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Instalar WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-configuracion-posterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Configuración Posterior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-despliegue-con-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Despliegue con Docker-Compose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Despliegue con Docker-Compose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-crear-el-archivo-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Crear el Archivo docker-compose.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-ejecutar-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Ejecutar Docker-Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-acceder-al-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Acceder al Sitio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-detener-y-reiniciar-el-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Detener y Reiniciar el Servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../b%29%20Sistema%20de%20archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Archivos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c%29%20El%20htaccess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de .htaccess en Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d%29%20Configuraci%C3%B3n%20inicial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Inicial de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../e%29%20Crons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crons en WordPress: WP-Cron y Crontab del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../f%29%20Estructura%20BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura Básica de la Base de Datos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g%29%20Actualizaciones%20wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Actualización de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g%29%20Internacionalizaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Internacionalización en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h%29%20TODO%20Requisitos%20hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos de Hardware para WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../i%29%20TODO%20Licencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencias de Uso en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../j%29%20WP-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de WP-CLI en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k%29%20Copias%20de%20seguridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copias de Seguridad en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="instalacion-de-wordpress-en-un-servidor-debianubuntu">Instalación de WordPress en un Servidor Debian/Ubuntu<a class="headerlink" href="#instalacion-de-wordpress-en-un-servidor-debianubuntu" title="Permanent link">&para;</a></h1>
+<p>En este documento se detallan los pasos para instalar WordPress en un servidor Debian con Apache, PHP y MySQL ya instalados. También se incluye una guía para desplegar WordPress en XAMPP, usando Docker-Compose y entornos de tipo cPanel, soluciones comunes para desarrollo.</p>
+<hr />
+<h2 id="1-preparativos-iniciales">1. <strong>Preparativos Iniciales</strong><a class="headerlink" href="#1-preparativos-iniciales" title="Permanent link">&para;</a></h2>
+<h3 id="11-verificacion-del-entorno">1.1 Verificación del Entorno<a class="headerlink" href="#11-verificacion-del-entorno" title="Permanent link">&para;</a></h3>
+<p>Antes de comenzar, asegúrate de que:</p>
+<ul>
+<li>Apache esté en ejecución: <code>sudo systemctl status apache2</code></li>
+<li>PHP esté instalado y funcional: <code>php -v</code></li>
+<li>MySQL esté corriendo: <code>sudo systemctl status mysql</code></li>
+</ul>
+<p>Instala paquetes adicionales necesarios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-mysql<span class="w"> </span>php-curl<span class="w"> </span>php-gd<span class="w"> </span>php-xml<span class="w"> </span>php-mbstring<span class="w"> </span>unzip<span class="w"> </span>curl<span class="w"> </span>-y
+</code></pre></div>
+<p>Reinicia Apache para aplicar los cambios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="12-creacion-de-la-base-de-datos">1.2 Creación de la Base de Datos<a class="headerlink" href="#12-creacion-de-la-base-de-datos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Inicia sesión en MySQL:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div></li>
+<li>Crea una nueva base de datos:
+   <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">wordpress</span><span class="p">;</span>
+</code></pre></div></li>
+<li>Crea un usuario y asigna permisos:
+   <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;wordpressuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;tu_contraseña_segura&#39;</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">wordpress</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;wordpressuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+<span class="n">EXIT</span><span class="p">;</span>
+</code></pre></div></li>
+</ol>
+<h3 id="por-que-no-usar-el-usuario-root-en-mysql">¿Por qué no usar el usuario root en MySQL?<a class="headerlink" href="#por-que-no-usar-el-usuario-root-en-mysql" title="Permanent link">&para;</a></h3>
+<p>Utilizar el usuario <code>root</code> en MySQL para aplicaciones como WordPress supone un riesgo de seguridad significativo. Algunas razones clave incluyen:</p>
+<ul>
+<li>
+<p><strong>Exposición de privilegios</strong>:</p>
+</li>
+<li>
+<p>Si un atacante obtiene acceso a la base de datos a través de una vulnerabilidad en WordPress, tendría control total sobre todas las bases de datos y configuraciones.</p>
+</li>
+<li>
+<p><strong>Buenas prácticas de seguridad</strong>:</p>
+</li>
+<li>
+<p>Los usuarios con privilegios limitados minimizan el impacto potencial de un compromiso.</p>
+</li>
+<li>
+<p><strong>Separación de responsabilidades</strong>:</p>
+</li>
+<li>
+<p>Crear usuarios específicos para cada aplicación ayuda a gestionar permisos y auditorías de forma más clara y efectiva.</p>
+</li>
+</ul>
+<p>Por estas razones, es esencial usar un usuario dedicado con permisos limitados para garantizar la seguridad y estabilidad del sistema.</p>
+<hr />
+<h2 id="2-descarga-e-instalacion-de-wordpress">2. <strong>Descarga e Instalación de WordPress</strong><a class="headerlink" href="#2-descarga-e-instalacion-de-wordpress" title="Permanent link">&para;</a></h2>
+<h3 id="21-descarga-de-wordpress">2.1 Descarga de WordPress<a class="headerlink" href="#21-descarga-de-wordpress" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Descarga la última versión de WordPress desde su sitio oficial:
+   <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>https://wordpress.org/latest.zip
+</code></pre></div></li>
+<li>Descomprime el archivo:
+   <div class="highlight"><pre><span></span><code>unzip<span class="w"> </span>latest.zip
+</code></pre></div></li>
+<li>Mueve los archivos a la raíz del servidor web:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mv<span class="w"> </span>wordpress/*<span class="w"> </span>/var/www/html/
+</code></pre></div></li>
+</ol>
+<h3 id="22-configuracion-de-permisos">2.2 Configuración de Permisos<a class="headerlink" href="#22-configuracion-de-permisos" title="Permanent link">&para;</a></h3>
+<p>Asegúrate de que WordPress tenga los permisos necesarios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html/
+</code></pre></div>
+<h3 id="23-configuracion-del-archivo-wp-configphp">2.3 Configuración del Archivo <code>wp-config.php</code><a class="headerlink" href="#23-configuracion-del-archivo-wp-configphp" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Copia el archivo de configuración:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/var/www/html/wp-config-sample.php<span class="w"> </span>/var/www/html/wp-config.php
+</code></pre></div></li>
+<li>Edita el archivo para incluir los detalles de la base de datos:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/wp-config.php
+</code></pre></div>
+   Cambia las siguientes líneas:
+   <div class="highlight"><pre><span></span><code><span class="x">define(&#39;DB_NAME&#39;, &#39;wordpress&#39;);</span>
+<span class="x">define(&#39;DB_USER&#39;, &#39;wordpressuser&#39;);</span>
+<span class="x">define(&#39;DB_PASSWORD&#39;, &#39;tu_contraseña_segura&#39;);</span>
+<span class="x">define(&#39;DB_HOST&#39;, &#39;localhost&#39;);</span>
+</code></pre></div></li>
+</ol>
+<hr />
+<h2 id="3-configuracion-en-el-navegador">3. <strong>Configuración en el Navegador</strong><a class="headerlink" href="#3-configuracion-en-el-navegador" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Accede a la dirección IP del servidor desde tu navegador:
+   <div class="highlight"><pre><span></span><code>http://&lt;tu-servidor&gt;
+</code></pre></div></li>
+<li>Completa el asistente de instalación de WordPress:</li>
+<li>Selecciona el idioma.</li>
+<li>Introduce el título del sitio, el nombre de usuario, contraseña y correo electrónico.</li>
+<li>Haz clic en "Instalar WordPress".</li>
+</ol>
+<hr />
+<h2 id="4-post-instalacion">4. <strong>Post-Instalación</strong><a class="headerlink" href="#4-post-instalacion" title="Permanent link">&para;</a></h2>
+<h3 id="41-configuracion-basica">4.1 Configuración Básica<a class="headerlink" href="#41-configuracion-basica" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ajusta los enlaces permanentes desde "Ajustes &gt; Enlaces Permanentes".</li>
+<li>Instala los plugins esenciales desde el panel de administración.</li>
+</ul>
+<h3 id="42-seguridad">4.2 Seguridad<a class="headerlink" href="#42-seguridad" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Elimina el archivo <code>readme.html</code> para mayor seguridad:
+  <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>/var/www/html/readme.html
+</code></pre></div></li>
+<li>Instala un plugin de seguridad como Wordfence.</li>
+</ul>
+<h3 id="43-copias-de-seguridad">4.3 Copias de Seguridad<a class="headerlink" href="#43-copias-de-seguridad" title="Permanent link">&para;</a></h3>
+<p>Configura un sistema de backups regulares con herramientas como UpdraftPlus o mediante scripts personalizados.</p>
+<hr />
+<h2 id="5-despliegue-en-xampp">5. <strong>Despliegue en XAMPP</strong><a class="headerlink" href="#5-despliegue-en-xampp" title="Permanent link">&para;</a></h2>
+<p>XAMPP es una herramienta popular para desarrollar sitios WordPress de forma local. Estos son los pasos para instalar WordPress en XAMPP:</p>
+<h3 id="51-preparar-el-entorno">5.1 Preparar el Entorno<a class="headerlink" href="#51-preparar-el-entorno" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Descarga e instala XAMPP desde su sitio oficial: <a href="https://www.apachefriends.org/">apachefriends.org</a>.</li>
+<li>Inicia los servicios de Apache y MySQL desde el Panel de Control de XAMPP.</li>
+</ol>
+<h3 id="52-crear-la-base-de-datos">5.2 Crear la Base de Datos<a class="headerlink" href="#52-crear-la-base-de-datos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Accede a phpMyAdmin desde: <code>http://localhost/phpmyadmin</code>.</li>
+<li>Crea una nueva base de datos llamada <code>wordpress</code>.</li>
+<li>No es necesario crear un usuario adicional en este caso, puedes usar el usuario <code>root</code> sin contraseña (solo para entornos locales).</li>
+</ol>
+<h3 id="53-instalar-wordpress">5.3 Instalar WordPress<a class="headerlink" href="#53-instalar-wordpress" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Descarga WordPress desde <a href="https://wordpress.org/">wordpress.org</a>.</li>
+<li>Extrae los archivos y cópialos a la carpeta <code>htdocs</code> de XAMPP (por ejemplo, <code>C:\xampp\htdocs\wordpress</code>).</li>
+<li>Accede a <code>http://localhost/wordpress</code> desde tu navegador.</li>
+<li>Completa el asistente de instalación ingresando:</li>
+<li><strong>Nombre de la base de datos</strong>: <code>wordpress</code>.</li>
+<li><strong>Usuario</strong>: <code>root</code>.</li>
+<li><strong>Contraseña</strong>: (dejar en blanco).</li>
+<li>Haz clic en "Instalar WordPress".</li>
+</ol>
+<h3 id="54-configuracion-posterior">5.4 Configuración Posterior<a class="headerlink" href="#54-configuracion-posterior" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configura enlaces permanentes desde el panel de administración.</li>
+<li>Realiza ajustes visuales y funcionales según las necesidades del proyecto.</li>
+</ul>
+<hr />
+<h2 id="6-despliegue-con-docker-compose">6. <strong>Despliegue con Docker-Compose</strong><a class="headerlink" href="#6-despliegue-con-docker-compose" title="Permanent link">&para;</a></h2>
+<p>Docker-Compose es una herramienta que permite configurar y ejecutar múltiples contenedores Docker. Estos son los pasos para desplegar WordPress con Docker-Compose:</p>
+<h3 id="61-crear-el-archivo-docker-composeyml">6.1 Crear el Archivo <code>docker-compose.yml</code><a class="headerlink" href="#61-crear-el-archivo-docker-composeyml" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Crea un archivo llamado <code>docker-compose.yml</code>.</li>
+<li>Añade el siguiente contenido:
+   <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tu_contraseña_segura</span>
+<span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+<span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpressuser</span>
+<span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tu_contraseña_segura</span>
+
+<span class="w">  </span><span class="nt">wordpress</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress:latest</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:80&quot;</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress_data:/var/www/html</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">WORDPRESS_DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db:3306</span>
+<span class="w">      </span><span class="nt">WORDPRESS_DB_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpressuser</span>
+<span class="w">      </span><span class="nt">WORDPRESS_DB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tu_contraseña_segura</span>
+<span class="w">      </span><span class="nt">WORDPRESS_DB_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db_data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">wordpress_data</span><span class="p">:</span>
+</code></pre></div></li>
+</ol>
+<h3 id="62-ejecutar-docker-compose">6.2 Ejecutar Docker-Compose<a class="headerlink" href="#62-ejecutar-docker-compose" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Abre una terminal en la carpeta donde se encuentra el archivo <code>docker-compose.yml</code>.</li>
+<li>Ejecuta el siguiente comando:
+   <div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></li>
+</ol>
+<h3 id="63-acceder-al-sitio">6.3 Acceder al Sitio<a class="headerlink" href="#63-acceder-al-sitio" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Abre tu navegador y accede a:
+   <div class="highlight"><pre><span></span><code>http://localhost:8080
+</code></pre></div></li>
+<li>Completa el asistente de instalación de WordPress.</li>
+</ol>
+<h3 id="64-detener-y-reiniciar-el-servicio">6.4 Detener y Reiniciar el Servicio<a class="headerlink" href="#64-detener-y-reiniciar-el-servicio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para detener los contenedores:
+  <div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>down
+</code></pre></div></li>
+<li>Para reiniciar los contenedores:
+  <div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div></li>
+</ul>
+<h1 id="fichero-alternativo-docker-compose">Fichero alternativo docker-compose:<a class="headerlink" href="#fichero-alternativo-docker-compose" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code>version:<span class="w"> </span><span class="s1">&#39;3&#39;</span>
+
+services:
+<span class="w">  </span><span class="c1"># Database</span>
+<span class="w">  </span>db:
+<span class="w">    </span>image:<span class="w"> </span>mysql:5.7
+<span class="w">    </span>volumes:
+<span class="w">      </span>-<span class="w"> </span>db_data:/var/lib/mysql
+<span class="w">    </span>restart:<span class="w"> </span>always
+<span class="w">    </span>environment:
+<span class="w">      </span>MYSQL_ROOT_PASSWORD:<span class="w"> </span>password
+<span class="w">      </span>MYSQL_DATABASE:<span class="w"> </span>wordpress
+<span class="w">      </span>MYSQL_USER:<span class="w"> </span>wordpress
+<span class="w">      </span>MYSQL_PASSWORD:<span class="w"> </span>wordpress
+<span class="w">    </span>networks:
+<span class="w">      </span>-<span class="w"> </span>wpsite
+<span class="w">  </span><span class="c1"># phpmyadmin</span>
+<span class="w">  </span>phpmyadmin:
+<span class="w">    </span>depends_on:
+<span class="w">      </span>-<span class="w"> </span>db
+<span class="w">    </span>image:<span class="w"> </span>phpmyadmin/phpmyadmin
+<span class="w">    </span>restart:<span class="w"> </span>always
+<span class="w">    </span>ports:
+<span class="w">      </span>-<span class="w"> </span><span class="s1">&#39;8080:80&#39;</span>
+<span class="w">    </span>environment:
+<span class="w">      </span>PMA_HOST:<span class="w"> </span>db
+<span class="w">      </span>MYSQL_ROOT_PASSWORD:<span class="w"> </span>password<span class="w"> </span>
+<span class="w">    </span>networks:
+<span class="w">      </span>-<span class="w"> </span>wpsite
+<span class="w">  </span><span class="c1"># Wordpress</span>
+<span class="w">  </span>wordpress:
+<span class="w">    </span>depends_on:
+<span class="w">      </span>-<span class="w"> </span>db
+<span class="w">    </span>image:<span class="w"> </span>wordpress:latest
+<span class="w">    </span>ports:
+<span class="w">      </span>-<span class="w"> </span><span class="s1">&#39;8000:80&#39;</span>
+<span class="w">    </span>restart:<span class="w"> </span>always
+<span class="w">    </span>volumes:<span class="w"> </span><span class="o">[</span><span class="s1">&#39;./:/var/www/html/otroworpress&#39;</span><span class="o">]</span>
+<span class="w">    </span>environment:
+<span class="w">      </span>WORDPRESS_DB_HOST:<span class="w"> </span>db:3306
+<span class="w">      </span>WORDPRESS_DB_USER:<span class="w"> </span>wordpress
+<span class="w">      </span>WORDPRESS_DB_PASSWORD:<span class="w"> </span>wordpress
+<span class="w">    </span>networks:
+<span class="w">      </span>-<span class="w"> </span>wpsite
+networks:
+<span class="w">  </span>wpsite:
+volumes:
+<span class="w">  </span>db_data:
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
