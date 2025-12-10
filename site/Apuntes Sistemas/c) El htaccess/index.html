@@ -1,0 +1,1315 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../b%29%20Sistema%20de%20archivos/">
+      
+      
+        <link rel="next" href="../d%29%20Configuraci%C3%B3n%20inicial/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Configuración de .htaccess en Debian - Repositorio materiales Wordpress de IAW ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuracion-de-htaccess-en-debian" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-header__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Repositorio materiales Wordpress de IAW ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuración de .htaccess en Debian
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-nav__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Repositorio materiales Wordpress de IAW ASIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Administración y Usuario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Administración y Usuario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/a%29%20Wordpress.com%20y%20.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diferencias entre WordPress.com y WordPress.org
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/b%29%20Terminolog%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminología Común en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/c%29%20Backend%20y%20Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprendiendo el Backend y Frontend en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/d%29%20Editor%20Gutenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El Editor Gutenberg en WordPress (2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/e%29%20Workflow%20de%20publicaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow de Publicación de Entradas en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/f%29%20Men%C3%BAs%20Wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de Menús en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/h%29%20Contenido%20multiling%C3%BCe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Polylang en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/i%29%20Roles%20y%20capacidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles y Capacidades en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a%29%20Instalaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación de WordPress en un Servidor Debian/Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../b%29%20Sistema%20de%20archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Archivos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de .htaccess en Debian
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de .htaccess en Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué es .htaccess?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-habilitar-el-uso-de-htaccess-en-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Habilitar el Uso de .htaccess en Apache
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Habilitar el Uso de .htaccess en Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-configurar-el-archivo-principal-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Configurar el archivo principal de Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-habilitar-el-modulo-mod_rewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Habilitar el módulo mod_rewrite
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Habilitar el módulo mod_rewrite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-ocurre-si-no-habilitas-mod_rewrite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué ocurre si no habilitas mod_rewrite?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ejemplos-de-configuraciones-comunes-en-htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ejemplos de Configuraciones Comunes en .htaccess
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ejemplos de Configuraciones Comunes en .htaccess">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-enlaces-permanentes-para-wordpress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Enlaces Permanentes para WordPress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-redireccion-301" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Redirección 301
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-bloquear-acceso-a-archivos-sensibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Bloquear Acceso a Archivos Sensibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-habilitar-compresion-gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Habilitar Compresión Gzip
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gestionar-el-archivo-htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Gestionar el Archivo .htaccess
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-buenas-practicas-con-htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Buenas Prácticas con .htaccess
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d%29%20Configuraci%C3%B3n%20inicial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Inicial de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../e%29%20Crons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crons en WordPress: WP-Cron y Crontab del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../f%29%20Estructura%20BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura Básica de la Base de Datos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g%29%20Actualizaciones%20wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Actualización de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g%29%20Internacionalizaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Internacionalización en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h%29%20TODO%20Requisitos%20hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos de Hardware para WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../i%29%20TODO%20Licencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencias de Uso en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../j%29%20WP-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de WP-CLI en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k%29%20Copias%20de%20seguridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copias de Seguridad en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="configuracion-de-htaccess-en-debian">Configuración de <code>.htaccess</code> en Debian<a class="headerlink" href="#configuracion-de-htaccess-en-debian" title="Permanent link">&para;</a></h1>
+<p>El archivo <code>.htaccess</code> es un archivo de configuración utilizado por el servidor web Apache para gestionar diversas configuraciones específicas a nivel de directorio. Este documento explica cómo habilitar, configurar y gestionar el archivo <code>.htaccess</code> en un entorno Debian.</p>
+<hr />
+<h2 id="1-que-es-htaccess">1. <strong>¿Qué es <code>.htaccess</code>?</strong><a class="headerlink" href="#1-que-es-htaccess" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ubicación:</strong> El archivo <code>.htaccess</code> se coloca en el directorio raíz del sitio web o en subdirectorios específicos.</li>
+<li><strong>Propósito:</strong> Permite realizar configuraciones relacionadas con:</li>
+<li>Enlaces permanentes.</li>
+<li>Redirecciones.</li>
+<li>Reglas de seguridad.</li>
+<li>Compresión de contenido.</li>
+<li><strong>Nota:</strong> Las configuraciones de <code>.htaccess</code> son aplicadas por Apache en tiempo real.</li>
+</ul>
+<hr />
+<h2 id="2-habilitar-el-uso-de-htaccess-en-apache">2. <strong>Habilitar el Uso de <code>.htaccess</code> en Apache</strong><a class="headerlink" href="#2-habilitar-el-uso-de-htaccess-en-apache" title="Permanent link">&para;</a></h2>
+<h3 id="21-configurar-el-archivo-principal-de-apache">2.1 Configurar el archivo principal de Apache<a class="headerlink" href="#21-configurar-el-archivo-principal-de-apache" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Edita el archivo de configuración de Apache para tu sitio (por ejemplo, <code>/etc/apache2/sites-available/000-default.conf</code>):
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/000-default.conf
+</code></pre></div></li>
+<li>Si no existe un bloque <code>&lt;Directory&gt;</code>, agrégalo dentro del VirtualHost para el directorio raíz del sitio y ajusta la directiva <code>AllowOverride</code>:</li>
+</ol>
+<p>La directiva <code>AllowOverride</code> define si Apache debe permitir o no que los archivos <code>.htaccess</code> en el sistema de archivos anulen las configuraciones globales. Configurar <code>AllowOverride All</code> es esencial para que WordPress pueda utilizar <code>.htaccess</code> para gestionar reglas como enlaces permanentes, redirecciones, y configuraciones específicas de directorio.</p>
+<p>Por ejemplo:
+   <div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>webmaster@localhost
+<span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span>
+
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/html</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nb">AllowOverride</span><span class="w"> </span><span class="k">All</span>
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+
+<span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/error.log
+<span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/access.log<span class="w"> </span>combined
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+3. Guarda los cambios y cierra el editor.</p>
+<h3 id="22-habilitar-el-modulo-mod_rewrite">2.2 Habilitar el módulo <code>mod_rewrite</code><a class="headerlink" href="#22-habilitar-el-modulo-mod_rewrite" title="Permanent link">&para;</a></h3>
+<p>El módulo <code>mod_rewrite</code> es esencial en WordPress para gestionar los enlaces permanentes y redirigir las solicitudes a <code>index.php</code>, que actúa como el controlador principal del CMS. Este módulo permite crear URLs amigables y personalizables, mejorando tanto la experiencia del usuario como el SEO del sitio.</p>
+<ol>
+<li>Activa el módulo de reescritura de Apache si aún no está habilitado:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+</code></pre></div></li>
+<li>Reinicia Apache para aplicar los cambios:
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div></li>
+</ol>
+<h4 id="que-ocurre-si-no-habilitas-mod_rewrite">¿Qué ocurre si no habilitas <code>mod_rewrite</code>?<a class="headerlink" href="#que-ocurre-si-no-habilitas-mod_rewrite" title="Permanent link">&para;</a></h4>
+<p>Si no activas el módulo <code>mod_rewrite</code>, los siguientes problemas pueden surgir en WordPress:</p>
+<ul>
+<li><strong>URLs Amigables No Funcionarían:</strong> Las URLs configuradas como enlaces permanentes (por ejemplo, <code>https://tusitio.com/categoria/articulo</code>) no serían accesibles, y en su lugar se usarían las predeterminadas, como <code>https://tusitio.com/?p=123</code>.</li>
+<li><strong>Redirecciones No Funcionarán:</strong> Las reglas de reescritura definidas en <code>.htaccess</code>, como redirecciones o manejo de solicitudes, no serán aplicadas.</li>
+<li><strong>Problemas en Temas y Plugins:</strong> Algunos temas o plugins que dependen de rutas amigables podrían fallar o no cargar recursos correctamente.</li>
+<li><strong>Impacto en el SEO:</strong> Las URLs no amigables afectan negativamente el posicionamiento en motores de búsqueda.</li>
+</ul>
+<p>Por estas razones, es fundamental habilitar y configurar <code>mod_rewrite</code> al trabajar con WordPress.</p>
+<hr />
+<h2 id="3-ejemplos-de-configuraciones-comunes-en-htaccess">3. <strong>Ejemplos de Configuraciones Comunes en <code>.htaccess</code></strong><a class="headerlink" href="#3-ejemplos-de-configuraciones-comunes-en-htaccess" title="Permanent link">&para;</a></h2>
+<h3 id="31-enlaces-permanentes-para-wordpress">3.1 Enlaces Permanentes para WordPress<a class="headerlink" href="#31-enlaces-permanentes-para-wordpress" title="Permanent link">&para;</a></h3>
+<p>Si estás utilizando WordPress, no necesitas añadir estas reglas manualmente. WordPress genera automáticamente este bloque en el archivo <code>.htaccess</code> cuando configuras los enlaces permanentes desde su panel de administración. Asegúrate de que el archivo tenga los permisos correctos para que WordPress pueda modificarlo automáticamente:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>/var/www/html/.htaccess
+sudo<span class="w"> </span>chown<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/.htaccess
+</code></pre></div>
+<p>A continuación, se muestra cómo luce el bloque generado por WordPress:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># BEGIN WordPress</span>
+<span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+<span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">On</span>
+<span class="nb">RewriteBase</span><span class="w"> </span>/
+<span class="nb">RewriteRule</span><span class="w"> </span>^index\.php$<span class="w"> </span>-<span class="w"> </span>[L]
+<span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>!-f
+<span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>!-d
+<span class="nb">RewriteRule</span><span class="w"> </span>.<span class="w"> </span><span class="sx">/index.php</span><span class="w"> </span>[L]
+<span class="nt">&lt;/IfModule&gt;</span>
+<span class="c"># END WordPress</span>
+</code></pre></div>
+<h3 id="32-redireccion-301">3.2 Redirección 301<a class="headerlink" href="#32-redireccion-301" title="Permanent link">&para;</a></h3>
+<p>Redirige una URL antigua a una nueva:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Redirect</span><span class="w"> </span><span class="m">301</span><span class="w"> </span><span class="sx">/pagina-antigua</span><span class="w"> </span>https://www.ejemplo.com/pagina-nueva
+</code></pre></div>
+<h3 id="33-bloquear-acceso-a-archivos-sensibles">3.3 Bloquear Acceso a Archivos Sensibles<a class="headerlink" href="#33-bloquear-acceso-a-archivos-sensibles" title="Permanent link">&para;</a></h3>
+<p>Protege archivos sensibles como <code>wp-config.php</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Files</span><span class="w"> </span><span class="s">wp-config.php</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">Order</span><span class="w"> </span>Allow,Deny
+<span class="w">    </span><span class="nb">Deny</span><span class="w"> </span>from<span class="w"> </span><span class="k">all</span>
+<span class="nt">&lt;/Files&gt;</span>
+</code></pre></div>
+<h3 id="34-habilitar-compresion-gzip">3.4 Habilitar Compresión Gzip<a class="headerlink" href="#34-habilitar-compresion-gzip" title="Permanent link">&para;</a></h3>
+<p>Optimiza el tiempo de carga del sitio activando Gzip:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">AddOutputFilterByType</span><span class="w"> </span>DEFLATE<span class="w"> </span>text/html<span class="w"> </span>text/plain<span class="w"> </span>text/xml<span class="w"> </span>text/css<span class="w"> </span>text/javascript<span class="w"> </span>application/javascript
+<span class="nt">&lt;/IfModule&gt;</span>
+</code></pre></div>
+<hr />
+<h2 id="4-gestionar-el-archivo-htaccess">4. <strong>Gestionar el Archivo <code>.htaccess</code></strong><a class="headerlink" href="#4-gestionar-el-archivo-htaccess" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Crear o Editar el Archivo:</strong></li>
+<li>Usa un editor como Nano:
+     <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/.htaccess
+</code></pre></div></li>
+<li><strong>Proteger el Archivo:</strong></li>
+<li>Establece permisos restrictivos para evitar accesos no autorizados:
+     <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>/var/www/html/.htaccess
+sudo<span class="w"> </span>chown<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/.htaccess
+</code></pre></div></li>
+<li><strong>Validar Configuraciones:</strong></li>
+<li>Revisa los errores de configuración de Apache:
+     <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apachectl<span class="w"> </span>configtest
+</code></pre></div></li>
+</ol>
+<hr />
+<h2 id="5-buenas-practicas-con-htaccess">5. <strong>Buenas Prácticas con <code>.htaccess</code></strong><a class="headerlink" href="#5-buenas-practicas-con-htaccess" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Evita Configuraciones Redundantes:</strong></li>
+<li>Siempre que sea posible, realiza configuraciones globales en los archivos principales de Apache para mejorar el rendimiento.</li>
+<li><strong>Realiza Backups Regularmente:</strong></li>
+<li>Guarda copias del archivo <code>.htaccess</code> antes de realizar cambios.</li>
+<li><strong>Usa Comentarios:</strong></li>
+<li>Documenta las reglas en el archivo para facilitar la comprensión:
+     <div class="highlight"><pre><span></span><code><span class="c"># Regla para enlaces permanentes de WordPress</span>
+<span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">On</span>
+</code></pre></div></li>
+<li><strong>Revisa los Logs de Apache:</strong></li>
+<li>Monitorea el comportamiento después de implementar cambios:
+     <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/apache2/error.log
+</code></pre></div></li>
+</ol>
+<p>Con estas configuraciones y buenas prácticas, puedes gestionar el archivo <code>.htaccess</code> de manera efectiva para optimizar el rendimiento y la seguridad de tu sitio en Debian.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
