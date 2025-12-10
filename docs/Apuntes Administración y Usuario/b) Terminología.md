@@ -7,17 +7,17 @@ WordPress tiene una terminología específica que puede resultar confusa para lo
 ## 1. **Términos Relacionados con el Núcleo de WordPress**
 
 **WordPress Core:**
-   - El núcleo o "core" de WordPress es el software base que proporciona todas las funcionalidades esenciales del CMS.
+* El núcleo o "core" de WordPress es el software base que proporciona todas las funcionalidades esenciales del CMS.
 
  **Admin Dashboard:**
-   - Es el panel de administración de WordPress desde donde gestionas todo el contenido y la configuración del sitio.
+* Es el panel de administración de WordPress desde donde gestionas todo el contenido y la configuración del sitio.
 
  **Posts y Pages:**
-   - **Posts (Entradas):** Contenido cronológico, como publicaciones de blogs.
-   - **Pages (Páginas):** Contenido estático, como "Sobre Nosotros" o "Contacto".
+* ***Posts (Entradas):** Contenido cronológico, como publicaciones de blogs.
+* **Pages (Páginas):** Contenido estático, como "Sobre Nosotros" o "Contacto".
 
  **Permalinks:**
-   - Enlaces permanentes o URLs utilizadas para acceder a las entradas, páginas y otros contenidos del sitio.
+* Enlaces permanentes o URLs utilizadas para acceder a las entradas, páginas y otros contenidos del sitio.
 
 ---
 
