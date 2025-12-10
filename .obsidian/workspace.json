@@ -11,14 +11,10 @@
             "id": "b3d5b28c376fed49",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Index.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Index"
+              "title": "New tab"
             }
           }
         ]
@@ -180,11 +176,14 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
+    "docs/Index.md",
+    "docs/index.md",
     "docs/attachments/Pasted image 20251210225813.png",
     "site/search/search_index.json",
     "site/search",
@@ -205,7 +204,6 @@
     "site/attachments/Pasted image 20251210225847.png",
     "site/attachments/Pasted image 20251210225813.png",
     "docs/Apuntes Sistemas/h) TODO Requisitos hardware.md",
-    "docs/Index.md",
     "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
     "docs/Apuntes Administración y Usuario/i) Roles y capacidades.md",
     "docs/Apuntes Sistemas/b) Sistema de archivos.md",
@@ -214,7 +212,6 @@
     "docs/Apuntes Administración y Usuario/h) Contenido multilingüe.md",
     "docs/Apuntes Administración y Usuario/f) Menús Wordpress.md",
     "docs/attachments/Pasted image 20251210231415.png",
-    "docs/attachments/Pasted image 20251210231347.png",
     "docs/Apuntes Administración y Usuario/e) Workflow de publicación.md",
     "docs/Apuntes Administración y Usuario/d) Editor Gutenberg.md",
     "docs/Apuntes Administración y Usuario/c) Backend y Frontend.md",
