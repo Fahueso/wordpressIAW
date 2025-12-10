@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "a) Wordpress.com y .org"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
-    "docs/Index.md",
+    "docs/Apuntes Sistemas/a) Instalación.md",
     "docs/index.md",
+    "docs/Index.md",
     "docs/attachments/Pasted image 20251210225813.png",
     "site/search/search_index.json",
     "site/search",
@@ -211,7 +212,6 @@
     "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
     "docs/Apuntes Administración y Usuario/i) Roles y capacidades.md",
     "docs/Apuntes Sistemas/b) Sistema de archivos.md",
-    "docs/Apuntes Sistemas/a) Instalación.md",
     "docs/Apuntes Sistemas/g) Internacionalización.md",
     "docs/Apuntes Administración y Usuario/h) Contenido multilingüe.md",
     "docs/Apuntes Administración y Usuario/f) Menús Wordpress.md",
