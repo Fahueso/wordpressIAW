@@ -27,6 +27,12 @@ Siempre que vayamos a utilizar el nuevo comando wp, debe de hacerse a nivel de l
    wp --info
    ```
 
+5. **Verificar permisos**:
+El usuario que ejecuta un comando CLI que escriba en el sistema de archivos debe de tener permisos. Muchas veces el usuario de la carpeta /var/www/html es www-data, por lo que algunos comando requerirán sudo. Por ejemplo, este comando elimina un plugin existente en la instalación por defecto de Wordpress (Akismet):
+```
+ sudo -u www-data wp plugin delete akismet
+```
+
 ---
 
 ## 2. **Comandos Básicos**

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Apuntes Sistemas/j) WP-CLI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "j) WP-CLI"
             }
           }
         ]
@@ -186,11 +186,11 @@
   },
   "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
+    "docs/index.md",
     "docs/Apuntes Administración y Usuario/b) Terminología.md",
     "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
     "docs/Apuntes Administración y Usuario/c) Backend y Frontend.md",
     "docs/Apuntes Sistemas/a) Instalación.md",
-    "docs/index.md",
     "docs/Index.md",
     "docs/attachments/Pasted image 20251210225813.png",
     "site/search/search_index.json",
