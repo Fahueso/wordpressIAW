@@ -48,6 +48,7 @@ WordPress tiene un sistema robusto de internacionalizaci√≥n (i18n) y localizaci√
    - Idiomas de temas:
      ```
      /wp-content/themes/tu-tema/languages
+     /wp-content/themes/languages/*
      ```
    - Idiomas de plugins:
      ```
