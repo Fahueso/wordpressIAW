@@ -1152,6 +1152,7 @@
 <li>
 <p>Idiomas de plugins:
      <div class="highlight"><pre><span></span><code>/wp-content/plugins/tu-plugin/languages
+/wp-content/plugins/languages/*
 </code></pre></div></p>
 </li>
 <li>
@@ -1197,17 +1198,16 @@
 <h2 id="5-traduccion-de-temas-y-plugins">5. <strong>Traducción de Temas y Plugins</strong><a class="headerlink" href="#5-traduccion-de-temas-y-plugins" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Añadir un Text Domain</strong></li>
-<li>
-<p>Define un "text domain" en el encabezado del archivo principal del tema o plugin.
+<li>Define un "text domain" en el encabezado del archivo principal del tema o plugin.
    <div class="highlight"><pre><span></span><code><span class="x">/*</span>
 <span class="x"> * Plugin Name: Mi Plugin</span>
 <span class="x"> * Text Domain: mi-plugin</span>
 <span class="x"> */</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Preparar el Código para Traducción</strong></p>
-</li>
+</code></pre></div></li>
+</ol>
+<p>Ejemplo: para el tema Astra podemos encontrar la identificación del dominio en la ruta <code>/themes/astra/inc/class-astra-after-setup-theme.php</code>. Podemos usar el comando <code>grep -Ri "Text Domain" .</code> para buscar en generar los <code>text domains</code> existentes.</p>
+<ol>
+<li><strong>Preparar el Código para Traducción</strong></li>
 <li>Usa funciones de internacionalización para envolver cadenas de texto.</li>
 <li>
 <p>Asegúrate de que el "text domain" coincida con el definido en el encabezado.</p>
