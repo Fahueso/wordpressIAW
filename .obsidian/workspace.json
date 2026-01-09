@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Apuntes Sistemas/g) Internacionalización.md",
+                "file": "docs/Apuntes Sistemas/k) Copias de seguridad.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "g) Internacionalización"
+              "title": "k) Copias de seguridad"
             }
           }
         ]
@@ -187,6 +187,9 @@
   "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
     "docs/Apuntes Sistemas/j) WP-CLI.md",
+    "docs/Apuntes Sistemas/i) Licencias.md",
+    "docs/Apuntes Sistemas/h) Requisitos hardware.md",
+    "docs/Apuntes Sistemas/g) Internacionalización.md",
     "docs/index.md",
     "docs/Apuntes Administración y Usuario/b) Terminología.md",
     "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
@@ -212,17 +215,14 @@
     "site/attachments/Pasted image 20251210230010.png",
     "site/attachments/Pasted image 20251210225847.png",
     "site/attachments/Pasted image 20251210225813.png",
-    "docs/Apuntes Sistemas/h) TODO Requisitos hardware.md",
     "docs/Apuntes Administración y Usuario/i) Roles y capacidades.md",
     "docs/Apuntes Sistemas/b) Sistema de archivos.md",
-    "docs/Apuntes Sistemas/g) Internacionalización.md",
     "docs/Apuntes Administración y Usuario/h) Contenido multilingüe.md",
     "docs/Apuntes Administración y Usuario/f) Menús Wordpress.md",
     "docs/attachments/Pasted image 20251210231415.png",
     "docs/Apuntes Administración y Usuario/e) Workflow de publicación.md",
     "docs/Apuntes Administración y Usuario/d) Editor Gutenberg.md",
     "docs/Apuntes Sistemas/k) Copias de seguridad.md",
-    "docs/Apuntes Sistemas/i) TODO Licencias.md",
     "docs/Apuntes Sistemas/g) Actualizaciones wordpress.md",
     "docs/Apuntes Sistemas/f) Estructura BD.md",
     "docs/Apuntes Sistemas/e) Crons.md",
