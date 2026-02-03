@@ -48,10 +48,12 @@ WordPress tiene un sistema robusto de internacionalización (i18n) y localizaci�
    - Idiomas de temas:
      ```
      /wp-content/themes/tu-tema/languages
+     /wp-content/themes/languages/*
      ```
    - Idiomas de plugins:
      ```
      /wp-content/plugins/tu-plugin/languages
+     /wp-content/plugins/languages/*
      ```
 
 3. **Archivos json:**
@@ -99,7 +101,10 @@ WordPress tiene un sistema robusto de internacionalización (i18n) y localizaci�
     */
    ```
 
-2. **Preparar el Código para Traducción**
+Ejemplo: para el tema Astra podemos encontrar la identificación del dominio en la ruta `/themes/astra/inc/class-astra-after-setup-theme.php`. Podemos usar el comando `grep -Ri "Text Domain" .` para buscar en generar los `text domains` existentes.
+
+
+1. **Preparar el Código para Traducción**
    - Usa funciones de internacionalización para envolver cadenas de texto.
    - Asegúrate de que el "text domain" coincida con el definido en el encabezado.
 
