@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Apuntes modificacion CMS/Actividades/1. Modificar Hello Dolly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "1. Modificar Hello Dolly"
             }
           }
         ],
@@ -201,8 +201,18 @@
   },
   "active": "d0e9e5fd79903a83",
   "lastOpenFiles": [
-    "docs/Apuntes Sistemas/Kubernetes.md",
+    "Apuntes modificacion CMS/Actividades/2. Añadir texto al final de las entradas.md",
+    "Apuntes modificacion CMS/Actividades/4. Modificar comportamiento login.md",
+    "Apuntes modificacion CMS/Actividades/3. Menú en el admin con texto.md",
+    "Apuntes modificacion CMS/b) Plugin Code Snippets.md",
+    "Apuntes modificacion CMS/a) Teoría.md",
+    "Apuntes modificacion CMS/c) Actions y Filter más comunes.md",
+    "Apuntes modificacion CMS/Actividades/1. Modificar Hello Dolly.md",
+    "Apuntes modificacion CMS/Actividades",
     "conflict-files-obsidian-git.md",
+    "docs/Apuntes Sistemas/Kubernetes.md",
+    "Apuntes modificacion CMS",
+    "Apuntes modificación CMS.md",
     "docs/Apuntes Sistemas/i) Licencias.md",
     "docs/Apuntes Sistemas/h) Requisitos hardware.md",
     "docs/Apuntes Administración y Usuario/a) Wordpress.com y .org.md",
@@ -220,8 +230,6 @@
     "site/Apuntes Sistemas/j) WP-CLI",
     "site/Apuntes Sistemas/i) TODO Licencias/index.html",
     "site/Apuntes Sistemas/i) TODO Licencias",
-    "site/Apuntes Sistemas/h) TODO Requisitos hardware/index.html",
-    "site/Apuntes Sistemas/h) TODO Requisitos hardware",
     "site/assets/images/favicon.png",
     "site/attachments/Pasted image 20251210231415.png",
     "site/attachments/Pasted image 20251210231347.png",
@@ -238,14 +246,6 @@
     "docs/Apuntes Administración y Usuario/f) Menús Wordpress.md",
     "docs/attachments/Pasted image 20251210231415.png",
     "docs/Apuntes Administración y Usuario/e) Workflow de publicación.md",
-    "docs/Apuntes Administración y Usuario/d) Editor Gutenberg.md",
-    "docs/Apuntes Sistemas/k) Copias de seguridad.md",
-    "docs/Apuntes Sistemas/j) WP-CLI.md",
-    "docs/Apuntes Sistemas/i) TODO Licencias.md",
-    "docs/Apuntes Sistemas/g) Actualizaciones wordpress.md",
-    "docs/Apuntes Sistemas/f) Estructura BD.md",
-    "docs/Apuntes Sistemas/e) Crons.md",
-    "docs/Apuntes Sistemas/d) Configuración inicial.md",
-    "docs/Apuntes Sistemas/c) El htaccess.md"
+    "docs/Apuntes Administración y Usuario/d) Editor Gutenberg.md"
   ]
 }
