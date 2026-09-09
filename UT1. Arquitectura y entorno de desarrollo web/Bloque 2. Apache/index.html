@@ -1,0 +1,5335 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Bloque%201.%20Aplicaciones%20web/">
+      
+      
+        <link rel="next" href="../Bloque%203.%20PHP/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>2.1. Entornos de desarrollo web - Repositorio materiales Wordpress de IAW ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#21-entornos-de-desarrollo-web" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-header__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Repositorio materiales Wordpress de IAW ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.1. Entornos de desarrollo web
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-nav__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Repositorio materiales Wordpress de IAW ASIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Administración y Usuario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Administración y Usuario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/a%29%20Wordpress.com%20y%20.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diferencias entre WordPress.com y WordPress.org
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/b%29%20Terminolog%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminología Común en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/c%29%20Backend%20y%20Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprendiendo el Backend y Frontend en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/d%29%20Editor%20Gutenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El Editor Gutenberg en WordPress (2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/e%29%20Workflow%20de%20publicaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow de Publicación de Entradas en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/f%29%20Men%C3%BAs%20Wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de Menús en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/h%29%20Contenido%20multiling%C3%BCe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Polylang en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/i%29%20Roles%20y%20capacidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles y Capacidades en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/Kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPress sobre Kubernetes (Minikube) en EC2 — Paso a paso**
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/a%29%20Instalaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación de WordPress en un Servidor Debian/Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/b%29%20Sistema%20de%20archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Archivos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/c%29%20El%20htaccess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de .htaccess en Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/d%29%20Configuraci%C3%B3n%20inicial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Inicial de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/e%29%20Crons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crons en WordPress: WP-Cron y Crontab del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/f%29%20Estructura%20BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura Básica de la Base de Datos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/g%29%20Actualizaciones%20wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Actualización de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/g%29%20Internacionalizaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Internacionalización en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/h%29%20Requisitos%20hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos de Hardware para WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/i%29%20Licencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencias de Uso en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/j%29%20WP-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de WP-CLI en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/k%29%20Copias%20de%20seguridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copias de Seguridad en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes modificacion CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes modificacion CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/a%29%20Teor%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Qué es un hook en WordPress?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/b%29%20Plugin%20Code%20Snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    b) Plugin Code Snippets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/c%29%20Actions%20y%20Filter%20m%C3%A1s%20comunes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACTIONS más comunes (acciones)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/1.%20Modificar%20Hello%20Dolly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Modificar Hello Dolly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/2.%20A%C3%B1adir%20texto%20al%20final%20de%20las%20entradas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Añadir texto al final de las entradas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/3.%20Men%C3%BA%20en%20el%20admin%20con%20texto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Menú en el admin con texto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/4.%20Modificar%20comportamiento%20login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Modificar comportamiento login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Arquitectura y entorno de desarrollo web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Arquitectura y entorno de desarrollo web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bloque%201.%20Aplicaciones%20web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 1. Aplicaciones web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Entornos de desarrollo web
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Entornos de desarrollo web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-son-necesarios-diferentes-entornos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué son necesarios diferentes entornos?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entorno de desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entorno de desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entorno de pruebas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entorno de producción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stacks-de-desarrollo-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stacks de desarrollo web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stacks de desarrollo web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-lamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack LAMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-lemp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack LEMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtualización
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtualización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-las-maquinas-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas de las máquinas virtuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-los-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas de los contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inconvenientes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inconvenientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maquinas-virtuales-y-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Máquinas virtuales y contenedores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Máquinas virtuales y contenedores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maquinas-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Máquinas virtuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenedores_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-de-este-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo de este entorno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-servidores-web-mas-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Servidores web más utilizados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Servidores web más utilizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache-http-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apache HTTP Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nginx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-iis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft IIS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-apache-http-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Apache HTTP Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Apache HTTP Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origen-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origen de Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-tan-utilizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué es tan utilizado?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-habituales-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funciones habituales de Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-arquitectura-modular-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Arquitectura modular de Apache
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Arquitectura modular de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-una-arquitectura-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas de una arquitectura modular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-en-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulos en Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-modulos-en-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de módulos en Debian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-y-desactivacion-de-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activación y desactivación de módulos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-modulos-cargados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación de módulos cargados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algunos-modulos-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algunos módulos habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-de-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulos de autenticación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-modular-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura modular y seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-instalacion-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Instalación de Apache
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Instalación de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requisitos-previos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requisitos previos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquetes-instalados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paquetes instalados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicio-automatico-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicio automático del servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión del servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-basica-de-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura básica de directorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primera-comprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primera comprobación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publicacion-de-nuestra-primera-pagina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publicación de nuestra primera página
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-habituales-durante-la-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas habituales durante la instalación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-mediante-la-direccion-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación mediante la dirección IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-mediante-herramientas-de-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación mediante herramientas de terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registros-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registros del servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-configuracion-basica-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Configuración básica de Apache
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Configuración básica de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directorio-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directorio de configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-principal-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo principal de configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de puertos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sitios-web-disponibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sitios web disponibles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-sitio-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El sitio por defecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sitios-web-activos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sitios web activos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-de-sitios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activación de sitios web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuraciones adicionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-de-configuraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activación de configuraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jerarquía de la configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DocumentRoot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorio-de-publicacion-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directorio de publicación por defecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificacion-de-la-pagina-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modificación de la página principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recarga-y-reinicio-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recarga y reinicio del servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validación de la configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-directorios-personales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Directorios personales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Directorios personales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-modulo-mod_userdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El módulo mod_userdir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activación del módulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-directorio-personal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del directorio personal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-pagina-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de una página de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceso-al-contenido-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceso al contenido publicado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permisos-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permisos de acceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-predeterminada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Página predeterminada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecucion-de-php-en-directorios-personales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejecución de PHP en directorios personales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-los-directorios-personales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas de los directorios personales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-ampliacion-gestion-de-modulos-en-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Ampliación gestión de módulos en Apache
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Ampliación gestión de módulos en Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-los-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de los módulos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulos habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-de-autenticacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulos de autenticación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo práctico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-control-de-accesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Control de accesos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 Control de accesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-y-autorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticación y autorización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-autenticacion-en-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos de autenticación en Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticación básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-modulo-mod_auth_basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El módulo mod_auth_basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-archivo-de-contrasenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación del archivo de contraseñas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-un-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de un directorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-la-autenticacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de la autenticación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-de-las-directivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicación de las directivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-de-cambios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicación de cambios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-del-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación del funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restriccion-a-usuarios-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restricción a usuarios concretos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-de-acceso-por-direccion-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de acceso por dirección IP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinacion-de-criterios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combinación de criterios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-de-la-autenticacion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones de la autenticación básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-https-con-certificado-autofirmado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 HTTPS con certificado autofirmado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.10 HTTPS con certificado autofirmado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activar-el-modulo-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activar el módulo SSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activar-el-sitio-ssl-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activar el sitio SSL por defecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generar-un-certificado-autofirmado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generar un certificado autofirmado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurar-el-sitio-para-utilizar-el-certificado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar el sitio para utilizar el certificado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicar-y-comprobar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicar y comprobar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-plataformas-integradas-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 Plataformas integradas de desarrollo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 Plataformas integradas de desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xampp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XAMPP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker Compose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-virtual-hosts-varios-sitios-en-un-mismo-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12 Virtual Hosts: varios sitios en un mismo servidor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.12 Virtual Hosts: varios sitios en un mismo servidor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-virtual-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de Virtual Hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparar-los-directorios-de-cada-sitio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparar los directorios de cada sitio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-los-archivos-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear los archivos de configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-de-las-directivas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explicación de las directivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activar-los-sitios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activar los sitios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolucion-de-nombres-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolución de nombres local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-los-registros-independientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación de los registros independientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-cortafuegos-apertura-de-puertos-con-ufw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13 Cortafuegos: apertura de puertos con ufw
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.13 Cortafuegos: apertura de puertos con ufw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-el-estado-del-cortafuegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobar el estado del cortafuegos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-de-aplicacion-registrados-por-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfiles de aplicación registrados por Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permitir-el-trafico-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permitir el tráfico web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-perder-el-acceso-por-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No perder el acceso por SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activar-el-cortafuegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activar el cortafuegos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobar-las-reglas-activas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobar las reglas activas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminar-una-regla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eliminar una regla
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desactivar-el-cortafuegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desactivar el cortafuegos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostico-el-problema-es-apache-o-el-cortafuegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico: ¿el problema es Apache o el cortafuegos?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214-documentacion-de-las-practicas-realizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.14 Documentación de las prácticas realizadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.14 Documentación de las prácticas realizadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-documentar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué documentar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-debe-incluir-una-buena-documentacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué debe incluir una buena documentación técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plantilla-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plantilla básica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-aplicado-resumido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo aplicado (resumido)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-utiles-para-documentar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas útiles para documentar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bloque%203.%20PHP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 3. PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bloque%204.%20MariaDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Bases de datos con MariaDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../borrar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borrar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="21-entornos-de-desarrollo-web">2.1. Entornos de desarrollo web<a class="headerlink" href="#21-entornos-de-desarrollo-web" title="Permanent link">&para;</a></h1>
+<p>Antes de comenzar a desarrollar aplicaciones web es necesario disponer de un entorno de trabajo adecuado.</p>
+<p>Un <strong>entorno de desarrollo web</strong> es el conjunto de herramientas, servicios y configuraciones que permiten desarrollar, probar y desplegar aplicaciones web.</p>
+<p>En este módulo trabajaremos principalmente con aplicaciones basadas en tecnologías como:</p>
+<ul>
+<li>Apache o Nginx.</li>
+<li>PHP.</li>
+<li>MariaDB.</li>
+<li>Herramientas de desarrollo y administración.</li>
+</ul>
+<p>El objetivo es disponer de un entorno que reproduzca, en la medida de lo posible, las condiciones reales de ejecución de una aplicación web.</p>
+<h2 id="por-que-son-necesarios-diferentes-entornos">¿Por qué son necesarios diferentes entornos?<a class="headerlink" href="#por-que-son-necesarios-diferentes-entornos" title="Permanent link">&para;</a></h2>
+<p>Durante el desarrollo de una aplicación es habitual realizar cambios, corregir errores y probar nuevas funcionalidades.</p>
+<p>Si estas modificaciones se realizaran directamente sobre la aplicación utilizada por los usuarios, cualquier error podría provocar interrupciones del servicio o pérdida de información.</p>
+<p>Por este motivo las organizaciones suelen utilizar diferentes entornos para cada fase del ciclo de vida de la aplicación.</p>
+<div class="highlight"><pre><span></span><code>Desarrollo
+   │
+   ▼
+Pruebas
+   │
+   ▼
+Producción
+</code></pre></div>
+<h2 id="entorno-de-desarrollo">Entorno de desarrollo<a class="headerlink" href="#entorno-de-desarrollo" title="Permanent link">&para;</a></h2>
+<p>Es el entorno utilizado por desarrolladores y administradores para crear, modificar y probar aplicaciones.</p>
+<p>En él se realizan tareas como:</p>
+<ul>
+<li>Programar nuevas funcionalidades.</li>
+<li>Corregir errores.</li>
+<li>Realizar pruebas iniciales.</li>
+<li>Experimentar con configuraciones.</li>
+</ul>
+<p>Un entorno de desarrollo típico podría estar formado por:</p>
+<div class="highlight"><pre><span></span><code>Equipo del desarrollador
+├── Apache
+├── PHP
+├── MariaDB
+├── Git
+└── Visual Studio Code
+</code></pre></div>
+<h3 id="ventajas">Ventajas<a class="headerlink" href="#ventajas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configuración sencilla.</li>
+<li>Permite realizar pruebas rápidas.</li>
+<li>No afecta a usuarios reales.</li>
+<li>Facilita el aprendizaje y la experimentación.</li>
+</ul>
+<h3 id="inconvenientes">Inconvenientes<a class="headerlink" href="#inconvenientes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Puede diferir del entorno final de producción.</li>
+<li>Puede generar conflictos entre distintas versiones de software.</li>
+<li>Los errores de configuración afectan únicamente al equipo local.</li>
+</ul>
+<p>Durante este módulo gran parte del trabajo se realizará en este tipo de entorno.</p>
+<h2 id="entorno-de-pruebas">Entorno de pruebas<a class="headerlink" href="#entorno-de-pruebas" title="Permanent link">&para;</a></h2>
+<p>También denominado entorno de <strong>preproducción</strong> o <strong>staging</strong>.</p>
+<p>Su objetivo es comprobar que la aplicación funciona correctamente antes de ser puesta a disposición de los usuarios.</p>
+<p>En este entorno se realizan:</p>
+<ul>
+<li>Pruebas funcionales.</li>
+<li>Comprobaciones de seguridad.</li>
+<li>Verificación de configuraciones.</li>
+<li>Pruebas de actualización o despliegue.</li>
+</ul>
+<p>Sus características suelen ser similares a las del entorno de producción, aunque sin usuarios reales.</p>
+<h2 id="entorno-de-produccion">Entorno de producción<a class="headerlink" href="#entorno-de-produccion" title="Permanent link">&para;</a></h2>
+<p>Es el entorno utilizado por los usuarios finales.</p>
+<p>Las aplicaciones desplegadas en producción deben ofrecer:</p>
+<ul>
+<li>Disponibilidad.</li>
+<li>Estabilidad.</li>
+<li>Seguridad.</li>
+<li>Rendimiento.</li>
+</ul>
+<p>Ejemplos de entornos de producción son:</p>
+<ul>
+<li>La plataforma Aules de la Generalitat Valenciana.</li>
+<li>El portal web de una empresa.</li>
+<li>Un servidor Nextcloud corporativo.</li>
+</ul>
+<p>Los cambios realizados en este entorno deben estar cuidadosamente controlados.</p>
+<h2 id="stacks-de-desarrollo-web">Stacks de desarrollo web<a class="headerlink" href="#stacks-de-desarrollo-web" title="Permanent link">&para;</a></h2>
+<p>Para ejecutar una aplicación web es necesario disponer de varios componentes que trabajen conjuntamente.</p>
+<p>El conjunto de tecnologías utilizadas recibe el nombre de <strong>stack</strong>.</p>
+<h3 id="stack-lamp">Stack LAMP<a class="headerlink" href="#stack-lamp" title="Permanent link">&para;</a></h3>
+<p>Uno de los stacks más utilizados es <strong>LAMP</strong>:</p>
+<div class="highlight"><pre><span></span><code>L → Linux
+A → Apache
+M → MariaDB (o MySQL)
+P → PHP
+</code></pre></div>
+<p>Muchas aplicaciones web, como WordPress, Moodle o Nextcloud, pueden ejecutarse sobre este stack.</p>
+<h3 id="stack-lemp">Stack LEMP<a class="headerlink" href="#stack-lemp" title="Permanent link">&para;</a></h3>
+<p>Otra alternativa habitual es <strong>LEMP</strong>:</p>
+<div class="highlight"><pre><span></span><code>L → Linux
+E → Engine-X (Nginx)
+M → MariaDB (o MySQL)
+P → PHP
+</code></pre></div>
+<p>La principal diferencia es que Apache es sustituido por Nginx como servidor web.</p>
+<h2 id="virtualizacion">Virtualización<a class="headerlink" href="#virtualizacion" title="Permanent link">&para;</a></h2>
+<p>Una forma habitual de crear entornos aislados consiste en utilizar máquinas virtuales.</p>
+<p>La virtualización permite ejecutar varios sistemas operativos independientes sobre un mismo equipo físico.</p>
+<div class="highlight"><pre><span></span><code>Equipo físico
+├── Máquina virtual 1
+│   ├── Apache
+│   └── PHP
+└── Máquina virtual 2
+    └── MariaDB
+</code></pre></div>
+<p>Gracias a esta técnica es posible separar servicios y realizar pruebas sin afectar al sistema principal.</p>
+<h3 id="ventajas-de-las-maquinas-virtuales">Ventajas de las máquinas virtuales<a class="headerlink" href="#ventajas-de-las-maquinas-virtuales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Alto nivel de aislamiento.</li>
+<li>Facilitan las pruebas y experimentación.</li>
+<li>Permiten crear instantáneas y restaurar estados anteriores.</li>
+<li>Reproducen entornos reales de trabajo.</li>
+</ul>
+<h3 id="inconvenientes_1">Inconvenientes<a class="headerlink" href="#inconvenientes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Consumen más memoria y almacenamiento.</li>
+<li>Requieren un sistema operativo completo en cada máquina virtual.</li>
+<li>Su arranque es más lento.</li>
+</ul>
+<h2 id="contenedores">Contenedores<a class="headerlink" href="#contenedores" title="Permanent link">&para;</a></h2>
+<p>Los contenedores constituyen una alternativa más ligera a las máquinas virtuales.</p>
+<p>En lugar de virtualizar un sistema operativo completo, los contenedores comparten el sistema operativo anfitrión y ejecutan únicamente las aplicaciones y dependencias necesarias.</p>
+<div class="highlight"><pre><span></span><code>Sistema anfitrión
+├── Contenedor Apache
+├── Contenedor PHP
+└── Contenedor MariaDB
+</code></pre></div>
+<h3 id="ventajas-de-los-contenedores">Ventajas de los contenedores<a class="headerlink" href="#ventajas-de-los-contenedores" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Menor consumo de recursos.</li>
+<li>Arranque muy rápido.</li>
+<li>Fácil distribución de aplicaciones.</li>
+<li>Configuraciones reproducibles.</li>
+<li>Mayor facilidad de despliegue.</li>
+</ul>
+<h3 id="inconvenientes_2">Inconvenientes<a class="headerlink" href="#inconvenientes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Menor aislamiento que una máquina virtual.</li>
+<li>Administración inicial más compleja.</li>
+</ul>
+<h2 id="maquinas-virtuales-y-contenedores">Máquinas virtuales y contenedores<a class="headerlink" href="#maquinas-virtuales-y-contenedores" title="Permanent link">&para;</a></h2>
+<p>Aunque ambos mecanismos permiten aislar aplicaciones, existen diferencias importantes.</p>
+<h3 id="maquinas-virtuales">Máquinas virtuales<a class="headerlink" href="#maquinas-virtuales" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Equipo anfitrión
+└── Máquina virtual
+    ├── Sistema operativo
+    ├── Apache
+    ├── PHP
+    └── MariaDB
+</code></pre></div>
+<ul>
+<li>Incluyen un sistema operativo completo.</li>
+<li>Mayor aislamiento.</li>
+<li>Mayor consumo de recursos.</li>
+</ul>
+<h3 id="contenedores_1">Contenedores<a class="headerlink" href="#contenedores_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Equipo anfitrión
+├── Contenedor Apache
+├── Contenedor PHP
+└── Contenedor MariaDB
+</code></pre></div>
+<ul>
+<li>Comparten el sistema operativo anfitrión.</li>
+<li>Menor consumo de recursos.</li>
+<li>Despliegue más rápido.</li>
+</ul>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p>Actualmente una de las tecnologías de contenedores más utilizadas es <strong>Docker</strong>.</p>
+<p>Docker permite crear, distribuir y ejecutar aplicaciones mediante contenedores.</p>
+<p>Por ejemplo, un entorno Docker podría incluir:</p>
+<div class="highlight"><pre><span></span><code>Contenedor Apache
+   │
+   ▼
+Contenedor PHP
+   │
+   ▼
+Contenedor MariaDB
+</code></pre></div>
+<p>De esta forma es posible reproducir el mismo entorno de desarrollo en distintos equipos y simplificar el despliegue de aplicaciones.</p>
+<h2 id="objetivo-de-este-entorno">Objetivo de este entorno<a class="headerlink" href="#objetivo-de-este-entorno" title="Permanent link">&para;</a></h2>
+<p>A lo largo de este módulo construiremos un entorno basado principalmente en:</p>
+<div class="highlight"><pre><span></span><code>Apache
+   │
+PHP
+   │
+MariaDB
+</code></pre></div>
+<p>que nos permitirá desarrollar, probar y desplegar aplicaciones web.</p>
+<p>Al finalizar este bloque deberás ser capaz de preparar un entorno funcional para ejecutar aplicaciones web, verificar su funcionamiento y solucionar los problemas más habituales de configuración.</p>
+<h2 id="22-servidores-web-mas-utilizados">2.2 Servidores web más utilizados<a class="headerlink" href="#22-servidores-web-mas-utilizados" title="Permanent link">&para;</a></h2>
+<h3 id="apache-http-server">Apache HTTP Server<a class="headerlink" href="#apache-http-server" title="Permanent link">&para;</a></h3>
+<p>Apache HTTP Server, conocido habitualmente como <strong>Apache</strong>, es uno de los servidores web más utilizados del mundo.</p>
+<p>Se trata de un proyecto de software libre desarrollado por la <strong>Apache Software Foundation</strong>.</p>
+<p>Entre sus características principales destacan:</p>
+<ul>
+<li>Software libre y de código abierto.</li>
+<li>Multiplataforma.</li>
+<li>Gran estabilidad y madurez.</li>
+<li>Amplia documentación.</li>
+<li>Arquitectura modular.</li>
+<li>Amplia compatibilidad con aplicaciones PHP.</li>
+</ul>
+<p>Apache es especialmente popular en entornos educativos y empresariales debido a su facilidad de configuración y a la gran cantidad de documentación disponible.</p>
+<p>Además, forma parte del conocido stack <strong>LAMP</strong>:</p>
+<div class="highlight"><pre><span></span><code>Linux
+Apache
+MariaDB
+PHP
+</code></pre></div>
+<p>que utilizaremos durante este módulo.</p>
+<h3 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
+<p>Nginx (pronunciado <em>engine-ex</em>) es otro de los servidores web más utilizados actualmente.</p>
+<p>Fue diseñado con el objetivo de ofrecer un alto rendimiento y un consumo reducido de recursos.</p>
+<p>Entre sus características destacan:</p>
+<ul>
+<li>Alto rendimiento.</li>
+<li>Bajo consumo de memoria.</li>
+<li>Arquitectura basada en eventos.</li>
+<li>Excelente capacidad para gestionar un gran número de conexiones simultáneas.</li>
+<li>Utilización frecuente como balanceador de carga y proxy inverso.</li>
+</ul>
+<p>Actualmente muchas aplicaciones web utilizan Nginx como alternativa a Apache o como complemento a éste.</p>
+<h3 id="microsoft-iis">Microsoft IIS<a class="headerlink" href="#microsoft-iis" title="Permanent link">&para;</a></h3>
+<p>IIS (<em>Internet Information Services</em>) es el servidor web desarrollado por Microsoft para sus sistemas operativos Windows Server.</p>
+<p>Entre sus características se encuentran:</p>
+<ul>
+<li>Integración con Windows.</li>
+<li>Herramientas gráficas de administración.</li>
+<li>Compatibilidad con tecnologías Microsoft.</li>
+<li>Integración con Active Directory.</li>
+<li>Soporte para aplicaciones ASP.NET.</li>
+</ul>
+<p>Es habitual encontrarlo en organizaciones cuya infraestructura está basada principalmente en tecnologías Microsoft.</p>
+<h3 id="comparativa-basica">Comparativa básica<a class="headerlink" href="#comparativa-basica" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Apache</th>
+<th>Nginx</th>
+<th>IIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software libre</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Multiplataforma</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Integración con Windows</td>
+<td>Limitada</td>
+<td>Limitada</td>
+<td>Excelente</td>
+</tr>
+<tr>
+<td>Compatibilidad con PHP</td>
+<td>Muy buena</td>
+<td>Muy buena</td>
+<td>Buena</td>
+</tr>
+<tr>
+<td>Administración gráfica</td>
+<td>Limitada</td>
+<td>Limitada</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>### ¿Cuál utilizaremos?</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Durante este módulo trabajaremos principalmente con <strong>Apache HTTP Server</strong> por varios motivos:</p>
+<ul>
+<li>Es uno de los servidores web más difundidos.</li>
+<li>Existe una gran cantidad de documentación y recursos de aprendizaje.</li>
+<li>Se integra fácilmente con PHP y MariaDB.</li>
+<li>Es la base de numerosas aplicaciones web como Moodle, WordPress o Nextcloud.</li>
+<li>Permite comprender los conceptos fundamentales que posteriormente pueden aplicarse a otros servidores web.</li>
+</ul>
+<p>No obstante, los conceptos estudiados serán aplicables también a otros servidores como Nginx o IIS.</p>
+<h2 id="23-apache-http-server">2.3 Apache HTTP Server<a class="headerlink" href="#23-apache-http-server" title="Permanent link">&para;</a></h2>
+<h3 id="origen-de-apache">Origen de Apache<a class="headerlink" href="#origen-de-apache" title="Permanent link">&para;</a></h3>
+<p>Apache comenzó a desarrollarse en la década de los 90 como una evolución de un servidor web anterior desarrollado por el National Center for Supercomputing Applications (NCSA).</p>
+<p>Actualmente el desarrollo y mantenimiento de Apache está coordinado por la <strong>Apache Software Foundation (ASF)</strong>, una organización sin ánimo de lucro responsable de numerosos proyectos de software libre.</p>
+<h3 id="por-que-es-tan-utilizado">¿Por qué es tan utilizado?<a class="headerlink" href="#por-que-es-tan-utilizado" title="Permanent link">&para;</a></h3>
+<p>Apache ha mantenido su popularidad durante años debido a varias características que lo convierten en una solución muy flexible.</p>
+<p>Entre sus principales ventajas destacan:</p>
+<ul>
+<li>Es software libre y de código abierto.</li>
+<li>Puede utilizarse gratuitamente.</li>
+<li>Funciona en diferentes sistemas operativos.</li>
+<li>Dispone de una amplia documentación.</li>
+<li>Es altamente configurable.</li>
+<li>Permite ampliar funcionalidades mediante módulos.</li>
+<li>Se integra fácilmente con PHP y otros lenguajes de programación.</li>
+<li>Cuenta con una gran comunidad de usuarios y desarrolladores.</li>
+</ul>
+<p>Estas características han convertido a Apache en uno de los servidores web más utilizados tanto en entornos educativos como empresariales.</p>
+<h3 id="funciones-habituales-de-apache">Funciones habituales de Apache<a class="headerlink" href="#funciones-habituales-de-apache" title="Permanent link">&para;</a></h3>
+<p>Gracias a su sistema modular, Apache puede realizar tareas muy diversas:</p>
+<ul>
+<li>Publicar páginas web.</li>
+<li>Servir imágenes y documentos.</li>
+<li>Ejecutar aplicaciones PHP.</li>
+<li>Gestionar conexiones seguras mediante HTTPS.</li>
+<li>Autenticar usuarios.</li>
+<li>Registrar accesos y errores.</li>
+<li>Redirigir peticiones.</li>
+<li>Hospedar múltiples sitios web en un mismo servidor.</li>
+</ul>
+<p>Por ello es habitual encontrar Apache en servidores web corporativos, plataformas educativas y aplicaciones de gestión empresarial.</p>
+<h2 id="24-arquitectura-modular-de-apache">2.4 Arquitectura modular de Apache<a class="headerlink" href="#24-arquitectura-modular-de-apache" title="Permanent link">&para;</a></h2>
+<p>Una de las principales razones del éxito de Apache es su <strong>arquitectura modular</strong>.</p>
+<p>Apache ha sido diseñado de forma que las funcionalidades básicas del servidor se encuentran en un núcleo reducido, mientras que las características adicionales se incorporan mediante módulos que pueden activarse o desactivarse según las necesidades de cada instalación.</p>
+<p>Gracias a este diseño, un administrador puede configurar un servidor ligero con únicamente las funcionalidades necesarias o ampliar su capacidad añadiendo nuevos módulos.</p>
+<div class="highlight"><pre><span></span><code>Apache
+├── Núcleo del servidor
+├── Módulos de autenticación
+├── Módulos de seguridad
+├── Módulos SSL
+├── Módulos PHP
+├── Módulos de reescritura
+└── Otros módulos
+</code></pre></div>
+<h3 id="ventajas-de-una-arquitectura-modular">Ventajas de una arquitectura modular<a class="headerlink" href="#ventajas-de-una-arquitectura-modular" title="Permanent link">&para;</a></h3>
+<p>Este diseño proporciona numerosas ventajas:</p>
+<ul>
+<li>Permite adaptar el servidor a distintas necesidades.</li>
+<li>Reduce el consumo de recursos.</li>
+<li>Facilita la administración del sistema.</li>
+<li>Permite incorporar nuevas funcionalidades sin modificar el núcleo.</li>
+<li>Incrementa la seguridad al mantener únicamente los módulos necesarios.</li>
+<li>Simplifica las actualizaciones y el mantenimiento.</li>
+</ul>
+<p>Gracias a esta flexibilidad, el mismo servidor Apache puede utilizarse para alojar un pequeño sitio web personal o una aplicación empresarial de gran tamaño.</p>
+<h3 id="modulos-en-apache">Módulos en Apache<a class="headerlink" href="#modulos-en-apache" title="Permanent link">&para;</a></h3>
+<p>Un módulo es un componente software que añade una funcionalidad concreta al servidor web.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Soporte para HTTPS.</li>
+<li>Autenticación de usuarios.</li>
+<li>Reescritura de URL.</li>
+<li>Ejecución de aplicaciones PHP.</li>
+<li>Generación de estadísticas.</li>
+<li>Control de acceso.</li>
+</ul>
+<p>Cuando un módulo no es necesario puede permanecer desactivado, evitando consumir recursos y reduciendo la superficie de ataque del sistema.</p>
+<h3 id="gestion-de-modulos-en-debian">Gestión de módulos en Debian<a class="headerlink" href="#gestion-de-modulos-en-debian" title="Permanent link">&para;</a></h3>
+<p>En sistemas basados en Debian y Ubuntu, los módulos suelen almacenarse en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/mods-available
+</code></pre></div>
+<p>Esta carpeta contiene los módulos disponibles para el servidor.</p>
+<p>Cuando un módulo se activa, Apache crea los enlaces correspondientes en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/mods-enabled
+</code></pre></div>
+<p>Por tanto:</p>
+<div class="highlight"><pre><span></span><code>mods-available
+   │
+   ▼
+Módulo disponible
+
+mods-enabled
+   │
+   ▼
+Módulo cargado por Apache
+</code></pre></div>
+<h3 id="activacion-y-desactivacion-de-modulos">Activación y desactivación de módulos<a class="headerlink" href="#activacion-y-desactivacion-de-modulos" title="Permanent link">&para;</a></h3>
+<p>Apache proporciona herramientas específicas para gestionar módulos.</p>
+<p><strong>Activar un módulo</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>nombre_modulo
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+</code></pre></div>
+<p><strong>Desactivar un módulo</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dismod<span class="w"> </span>nombre_modulo
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dismod<span class="w"> </span>rewrite
+</code></pre></div>
+<p>Tras realizar cambios es necesario reiniciar o recargar el servicio:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="comprobacion-de-modulos-cargados">Comprobación de módulos cargados<a class="headerlink" href="#comprobacion-de-modulos-cargados" title="Permanent link">&para;</a></h3>
+<p>Podemos consultar los módulos cargados por Apache mediante el comando:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M
+</code></pre></div>
+<p>La salida mostrará una lista de todos los módulos actualmente activos.</p>
+<p>Ejemplo simplificado:</p>
+<div class="highlight"><pre><span></span><code>rewrite_module
+ssl_module
+alias_module
+dir_module
+php_module
+</code></pre></div>
+<h3 id="algunos-modulos-habituales">Algunos módulos habituales<a class="headerlink" href="#algunos-modulos-habituales" title="Permanent link">&para;</a></h3>
+<p>Apache dispone de decenas de módulos. A continuación se muestran algunos de los más utilizados.</p>
+<p><strong>mod_alias</strong></p>
+<p>Permite crear alias para acceder a directorios o recursos utilizando rutas diferentes.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/manual
+</code></pre></div>
+<p>puede apuntar a una carpeta distinta dentro del sistema de archivos.</p>
+<p><strong>mod_dir</strong></p>
+<p>Gestiona las páginas predeterminadas de un directorio.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>index.html
+index.php
+</code></pre></div>
+<p>Cuando un usuario accede a:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/
+</code></pre></div>
+<p>Apache buscará automáticamente uno de estos archivos.</p>
+<p><strong>mod_autoindex</strong></p>
+<p>Permite generar listados de directorios cuando no existe una página de inicio.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/documentos/
+</code></pre></div>
+<p>podría mostrar el contenido de esa carpeta.</p>
+<p><strong>mod_rewrite</strong></p>
+<p>Uno de los módulos más utilizados.</p>
+<p>Permite modificar y reescribir URL.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>https://web.com/producto.php?id=25
+</code></pre></div>
+<p>puede transformarse en:</p>
+<div class="highlight"><pre><span></span><code>https://web.com/productos/25
+</code></pre></div>
+<p>Las URL resultantes son más legibles y fáciles de recordar.</p>
+<p><strong>mod_ssl</strong></p>
+<p>Añade soporte para comunicaciones seguras mediante HTTPS.</p>
+<p>Gracias a este módulo Apache puede:</p>
+<ul>
+<li>Utilizar certificados digitales.</li>
+<li>Cifrar las comunicaciones.</li>
+<li>Garantizar la autenticidad del servidor.</li>
+</ul>
+<p>Actualmente es uno de los módulos más importantes en cualquier servidor web.</p>
+<p><strong>mod_userdir</strong></p>
+<p>Permite que cada usuario del sistema disponga de un directorio web personal.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/~usuario
+</code></pre></div>
+<p>Esta funcionalidad ha sido utilizada tradicionalmente en entornos educativos y de desarrollo.</p>
+<h3 id="modulos-de-autenticacion">Módulos de autenticación<a class="headerlink" href="#modulos-de-autenticacion" title="Permanent link">&para;</a></h3>
+<p>Apache incluye diversos módulos relacionados con la autenticación y autorización de usuarios.</p>
+<p>Entre ellos destacan:</p>
+<ul>
+<li><code>mod_auth_basic</code></li>
+<li><code>mod_authn_*</code></li>
+<li><code>mod_authz_*</code></li>
+</ul>
+<p>Estos módulos permiten:</p>
+<ul>
+<li>Solicitar usuario y contraseña.</li>
+<li>Validar credenciales.</li>
+<li>Restringir el acceso a determinados recursos.</li>
+<li>Controlar permisos.</li>
+</ul>
+<p>Más adelante utilizaremos algunos de ellos para proteger recursos web.</p>
+<h3 id="arquitectura-modular-y-seguridad">Arquitectura modular y seguridad<a class="headerlink" href="#arquitectura-modular-y-seguridad" title="Permanent link">&para;</a></h3>
+<p>Una buena práctica de administración consiste en activar únicamente los módulos necesarios para el funcionamiento del servidor.</p>
+<p>Cuantos más módulos estén cargados:</p>
+<ul>
+<li>Mayor será el consumo de recursos.</li>
+<li>Más compleja será la administración.</li>
+<li>Mayor será la superficie de ataque.</li>
+</ul>
+<p>Por este motivo es habitual revisar periódicamente los módulos activos y deshabilitar aquellos que no sean necesarios.</p>
+<h2 id="25-instalacion-de-apache">2.5 Instalación de Apache<a class="headerlink" href="#25-instalacion-de-apache" title="Permanent link">&para;</a></h2>
+<p>Una vez comprendido el papel que desempeña Apache dentro de una aplicación web, el siguiente paso consiste en instalarlo y verificar su correcto funcionamiento.</p>
+<p>En este módulo utilizaremos sistemas basados en Debian GNU/Linux, por lo que la instalación se realizará mediante el gestor de paquetes <strong>APT</strong>.</p>
+<h3 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h3>
+<p>Para instalar software en el sistema es necesario disponer de permisos de administración.</p>
+<p>Podemos ejecutar los comandos utilizando <code>sudo</code> o trabajando directamente con el usuario <code>root</code>.</p>
+<p>Antes de instalar cualquier paquete es recomendable actualizar la información de los repositorios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<h3 id="instalacion-de-apache">Instalación de Apache<a class="headerlink" href="#instalacion-de-apache" title="Permanent link">&para;</a></h3>
+<p>Apache se distribuye en Debian mediante el paquete:</p>
+<div class="highlight"><pre><span></span><code>apache2
+</code></pre></div>
+<p>La instalación se realiza con el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+</code></pre></div>
+<p>Durante el proceso se instalarán también algunos paquetes adicionales necesarios para el funcionamiento del servidor.</p>
+<h3 id="paquetes-instalados">Paquetes instalados<a class="headerlink" href="#paquetes-instalados" title="Permanent link">&para;</a></h3>
+<p>Además del servidor web, suelen instalarse componentes auxiliares como:</p>
+<p><strong>apache2-data</strong></p>
+<p>Contiene recursos comunes utilizados por Apache:</p>
+<ul>
+<li>Páginas de error.</li>
+<li>Iconos.</li>
+<li>Archivos estáticos.</li>
+<li>Configuraciones básicas.</li>
+</ul>
+<p><strong>apache2-utils</strong></p>
+<p>Incluye herramientas de administración y diagnóstico.</p>
+<p>Algunas de las más utilizadas son:</p>
+<p><em>ab</em></p>
+<p>Permite realizar pruebas de rendimiento sobre un servidor web.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>ab<span class="w"> </span>-n<span class="w"> </span><span class="m">1000</span><span class="w"> </span>-c<span class="w"> </span><span class="m">10</span><span class="w"> </span>http://localhost/
+</code></pre></div>
+<p><em>htpasswd</em></p>
+<p>Permite crear y gestionar ficheros de usuarios para autenticación básica.</p>
+<h3 id="inicio-automatico-del-servicio">Inicio automático del servicio<a class="headerlink" href="#inicio-automatico-del-servicio" title="Permanent link">&para;</a></h3>
+<p>Tras la instalación, Apache suele iniciarse automáticamente.</p>
+<p>Podemos comprobar el estado del servicio mediante:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+<p>Si el servidor está funcionando correctamente observaremos un resultado similar a:</p>
+<div class="highlight"><pre><span></span><code>Active: active (running)
+</code></pre></div>
+<h3 id="gestion-del-servicio">Gestión del servicio<a class="headerlink" href="#gestion-del-servicio" title="Permanent link">&para;</a></h3>
+<p>Los sistemas Linux actuales utilizan normalmente <strong>systemd</strong> para gestionar servicios.</p>
+<p><strong>Iniciar Apache</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2
+</code></pre></div>
+<p><strong>Detener Apache</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>apache2
+</code></pre></div>
+<p><strong>Reiniciar Apache</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<p><strong>Recargar la configuración</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<p><strong>Consultar el estado</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="estructura-basica-de-directorios">Estructura básica de directorios<a class="headerlink" href="#estructura-basica-de-directorios" title="Permanent link">&para;</a></h3>
+<p>Después de la instalación encontraremos varios directorios importantes.</p>
+<p><strong>Directorio de configuración</strong></p>
+<div class="highlight"><pre><span></span><code>/etc/apache2
+</code></pre></div>
+<p>Contiene los archivos de configuración del servidor.</p>
+<p>Entre ellos destacan:</p>
+<div class="highlight"><pre><span></span><code>apache2.conf
+ports.conf
+</code></pre></div>
+<p>y diversos subdirectorios para módulos y sitios web.</p>
+<p><strong>Directorio de contenido web</strong></p>
+<div class="highlight"><pre><span></span><code>/var/www/html
+</code></pre></div>
+<p>Es el directorio utilizado por defecto para publicar páginas web.</p>
+<p>Cualquier archivo almacenado aquí podrá ser servido por Apache.</p>
+<h3 id="primera-comprobacion">Primera comprobación<a class="headerlink" href="#primera-comprobacion" title="Permanent link">&para;</a></h3>
+<p>Una vez instalado Apache, podemos abrir un navegador y acceder a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost
+</code></pre></div>
+<p>Si todo funciona correctamente aparecerá la página de bienvenida de Apache.</p>
+<p>Esta página confirma que:</p>
+<ul>
+<li>Apache está instalado.</li>
+<li>El servicio está funcionando.</li>
+<li>El servidor acepta conexiones HTTP.</li>
+</ul>
+<h3 id="publicacion-de-nuestra-primera-pagina">Publicación de nuestra primera página<a class="headerlink" href="#publicacion-de-nuestra-primera-pagina" title="Permanent link">&para;</a></h3>
+<p>Podemos añadir una página de prueba:</p>
+<p><strong>Crear el archivo</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/prueba.html
+</code></pre></div>
+<p>Contenido:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi primer servidor web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Servidor Apache funcionando correctamente<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Guardar cambios</strong></p>
+<p>Una vez guardado el fichero, al acceder nuevamente a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/prueba.html
+</code></pre></div>
+<p>el navegador mostrará nuestra página.</p>
+<h3 id="problemas-habituales-durante-la-instalacion">Problemas habituales durante la instalación<a class="headerlink" href="#problemas-habituales-durante-la-instalacion" title="Permanent link">&para;</a></h3>
+<p><strong>El puerto 80 está ocupado</strong></p>
+<p>Si otro servicio utiliza el puerto 80, Apache no podrá iniciarse.</p>
+<p>Podemos identificar el proceso que está utilizando dicho puerto:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ss<span class="w"> </span>-tulpn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:80
+</code></pre></div>
+<p><strong>Error de configuración</strong></p>
+<p>Si Apache no arranca después de modificar algún fichero:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>configtest
+</code></pre></div>
+<p>suele proporcionar información suficiente para localizar el problema.</p>
+<p><strong>Página no accesible</strong></p>
+<p>Comprobar:</p>
+<ul>
+<li>Que el servicio esté activo.</li>
+<li>Que el cortafuegos permita conexiones.</li>
+<li>Que exista un archivo <code>index.html</code>.</li>
+<li>Que los permisos sean correctos.</li>
+</ul>
+<h3 id="comprobacion-mediante-la-direccion-ip">Comprobación mediante la dirección IP<a class="headerlink" href="#comprobacion-mediante-la-direccion-ip" title="Permanent link">&para;</a></h3>
+<p>Además de utilizar <code>localhost</code>, también podemos acceder mediante la dirección IP del equipo.</p>
+<p>La forma más sencilla de conocerla es:</p>
+<div class="highlight"><pre><span></span><code>hostname<span class="w"> </span>-I
+</code></pre></div>
+<p>Como alternativa podemos utilizar:</p>
+<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>addr
+</code></pre></div>
+<p>Supongamos que la dirección IP es:</p>
+<div class="highlight"><pre><span></span><code>192.168.1.100
+</code></pre></div>
+<p>Podemos acceder desde el navegador mediante:</p>
+<div class="highlight"><pre><span></span><code>http://192.168.1.100
+</code></pre></div>
+<p>Si la página se muestra correctamente, Apache está atendiendo solicitudes a través de la red.</p>
+<h3 id="comprobacion-mediante-herramientas-de-terminal">Comprobación mediante herramientas de terminal<a class="headerlink" href="#comprobacion-mediante-herramientas-de-terminal" title="Permanent link">&para;</a></h3>
+<p>También es posible verificar el funcionamiento utilizando herramientas de línea de comandos.</p>
+<p><strong>Utilizando curl</strong></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost
+</code></pre></div>
+<p>El servidor devolverá el contenido HTML de la página solicitada.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Apache funciona correctamente<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Utilizando wget</strong></p>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span>http://localhost
+</code></pre></div>
+<p>Estas herramientas son especialmente útiles en servidores sin entorno gráfico.</p>
+<h3 id="registros-del-servidor">Registros del servidor<a class="headerlink" href="#registros-del-servidor" title="Permanent link">&para;</a></h3>
+<p>Apache registra información sobre su funcionamiento en distintos archivos de log.</p>
+<p>Estos registros son fundamentales para detectar incidencias.</p>
+<p><strong>Registro de errores</strong></p>
+<div class="highlight"><pre><span></span><code>/var/log/apache2/error.log
+</code></pre></div>
+<p>Permite consultar:</p>
+<ul>
+<li>Errores de configuración.</li>
+<li>Problemas de permisos.</li>
+<li>Fallos de módulos.</li>
+<li>Errores internos del servidor.</li>
+</ul>
+<p>Visualización rápida:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/error.log
+</code></pre></div>
+<p><strong>Registro de accesos</strong></p>
+<div class="highlight"><pre><span></span><code>/var/log/apache2/access.log
+</code></pre></div>
+<p>Contiene información sobre las solicitudes realizadas al servidor.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>192.168.1.50 - - [01/Sep/2026:10:15:21 +0200] "GET /index.html HTTP/1.1" 200 1234
+</code></pre></div>
+<p>Esta información permite conocer:</p>
+<ul>
+<li>Qué recurso se ha solicitado.</li>
+<li>Qué método HTTP se ha utilizado.</li>
+<li>Qué código de respuesta ha devuelto el servidor.</li>
+<li>El tamaño de la respuesta enviada.</li>
+<li>La fecha y hora del acceso.</li>
+</ul>
+<h2 id="27-configuracion-basica-de-apache">2.7 Configuración básica de Apache<a class="headerlink" href="#27-configuracion-basica-de-apache" title="Permanent link">&para;</a></h2>
+<p>Una vez instalado y comprobado el funcionamiento del servidor web, el siguiente paso consiste en conocer cómo se organiza su configuración.</p>
+<p>Apache dispone de una estructura jerárquica de archivos y directorios que permite configurar distintos aspectos de su funcionamiento sin necesidad de modificar el núcleo del servidor.</p>
+<p>Comprender esta estructura resulta fundamental para administrar correctamente un servidor web.</p>
+<h3 id="directorio-de-configuracion">Directorio de configuración<a class="headerlink" href="#directorio-de-configuracion" title="Permanent link">&para;</a></h3>
+<p>En sistemas Debian y Ubuntu, los archivos de configuración de Apache se encuentran en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2
+</code></pre></div>
+<p>Podemos explorar su contenido mediante:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/etc/apache2
+</code></pre></div>
+<p>Una instalación típica contiene archivos y directorios similares a los siguientes:</p>
+<div class="highlight"><pre><span></span><code>apache2.conf
+ports.conf
+mods-available
+mods-enabled
+conf-available
+conf-enabled
+sites-available
+sites-enabled
+</code></pre></div>
+<h3 id="archivo-principal-de-configuracion">Archivo principal de configuración<a class="headerlink" href="#archivo-principal-de-configuracion" title="Permanent link">&para;</a></h3>
+<p>El archivo principal de Apache es:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/apache2.conf
+</code></pre></div>
+<p>Este fichero contiene la configuración global del servidor.</p>
+<p>Entre otros aspectos permite definir:</p>
+<ul>
+<li>Configuración general de Apache.</li>
+<li>Directivas comunes para todo el servidor.</li>
+<li>Configuración de directorios.</li>
+<li>Inclusión de otros archivos de configuración.</li>
+<li>Parámetros de seguridad y funcionamiento.</li>
+</ul>
+<p>Aunque gran parte de la configuración diaria se realiza mediante otros archivos más específicos, algunas configuraciones globales requieren modificar este fichero.</p>
+<h3 id="configuracion-de-puertos">Configuración de puertos<a class="headerlink" href="#configuracion-de-puertos" title="Permanent link">&para;</a></h3>
+<p>Apache utiliza el archivo:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/ports.conf
+</code></pre></div>
+<p>para definir los puertos en los que escuchará conexiones entrantes.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Listen</span><span class="w"> </span><span class="m">80</span>
+</code></pre></div>
+<p>La directiva <code>Listen</code> indica que Apache aceptará conexiones TCP en el puerto 80.</p>
+<p>También es habitual encontrar:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Listen</span><span class="w"> </span><span class="m">443</span>
+</code></pre></div>
+<p>para conexiones HTTPS.</p>
+<p>Por tanto, este fichero determina qué puertos utilizará Apache para recibir las solicitudes de los clientes.</p>
+<h3 id="sitios-web-disponibles">Sitios web disponibles<a class="headerlink" href="#sitios-web-disponibles" title="Permanent link">&para;</a></h3>
+<p>Apache permite alojar varios sitios web en un mismo servidor.</p>
+<p>Las configuraciones de los distintos sitios se almacenan en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/sites-available
+</code></pre></div>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/etc/apache2/sites-available
+</code></pre></div>
+<p>puede mostrar:</p>
+<div class="highlight"><pre><span></span><code>000-default.conf
+default-ssl.conf
+</code></pre></div>
+<p>Este directorio contiene los sitios definidos, independientemente de que estén activos o no.</p>
+<h3 id="el-sitio-por-defecto">El sitio por defecto<a class="headerlink" href="#el-sitio-por-defecto" title="Permanent link">&para;</a></h3>
+<p>Durante la instalación se crea normalmente un sitio denominado:</p>
+<div class="highlight"><pre><span></span><code>000-default.conf
+</code></pre></div>
+<p>Este archivo define el sitio web predeterminado del servidor.</p>
+<p>Apache utilizará esta configuración cuando no exista otra más específica que deba responder a la solicitud recibida.</p>
+<h3 id="sitios-web-activos">Sitios web activos<a class="headerlink" href="#sitios-web-activos" title="Permanent link">&para;</a></h3>
+<p>Los sitios que realmente utilizará Apache se encuentran en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/sites-enabled
+</code></pre></div>
+<p>Normalmente este directorio contiene enlaces simbólicos a los archivos almacenados en:</p>
+<div class="highlight"><pre><span></span><code>sites-available
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sites-available
+   │
+   ▼
+000-default.conf
+   │
+   ▼
+sites-enabled
+</code></pre></div>
+<p>Por tanto:</p>
+<ul>
+<li><code>sites-available</code> contiene los sitios definidos.</li>
+<li><code>sites-enabled</code> contiene los sitios activos.</li>
+</ul>
+<p>Cuando Apache arranca únicamente carga las configuraciones presentes en <code>sites-enabled</code>.</p>
+<hr />
+<h3 id="activacion-de-sitios-web">Activación de sitios web<a class="headerlink" href="#activacion-de-sitios-web" title="Permanent link">&para;</a></h3>
+<p>Apache incorpora herramientas específicas para gestionar sitios web.</p>
+<p><strong>Activar un sitio</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>nombre_sitio
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>miweb.conf
+</code></pre></div>
+<p><strong>Desactivar un sitio</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dissite<span class="w"> </span>nombre_sitio
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dissite<span class="w"> </span>miweb.conf
+</code></pre></div>
+<p>Después de cualquier modificación es necesario recargar la configuración:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<hr />
+<h3 id="configuraciones-adicionales">Configuraciones adicionales<a class="headerlink" href="#configuraciones-adicionales" title="Permanent link">&para;</a></h3>
+<p>Apache también permite incorporar configuraciones complementarias mediante:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/conf-available
+</code></pre></div>
+<p>Estas configuraciones suelen utilizarse para:</p>
+<ul>
+<li>Alias.</li>
+<li>Documentación.</li>
+<li>Configuraciones compartidas.</li>
+<li>Opciones generales reutilizables.</li>
+</ul>
+<p>Las configuraciones activas aparecen en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/conf-enabled
+</code></pre></div>
+<hr />
+<h3 id="activacion-de-configuraciones">Activación de configuraciones<a class="headerlink" href="#activacion-de-configuraciones" title="Permanent link">&para;</a></h3>
+<p><strong>Activar una configuración</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enconf<span class="w"> </span>nombre_configuracion
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enconf<span class="w"> </span>apache2-doc
+</code></pre></div>
+<p><strong>Desactivar una configuración</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2disconf<span class="w"> </span>nombre_configuracion
+</code></pre></div>
+<p>Después de cualquier cambio:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<hr />
+<h3 id="jerarquia-de-la-configuracion">Jerarquía de la configuración<a class="headerlink" href="#jerarquia-de-la-configuracion" title="Permanent link">&para;</a></h3>
+<p>Durante el arranque, Apache procesa de forma automática los principales archivos y directorios de configuración.</p>
+<p>De forma simplificada:</p>
+<div class="highlight"><pre><span></span><code>apache2.conf
+   │
+   ├── ports.conf
+   ├── mods-enabled
+   ├── conf-enabled
+   └── sites-enabled
+</code></pre></div>
+<p>A partir de estos elementos Apache construye la configuración efectiva del servidor.</p>
+<p>Por este motivo es importante recordar que Apache trabaja principalmente con los elementos activos (<code>*-enabled</code>), no con todos los disponibles (<code>*-available</code>).</p>
+<hr />
+<h3 id="documentroot">DocumentRoot<a class="headerlink" href="#documentroot" title="Permanent link">&para;</a></h3>
+<p>Cada sitio web necesita un directorio desde el que publicar sus recursos.</p>
+<p>Este directorio recibe el nombre de <strong>DocumentRoot</strong>.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span>
+</code></pre></div>
+<p>indica que Apache buscará los recursos del sitio en:</p>
+<div class="highlight"><pre><span></span><code>/var/www/html
+</code></pre></div>
+<p>Cuando un usuario solicita:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/index.html
+</code></pre></div>
+<p>Apache buscará el fichero:</p>
+<div class="highlight"><pre><span></span><code>/var/www/html/index.html
+</code></pre></div>
+<p>dentro del DocumentRoot configurado para ese sitio.</p>
+<hr />
+<h3 id="directorio-de-publicacion-por-defecto">Directorio de publicación por defecto<a class="headerlink" href="#directorio-de-publicacion-por-defecto" title="Permanent link">&para;</a></h3>
+<p>En las instalaciones estándar de Debian y Ubuntu, el sitio web predeterminado utiliza:</p>
+<div class="highlight"><pre><span></span><code>/var/www/html
+</code></pre></div>
+<p>como DocumentRoot.</p>
+<p>Por ello, los archivos almacenados en dicho directorio pueden ser publicados directamente por Apache.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"&lt;h1&gt;Hola ASIR&lt;/h1&gt;"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/var/www/html/index.html
+</code></pre></div>
+<hr />
+<h3 id="modificacion-de-la-pagina-principal">Modificación de la página principal<a class="headerlink" href="#modificacion-de-la-pagina-principal" title="Permanent link">&para;</a></h3>
+<p>Podemos sustituir la página predeterminada por una propia.</p>
+<p>Editar:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/index.html
+</code></pre></div>
+<p>Contenido de ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Servidor Apache<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Configuración básica completada<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Al acceder a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost
+</code></pre></div>
+<p>Apache mostrará la nueva página.</p>
+<hr />
+<h3 id="recarga-y-reinicio-del-servidor">Recarga y reinicio del servidor<a class="headerlink" href="#recarga-y-reinicio-del-servidor" title="Permanent link">&para;</a></h3>
+<p>Después de modificar la configuración es necesario aplicar los cambios.</p>
+<p><strong>Recargar la configuración</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<p>Apache vuelve a leer los archivos de configuración sin detener completamente el servicio.</p>
+<p><strong>Reiniciar el servidor</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<p>Apache detiene y vuelve a iniciar todos sus procesos.</p>
+<p>Siempre que sea posible es preferible utilizar <code>reload</code>, ya que provoca una interrupción mínima o nula del servicio.</p>
+<hr />
+<h3 id="validacion-de-la-configuracion">Validación de la configuración<a class="headerlink" href="#validacion-de-la-configuracion" title="Permanent link">&para;</a></h3>
+<p>Antes de aplicar cambios es recomendable verificar la sintaxis de los archivos modificados.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>configtest
+</code></pre></div>
+<p>Si la configuración es correcta aparecerá:</p>
+<div class="highlight"><pre><span></span><code>Syntax OK
+</code></pre></div>
+<p>Esta comprobación ayuda a evitar errores que podrían impedir el arranque del servidor.</p>
+<hr />
+<h3 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mantener los sitios personalizados en <code>sites-available</code>.</li>
+<li>Activar únicamente los sitios necesarios.</li>
+<li>Utilizar comentarios en los archivos de configuración.</li>
+<li>Documentar los cambios realizados.</li>
+<li>Realizar copias de seguridad antes de modificar configuraciones importantes.</li>
+<li>Validar siempre la configuración mediante <code>apache2ctl configtest</code>.</li>
+<li>Utilizar <code>reload</code> siempre que sea posible.</li>
+</ul>
+<hr />
+<h3 id="ideas-clave">Ideas clave<a class="headerlink" href="#ideas-clave" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Identificar la estructura de configuración de Apache.</li>
+<li>Comprender la función de <code>apache2.conf</code> y <code>ports.conf</code>.</li>
+<li>Diferenciar sitios definidos y sitios activos.</li>
+<li>Comprender el papel del sitio por defecto <code>000-default.conf</code>.</li>
+<li>Explicar qué es un <code>DocumentRoot</code>.</li>
+<li>Activar y desactivar sitios mediante <code>a2ensite</code> y <code>a2dissite</code>.</li>
+<li>Activar y desactivar configuraciones mediante <code>a2enconf</code> y <code>a2disconf</code>.</li>
+<li>Modificar el contenido publicado por Apache.</li>
+<li>Validar la configuración antes de aplicarla.</li>
+<li>Aplicar cambios mediante <code>reload</code> o <code>restart</code>.</li>
+</ul>
+<h2 id="27-directorios-personales">2.7 Directorios personales<a class="headerlink" href="#27-directorios-personales" title="Permanent link">&para;</a></h2>
+<p>Apache permite que cada usuario del sistema disponga de un espacio web propio dentro de su directorio personal.</p>
+<p>Esta funcionalidad resulta especialmente útil en entornos educativos y de desarrollo, ya que permite que varios usuarios publiquen sus páginas web sin necesidad de modificar la configuración principal del servidor.</p>
+<p>Cada usuario podrá publicar contenido en su propio directorio y acceder a él mediante una URL específica.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>/home/alumno/public_html
+</code></pre></div>
+<p>podrá ser accesible desde:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/~alumno
+</code></pre></div>
+<hr />
+<h3 id="el-modulo-mod_userdir">El módulo mod_userdir<a class="headerlink" href="#el-modulo-mod_userdir" title="Permanent link">&para;</a></h3>
+<p>La funcionalidad de directorios personales se proporciona mediante el módulo:</p>
+<div class="highlight"><pre><span></span><code>mod_userdir
+</code></pre></div>
+<p>Este módulo permite asociar un directorio de cada usuario a una dirección web específica.</p>
+<p>De esta forma, Apache será capaz de localizar y servir automáticamente los contenidos publicados por cada usuario.</p>
+<hr />
+<h3 id="activacion-del-modulo">Activación del módulo<a class="headerlink" href="#activacion-del-modulo" title="Permanent link">&para;</a></h3>
+<p>Para habilitar esta funcionalidad debemos activar el módulo correspondiente.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>userdir
+</code></pre></div>
+<p>Una vez activado, es necesario recargar la configuración del servidor:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<p>También podemos comprobar que el módulo está cargado:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>userdir
+</code></pre></div>
+<p>Si todo funciona correctamente aparecerá una salida similar a:</p>
+<div class="highlight"><pre><span></span><code>userdir_module
+</code></pre></div>
+<hr />
+<h3 id="configuracion-basica">Configuración básica<a class="headerlink" href="#configuracion-basica" title="Permanent link">&para;</a></h3>
+<p>Al activar el módulo se utiliza una configuración similar a la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">UserDir</span><span class="w"> </span>public_html
+<span class="w">    </span><span class="nb">UserDir</span><span class="w"> </span>disabled<span class="w"> </span>root
+<span class="nt">&lt;/IfModule&gt;</span>
+</code></pre></div>
+<p>La directiva:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">UserDir</span><span class="w"> </span>public_html
+</code></pre></div>
+<p>indica que Apache buscará el contenido web de cada usuario dentro de un directorio denominado:</p>
+<div class="highlight"><pre><span></span><code>public_html
+</code></pre></div>
+<p>situado en su directorio personal.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>/home/alumno/public_html
+</code></pre></div>
+<p>Por motivos de seguridad, el usuario <code>root</code> suele tener esta funcionalidad deshabilitada:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">UserDir</span><span class="w"> </span>disabled<span class="w"> </span>root
+</code></pre></div>
+<hr />
+<h3 id="creacion-del-directorio-personal">Creación del directorio personal<a class="headerlink" href="#creacion-del-directorio-personal" title="Permanent link">&para;</a></h3>
+<p>Cada usuario debe crear su propio directorio de publicación.</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>~/public_html
+</code></pre></div>
+<p>Podemos verificar su creación mediante:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>~
+</code></pre></div>
+<p>Debería aparecer:</p>
+<div class="highlight"><pre><span></span><code>public_html
+</code></pre></div>
+<hr />
+<h3 id="creacion-de-una-pagina-de-prueba">Creación de una página de prueba<a class="headerlink" href="#creacion-de-una-pagina-de-prueba" title="Permanent link">&para;</a></h3>
+<p>Una vez creado el directorio, podemos publicar una página sencilla.</p>
+<p>Crear el archivo:</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>~/public_html/index.html
+</code></pre></div>
+<p>Contenido:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Página personal<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi espacio web personal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Guardar el archivo y cerrar el editor.</p>
+<hr />
+<h3 id="acceso-al-contenido-publicado">Acceso al contenido publicado<a class="headerlink" href="#acceso-al-contenido-publicado" title="Permanent link">&para;</a></h3>
+<p>Si el módulo está correctamente configurado, podremos acceder a la página mediante:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/~usuario
+</code></pre></div>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/~alumno
+</code></pre></div>
+<p>Apache buscará automáticamente:</p>
+<div class="highlight"><pre><span></span><code>/home/alumno/public_html/index.html
+</code></pre></div>
+<p>y enviará su contenido al navegador.</p>
+<div class="highlight"><pre><span></span><code>Navegador
+   │
+   ▼
+http://localhost/~alumno
+   │
+   ▼
+Apache
+   │
+   ▼
+/home/alumno/public_html/index.html
+</code></pre></div>
+<hr />
+<h3 id="permisos-de-acceso">Permisos de acceso<a class="headerlink" href="#permisos-de-acceso" title="Permanent link">&para;</a></h3>
+<p>Para que Apache pueda publicar el contenido, debe tener permisos suficientes para acceder al directorio <code>public_html</code>.</p>
+<p>La configuración exacta dependerá de la política de permisos del sistema.</p>
+<p>Un ejemplo habitual consiste en permitir la lectura y ejecución sobre el directorio publicado:</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>~/public_html
+</code></pre></div>
+<p>Podemos comprobar los permisos mediante:</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-ld<span class="w"> </span>~/public_html
+</code></pre></div>
+<p>Si Apache no puede acceder al directorio, la página no será visible aunque exista correctamente.</p>
+<hr />
+<h3 id="pagina-predeterminada">Página predeterminada<a class="headerlink" href="#pagina-predeterminada" title="Permanent link">&para;</a></h3>
+<p>Cuando un usuario accede a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/~usuario
+</code></pre></div>
+<p>Apache busca automáticamente una página de inicio dentro del directorio personal.</p>
+<p>Los nombres más habituales son:</p>
+<div class="highlight"><pre><span></span><code>index.html
+index.php
+</code></pre></div>
+<p>Si no encuentra ninguno de ellos, el comportamiento dependerá de la configuración del servidor.</p>
+<hr />
+<h3 id="ejecucion-de-php-en-directorios-personales">Ejecución de PHP en directorios personales<a class="headerlink" href="#ejecucion-de-php-en-directorios-personales" title="Permanent link">&para;</a></h3>
+<p>Por motivos de seguridad, las distribuciones Debian y Ubuntu suelen deshabilitar la ejecución de PHP dentro de los directorios personales de los usuarios.</p>
+<p>Esto significa que:</p>
+<div class="highlight"><pre><span></span><code>index.html
+</code></pre></div>
+<p>funcionará correctamente, pero un archivo como:</p>
+<div class="highlight"><pre><span></span><code>index.php
+</code></pre></div>
+<p>puede no ejecutarse aunque PHP esté instalado.</p>
+<p>Esta restricción se configura normalmente en un archivo similar a:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/mods-available/php*.conf
+</code></pre></div>
+<p>donde suele aparecer un bloque parecido a:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/home/*/public_html</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nb">php_admin_flag</span><span class="w"> </span>engine<span class="w"> </span><span class="k">Off</span>
+<span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/IfModule&gt;</span>
+</code></pre></div>
+<p>La directiva:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">php_admin_flag</span><span class="w"> </span>engine<span class="w"> </span><span class="k">Off</span>
+</code></pre></div>
+<p>impide que Apache ejecute código PHP dentro de los directorios personales.</p>
+<p>Si se desea permitir la ejecución de PHP será necesario modificar esta configuración y reiniciar Apache.</p>
+<blockquote>
+<p>En entornos reales esta restricción suele mantenerse por motivos de seguridad.</p>
+</blockquote>
+<hr />
+<h3 id="ventajas-de-los-directorios-personales">Ventajas de los directorios personales<a class="headerlink" href="#ventajas-de-los-directorios-personales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cada usuario dispone de su propio espacio web.</li>
+<li>No es necesario crear un sitio independiente para cada alumno.</li>
+<li>Facilita las prácticas de desarrollo web.</li>
+<li>Permite aislar el trabajo de distintos usuarios.</li>
+<li>Simplifica las pruebas en entornos educativos.</li>
+</ul>
+<hr />
+<h3 id="limitaciones">Limitaciones<a class="headerlink" href="#limitaciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No suele utilizarse en entornos de producción.</li>
+<li>Requiere una correcta configuración de permisos.</li>
+<li>PHP suele estar deshabilitado por defecto.</li>
+<li>Resulta menos flexible que el uso de Virtual Hosts.</li>
+</ul>
+<hr />
+<h3 id="buenas-practicas_1">Buenas prácticas<a class="headerlink" href="#buenas-practicas_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mantener los archivos personales dentro de <code>public_html</code>.</li>
+<li>Utilizar permisos adecuados.</li>
+<li>Evitar publicar información sensible.</li>
+<li>Verificar el funcionamiento con una página HTML sencilla antes de utilizar otras tecnologías.</li>
+<li>Comprobar los registros de Apache cuando aparezcan errores de acceso.</li>
+</ul>
+<hr />
+<h3 id="ideas-clave_1">Ideas clave<a class="headerlink" href="#ideas-clave_1" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Explicar qué son los directorios personales de Apache.</li>
+<li>Comprender la función del módulo <code>mod_userdir</code>.</li>
+<li>Activar y verificar el funcionamiento del módulo.</li>
+<li>Crear un directorio <code>public_html</code>.</li>
+<li>Publicar contenido web personal.</li>
+<li>Acceder a dicho contenido mediante la URL <code>http://localhost/~usuario</code>.</li>
+<li>Comprender las limitaciones relacionadas con los permisos y la ejecución de PHP.</li>
+</ul>
+<h2 id="28-ampliacion-gestion-de-modulos-en-apache">2.8 Ampliación gestión de módulos en Apache<a class="headerlink" href="#28-ampliacion-gestion-de-modulos-en-apache" title="Permanent link">&para;</a></h2>
+<h3 id="estructura-de-los-modulos">Estructura de los módulos<a class="headerlink" href="#estructura-de-los-modulos" title="Permanent link">&para;</a></h3>
+<p>La mayoría de los módulos están formados por dos archivos:</p>
+<p><strong>Archivo <code>.load</code></strong></p>
+<p>Indica a Apache qué módulo debe cargarse.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>rewrite.load
+</code></pre></div>
+<p><strong>Archivo <code>.conf</code></strong></p>
+<p>Contiene la configuración asociada al módulo.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>rewrite.conf
+</code></pre></div>
+<p>No todos los módulos disponen de un archivo de configuración, pero muchos de ellos sí lo utilizan.</p>
+<hr />
+<h3 id="modulos-habituales">Módulos habituales<a class="headerlink" href="#modulos-habituales" title="Permanent link">&para;</a></h3>
+<p>A continuación se muestran algunos de los módulos más utilizados durante la administración de servidores Apache.</p>
+<p><strong>mod_alias</strong></p>
+<p>Permite crear alias para directorios y recursos.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/manual
+</code></pre></div>
+<p>puede apuntar a una ubicación diferente dentro del sistema de archivos.</p>
+<p>Se utiliza frecuentemente para simplificar rutas de acceso.</p>
+<p><strong>mod_dir</strong></p>
+<p>Gestiona las páginas de inicio de cada directorio.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>index.html
+index.php
+</code></pre></div>
+<p>Cuando un usuario accede a:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/
+</code></pre></div>
+<p>Apache buscará automáticamente uno de estos archivos para mostrarlo.</p>
+<p><strong>mod_autoindex</strong></p>
+<p>Permite generar listados automáticos de directorios cuando no existe una página de inicio.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://servidor/documentos/
+</code></pre></div>
+<p>podría mostrar el contenido de la carpeta.</p>
+<p>Esta funcionalidad suele deshabilitarse en entornos de producción por motivos de seguridad.</p>
+<p><strong>mod_rewrite</strong></p>
+<p>Es uno de los módulos más utilizados.</p>
+<p>Permite modificar y reescribir URL.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>https://web.com/producto.php?id=25
+</code></pre></div>
+<p>puede transformarse en:</p>
+<div class="highlight"><pre><span></span><code>https://web.com/productos/25
+</code></pre></div>
+<p>Gracias a ello es posible utilizar URL más legibles y amigables para los usuarios.</p>
+<p><strong>mod_ssl</strong></p>
+<p>Añade soporte para HTTPS.</p>
+<p>Permite:</p>
+<ul>
+<li>Utilizar certificados digitales.</li>
+<li>Cifrar las comunicaciones.</li>
+<li>Verificar la identidad del servidor.</li>
+</ul>
+<p>Actualmente es imprescindible en prácticamente cualquier sitio web publicado en Internet.</p>
+<p><strong>mod_userdir</strong></p>
+<p>Permite que cada usuario disponga de un directorio web personal.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/~alumno
+</code></pre></div>
+<p>Este módulo fue estudiado en el apartado anterior.</p>
+<p><strong>mod_status</strong></p>
+<p>Proporciona información sobre el estado del servidor.</p>
+<p>Puede utilizarse para consultar:</p>
+<ul>
+<li>Conexiones activas.</li>
+<li>Procesos en ejecución.</li>
+<li>Estadísticas de funcionamiento.</li>
+</ul>
+<p>Es especialmente útil para tareas de monitorización.</p>
+<hr />
+<h3 id="modulos-de-autenticacion_1">Módulos de autenticación<a class="headerlink" href="#modulos-de-autenticacion_1" title="Permanent link">&para;</a></h3>
+<p>Apache dispone de varios módulos destinados al control de acceso.</p>
+<p>Entre los más importantes se encuentran:</p>
+<div class="highlight"><pre><span></span><code>mod_auth_basic
+mod_authn_*
+mod_authz_*
+</code></pre></div>
+<p>Estos módulos permiten:</p>
+<ul>
+<li>Solicitar usuario y contraseña.</li>
+<li>Verificar credenciales.</li>
+<li>Restringir el acceso a recursos.</li>
+<li>Aplicar permisos.</li>
+</ul>
+<p>Más adelante utilizaremos algunos de ellos para proteger directorios y páginas web.</p>
+<hr />
+<h3 id="buenas-practicas_2">Buenas prácticas<a class="headerlink" href="#buenas-practicas_2" title="Permanent link">&para;</a></h3>
+<p>Aunque Apache permite activar numerosos módulos, es recomendable habilitar únicamente aquellos que realmente sean necesarios.</p>
+<p>Activar módulos innecesarios puede provocar:</p>
+<ul>
+<li>Mayor consumo de recursos.</li>
+<li>Configuraciones más complejas.</li>
+<li>Incremento de la superficie de ataque.</li>
+<li>Mayor dificultad de mantenimiento.</li>
+</ul>
+<p>Una buena práctica consiste en revisar periódicamente los módulos activos y deshabilitar aquellos que no se utilicen.</p>
+<hr />
+<h3 id="ejemplo-practico">Ejemplo práctico<a class="headerlink" href="#ejemplo-practico" title="Permanent link">&para;</a></h3>
+<p>Activar HTTPS y reescritura de URL:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>ssl
+sudo<span class="w"> </span>a2enmod<span class="w"> </span>rewrite
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<p>Comprobar la carga de los módulos:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ssl
+sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>rewrite
+</code></pre></div>
+<p>Si aparecen:</p>
+<div class="highlight"><pre><span></span><code>ssl_module
+rewrite_module
+</code></pre></div>
+<p>la activación se ha realizado correctamente.</p>
+<hr />
+<h3 id="ideas-clave_2">Ideas clave<a class="headerlink" href="#ideas-clave_2" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Explicar qué es un módulo de Apache.</li>
+<li>Diferenciar módulos instalados y módulos activos.</li>
+<li>Activar y desactivar módulos mediante <code>a2enmod</code> y <code>a2dismod</code>.</li>
+<li>Consultar los módulos cargados por Apache.</li>
+<li>Reconocer la función de módulos habituales como <code>mod_ssl</code>, <code>mod_rewrite</code> o <code>mod_userdir</code>.</li>
+<li>Comprender la relación entre modularidad, rendimiento y seguridad.</li>
+<li>Aplicar buenas prácticas en la gestión de módulos.</li>
+</ul>
+<h2 id="29-control-de-accesos">2.9 Control de accesos<a class="headerlink" href="#29-control-de-accesos" title="Permanent link">&para;</a></h2>
+<p>En muchas ocasiones no todos los recursos publicados por un servidor web deben estar disponibles para cualquier usuario.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Paneles de administración.</li>
+<li>Intranets corporativas.</li>
+<li>Áreas privadas de usuarios.</li>
+<li>Documentación interna.</li>
+<li>Herramientas de gestión.</li>
+</ul>
+<p>Apache incorpora diferentes mecanismos que permiten controlar quién puede acceder a determinados recursos.</p>
+<p>Estos mecanismos pueden basarse en:</p>
+<ul>
+<li>Usuario y contraseña.</li>
+<li>Dirección IP.</li>
+<li>Grupos de usuarios.</li>
+<li>Reglas de autorización.</li>
+</ul>
+<hr />
+<h3 id="autenticacion-y-autorizacion">Autenticación y autorización<a class="headerlink" href="#autenticacion-y-autorizacion" title="Permanent link">&para;</a></h3>
+<p>Aunque suelen utilizarse conjuntamente, son conceptos diferentes.</p>
+<p><strong>Autenticación</strong></p>
+<p>La autenticación consiste en verificar la identidad de un usuario.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>Usuario: alumno
+Contraseña: ********
+</code></pre></div>
+<p>El servidor comprueba si las credenciales son correctas.</p>
+<p>La pregunta que responde es: ¿Quién eres?</p>
+<p><strong>Autorización</strong></p>
+<p>La autorización determina qué recursos puede utilizar un usuario autenticado.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>Usuario autenticado
+   │
+   ├── Acceso permitido a /privado
+   │
+   └── Acceso denegado a /admin
+</code></pre></div>
+<p>La pregunta que responde es: ¿Qué puedes hacer?</p>
+<hr />
+<h3 id="metodos-de-autenticacion-en-apache">Métodos de autenticación en Apache<a class="headerlink" href="#metodos-de-autenticacion-en-apache" title="Permanent link">&para;</a></h3>
+<p>Apache soporta varios mecanismos de autenticación.</p>
+<p>Los más habituales son:</p>
+<ul>
+<li>Autenticación básica (Basic Authentication).</li>
+<li>Autenticación Digest.</li>
+<li>Bases de datos.</li>
+<li>LDAP.</li>
+<li>Directorios corporativos.</li>
+</ul>
+<p>En este módulo estudiaremos principalmente la autenticación básica.</p>
+<hr />
+<h3 id="autenticacion-basica">Autenticación básica<a class="headerlink" href="#autenticacion-basica" title="Permanent link">&para;</a></h3>
+<p>La autenticación básica es el mecanismo más sencillo para proteger recursos web.</p>
+<p>Cuando un usuario intenta acceder a un recurso protegido, el navegador muestra una ventana solicitando:</p>
+<div class="highlight"><pre><span></span><code>Usuario
+Contraseña
+</code></pre></div>
+<p>Si las credenciales son válidas, Apache permite el acceso.</p>
+<div class="highlight"><pre><span></span><code>Cliente
+   │
+   ▼
+Apache
+   │
+   │ Solicita credenciales
+   ▼
+Usuario
+   │
+   │ Introduce usuario y contraseña
+   ▼
+Apache
+   │
+   │ Verifica credenciales
+   ▼
+Acceso permitido o denegado
+</code></pre></div>
+<hr />
+<h3 id="el-modulo-mod_auth_basic">El módulo mod_auth_basic<a class="headerlink" href="#el-modulo-mod_auth_basic" title="Permanent link">&para;</a></h3>
+<p>La autenticación básica se implementa mediante el módulo:</p>
+<div class="highlight"><pre><span></span><code>mod_auth_basic
+</code></pre></div>
+<p>Podemos comprobar si está activo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>auth_basic
+</code></pre></div>
+<p>Si fuera necesario activarlo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>auth_basic
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<hr />
+<h3 id="creacion-del-archivo-de-contrasenas">Creación del archivo de contraseñas<a class="headerlink" href="#creacion-del-archivo-de-contrasenas" title="Permanent link">&para;</a></h3>
+<p>Apache almacena los usuarios y contraseñas en un fichero especial.</p>
+<p>Para crearlo utilizamos la herramienta:</p>
+<div class="highlight"><pre><span></span><code>htpasswd
+</code></pre></div>
+<p><strong>Crear el fichero e introducir el primer usuario</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>htpasswd<span class="w"> </span>-c<span class="w"> </span>/etc/apache2/.htpasswd<span class="w"> </span>alumno
+</code></pre></div>
+<p>El sistema solicitará la contraseña:</p>
+<div class="highlight"><pre><span></span><code>New password:
+Re-type new password:
+</code></pre></div>
+<p><strong>Añadir usuarios adicionales</strong></p>
+<p>Una vez creado el fichero no debemos utilizar la opción <code>-c</code>, ya que sobrescribiría el contenido existente.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>htpasswd<span class="w"> </span>/etc/apache2/.htpasswd<span class="w"> </span>profesor
+</code></pre></div>
+<p>Podemos añadir tantos usuarios como necesitemos.</p>
+<hr />
+<h3 id="proteccion-de-un-directorio">Protección de un directorio<a class="headerlink" href="#proteccion-de-un-directorio" title="Permanent link">&para;</a></h3>
+<p>Supongamos que queremos proteger el directorio:</p>
+<div class="highlight"><pre><span></span><code>/var/www/html/privado
+</code></pre></div>
+<p>Creamos la carpeta:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/www/html/privado
+</code></pre></div>
+<p>y una página de prueba:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"&lt;h1&gt;Zona privada&lt;/h1&gt;"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/var/www/html/privado/index.html
+</code></pre></div>
+<hr />
+<h3 id="configuracion-de-la-autenticacion">Configuración de la autenticación<a class="headerlink" href="#configuracion-de-la-autenticacion" title="Permanent link">&para;</a></h3>
+<p>Podemos añadir una configuración similar a la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">"/var/www/html/privado"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">AuthType</span><span class="w"> </span>Basic
+<span class="w">    </span><span class="nb">AuthName</span><span class="w"> </span><span class="s2">"Acceso restringido"</span>
+<span class="w">    </span><span class="nb">AuthUserFile</span><span class="w"> </span><span class="sx">/etc/apache2/.htpasswd</span>
+<span class="w">    </span><span class="nb">Require</span><span class="w"> </span>valid-user
+<span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="explicacion-de-las-directivas">Explicación de las directivas<a class="headerlink" href="#explicacion-de-las-directivas" title="Permanent link">&para;</a></h3>
+<p><strong>AuthType</strong></p>
+<p>Indica el tipo de autenticación utilizado.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">AuthType</span><span class="w"> </span>Basic
+</code></pre></div>
+<p>En este caso utilizamos autenticación básica.</p>
+<p><strong>AuthName</strong></p>
+<p>Define el texto mostrado al usuario en la ventana de autenticación.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">AuthName</span><span class="w"> </span><span class="s2">"Acceso restringido"</span>
+</code></pre></div>
+<p><strong>AuthUserFile</strong></p>
+<p>Indica la ubicación del archivo que contiene los usuarios y contraseñas.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">AuthUserFile</span><span class="w"> </span><span class="sx">/etc/apache2/.htpasswd</span>
+</code></pre></div>
+<p><strong>Require valid-user</strong></p>
+<p>Permite el acceso a cualquier usuario incluido en el archivo de contraseñas.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Require</span><span class="w"> </span>valid-user
+</code></pre></div>
+<hr />
+<h3 id="aplicacion-de-cambios">Aplicación de cambios<a class="headerlink" href="#aplicacion-de-cambios" title="Permanent link">&para;</a></h3>
+<p>Después de modificar la configuración debemos comprobar su sintaxis:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>configtest
+</code></pre></div>
+<p>Si el resultado es:</p>
+<div class="highlight"><pre><span></span><code>Syntax OK
+</code></pre></div>
+<p>podemos aplicar los cambios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<hr />
+<h3 id="comprobacion-del-funcionamiento">Comprobación del funcionamiento<a class="headerlink" href="#comprobacion-del-funcionamiento" title="Permanent link">&para;</a></h3>
+<p>Al acceder a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/privado
+</code></pre></div>
+<p>el navegador solicitará las credenciales configuradas.</p>
+<p>Si el usuario y la contraseña son correctos:</p>
+<div class="highlight"><pre><span></span><code>Acceso permitido
+</code></pre></div>
+<p>En caso contrario:</p>
+<div class="highlight"><pre><span></span><code>401 Unauthorized
+</code></pre></div>
+<hr />
+<h3 id="restriccion-a-usuarios-concretos">Restricción a usuarios concretos<a class="headerlink" href="#restriccion-a-usuarios-concretos" title="Permanent link">&para;</a></h3>
+<p>No siempre es necesario permitir el acceso a todos los usuarios registrados.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Require</span><span class="w"> </span><span class="k">user</span><span class="w"> </span>profesor
+</code></pre></div>
+<p>únicamente permitirá acceder al usuario:</p>
+<div class="highlight"><pre><span></span><code>profesor
+</code></pre></div>
+<p>También es posible especificar varios usuarios:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Require</span><span class="w"> </span><span class="k">user</span><span class="w"> </span>profesor<span class="w"> </span>administrador
+</code></pre></div>
+<hr />
+<h3 id="control-de-acceso-por-direccion-ip">Control de acceso por dirección IP<a class="headerlink" href="#control-de-acceso-por-direccion-ip" title="Permanent link">&para;</a></h3>
+<p>Apache también puede restringir accesos según el origen de la conexión.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">"/var/www/html/interna"</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">Require</span><span class="w"> </span>ip<span class="w"> </span><span class="m">192.168.1.0/24</span>
+<span class="nt">&lt;/Directory&gt;</span>
+</code></pre></div>
+<p>Esto permite el acceso únicamente desde equipos de la red:</p>
+<div class="highlight"><pre><span></span><code>192.168.1.x
+</code></pre></div>
+<hr />
+<h3 id="combinacion-de-criterios">Combinación de criterios<a class="headerlink" href="#combinacion-de-criterios" title="Permanent link">&para;</a></h3>
+<p>Es posible combinar distintos mecanismos de control de acceso.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>Usuario válido
++
+IP autorizada
+</code></pre></div>
+<p>Esto incrementa la seguridad del recurso protegido.</p>
+<hr />
+<h3 id="limitaciones-de-la-autenticacion-basica">Limitaciones de la autenticación básica<a class="headerlink" href="#limitaciones-de-la-autenticacion-basica" title="Permanent link">&para;</a></h3>
+<p>La autenticación básica presenta algunas limitaciones:</p>
+<ul>
+<li>El navegador envía las credenciales en cada solicitud.</li>
+<li>No cifra la información por sí misma.</li>
+<li>Requiere HTTPS para proteger adecuadamente las contraseñas.</li>
+</ul>
+<p>Por este motivo es recomendable utilizar siempre:</p>
+<div class="highlight"><pre><span></span><code>HTTPS + Autenticación básica
+</code></pre></div>
+<p>cuando se protejan recursos reales.</p>
+<hr />
+<h3 id="buenas-practicas_3">Buenas prácticas<a class="headerlink" href="#buenas-practicas_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Utilizar HTTPS en recursos protegidos.</li>
+<li>Limitar el acceso únicamente a los usuarios necesarios.</li>
+<li>Proteger los archivos de contraseñas.</li>
+<li>Comprobar periódicamente los permisos configurados.</li>
+<li>Revisar los registros de acceso para detectar intentos no autorizados.</li>
+<li>Eliminar usuarios que ya no necesiten acceso.</li>
+</ul>
+<hr />
+<p>Para cerrar por completo el RA1 en lo que respecta al servidor web, conviene abordar dos aspectos adicionales: la seguridad en las comunicaciones (HTTPS) y el uso de plataformas integradas de desarrollo.</p>
+<h2 id="210-https-con-certificado-autofirmado">2.10 HTTPS con certificado autofirmado<a class="headerlink" href="#210-https-con-certificado-autofirmado" title="Permanent link">&para;</a></h2>
+<p>En el apartado 2.8 activamos el módulo <code>mod_ssl</code> al hablar de la gestión de módulos, pero sin llegar a configurar un certificado real. Vamos a completarlo con un certificado autofirmado, válido para entornos de desarrollo.</p>
+<h3 id="activar-el-modulo-ssl">Activar el módulo SSL<a class="headerlink" href="#activar-el-modulo-ssl" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2enmod<span class="w"> </span>ssl
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="activar-el-sitio-ssl-por-defecto">Activar el sitio SSL por defecto<a class="headerlink" href="#activar-el-sitio-ssl-por-defecto" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>default-ssl
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<h3 id="generar-un-certificado-autofirmado">Generar un certificado autofirmado<a class="headerlink" href="#generar-un-certificado-autofirmado" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-keyout<span class="w"> </span>/etc/ssl/private/apache-selfsigned.key<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-out<span class="w"> </span>/etc/ssl/certs/apache-selfsigned.crt
+</code></pre></div>
+<p>Durante el proceso se solicitarán datos como el país, la organización o el nombre del servidor (<code>Common Name</code>).</p>
+<h3 id="configurar-el-sitio-para-utilizar-el-certificado">Configurar el sitio para utilizar el certificado<a class="headerlink" href="#configurar-el-sitio-para-utilizar-el-certificado" title="Permanent link">&para;</a></h3>
+<p>En el archivo:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/sites-available/default-ssl.conf
+</code></pre></div>
+<p>se deben indicar las rutas al certificado y a la clave privada:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">SSLCertificateFile</span><span class="w">      </span><span class="sx">/etc/ssl/certs/apache-selfsigned.crt</span>
+<span class="nb">SSLCertificateKeyFile</span><span class="w">   </span><span class="sx">/etc/ssl/private/apache-selfsigned.key</span>
+</code></pre></div>
+<h3 id="aplicar-y-comprobar">Aplicar y comprobar<a class="headerlink" href="#aplicar-y-comprobar" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>configtest
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<p>Acceder a:</p>
+<div class="highlight"><pre><span></span><code>https://localhost
+</code></pre></div>
+<p>El navegador mostrará una advertencia de seguridad, ya que el certificado no está firmado por una autoridad reconocida. Esto es normal y esperado en un certificado autofirmado utilizado en desarrollo.</p>
+<blockquote>
+<p>En un servidor con nombre de dominio público, lo habitual es sustituir este certificado por uno emitido gratuitamente mediante <strong>Let's Encrypt</strong> y la herramienta <code>certbot</code>, que además renueva los certificados automáticamente.</p>
+</blockquote>
+<hr />
+<h2 id="211-plataformas-integradas-de-desarrollo">2.11 Plataformas integradas de desarrollo<a class="headerlink" href="#211-plataformas-integradas-de-desarrollo" title="Permanent link">&para;</a></h2>
+<p>Hasta ahora hemos instalado cada componente del stack de forma manual e independiente. Existen alternativas que integran todos los componentes en un único paquete o configuración, pensadas para agilizar el desarrollo y las pruebas.</p>
+<h3 id="xampp">XAMPP<a class="headerlink" href="#xampp" title="Permanent link">&para;</a></h3>
+<p><strong>XAMPP</strong> es una de las plataformas integradas más conocidas. Incluye Apache, PHP, MariaDB y otras herramientas (como phpMyAdmin) preconfiguradas y listas para funcionar, disponible para Windows, Linux y macOS.</p>
+<p>Resulta especialmente útil para:</p>
+<ul>
+<li>Entornos de desarrollo local.</li>
+<li>Aprendizaje y pruebas rápidas.</li>
+<li>Equipos donde no se desea configurar cada componente manualmente.</li>
+</ul>
+<p>Su principal inconveniente es que su configuración suele diferir bastante de un servidor de producción real basado en Linux.</p>
+<h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
+<p>Una alternativa más cercana a los entornos profesionales actuales consiste en definir el stack completo mediante <strong>contenedores Docker</strong>, ya presentados en el Bloque 1.</p>
+<p>Un archivo <code>docker-compose.yml</code> puede definir los tres servicios del stack LAMP:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"3.8"</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">apache</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">php:8.2-apache</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"8080:80"</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./www:/var/www/html</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+
+<span class="w">  </span><span class="nt">mariadb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:10.11</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rootpass</span>
+<span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tienda</span>
+<span class="w">      </span><span class="nt">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">appweb</span>
+<span class="w">      </span><span class="nt">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">contraseña_segura</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db_data:/var/lib/mysql</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db_data</span><span class="p">:</span>
+</code></pre></div>
+<p>Levantar el entorno completo:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<p>Comprobar los contenedores en ejecución:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>ps
+</code></pre></div>
+<p>Este enfoque permite reproducir el mismo entorno en cualquier máquina con Docker instalado, y es habitual en flujos de trabajo profesionales de integración continua y despliegue.</p>
+<h3 id="comparativa">Comparativa<a class="headerlink" href="#comparativa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Instalación manual</th>
+<th>XAMPP</th>
+<th>Docker Compose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Similitud con producción</td>
+<td>Alta</td>
+<td>Baja</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Facilidad de instalación</td>
+<td>Baja</td>
+<td>Alta</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Aislamiento entre proyectos</td>
+<td>Bajo</td>
+<td>Bajo</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>Reproducibilidad</td>
+<td>Baja</td>
+<td>Media</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Uso habitual en ASIR</td>
+<td>Aprendizaje inicial</td>
+<td>Pruebas rápidas</td>
+<td>Desarrollo profesional</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="ideas-clave_3">Ideas clave<a class="headerlink" href="#ideas-clave_3" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Activar <code>mod_ssl</code> y generar un certificado autofirmado para Apache.</li>
+<li>Configurar un sitio HTTPS y comprobar su funcionamiento.</li>
+<li>Explicar la diferencia entre un certificado autofirmado y uno emitido por una autoridad de certificación (por ejemplo, Let's Encrypt).</li>
+<li>Explicar qué es una plataforma integrada de desarrollo y poner ejemplos (XAMPP, Docker Compose).</li>
+<li>Valorar las ventajas e inconvenientes de cada enfoque para preparar un entorno de desarrollo o pruebas.</li>
+</ul>
+<hr />
+<h2 id="212-virtual-hosts-varios-sitios-en-un-mismo-servidor">2.12 Virtual Hosts: varios sitios en un mismo servidor<a class="headerlink" href="#212-virtual-hosts-varios-sitios-en-un-mismo-servidor" title="Permanent link">&para;</a></h2>
+<p>En el apartado 2.6 vimos que Apache organiza los sitios web mediante <code>sites-available</code> y <code>sites-enabled</code>, y que el sitio por defecto (<code>000-default.conf</code>) responde cuando no existe una configuración más específica.</p>
+<p>Sin embargo, un mismo servidor Apache puede alojar <strong>varios sitios web independientes</strong>, cada uno con su propio dominio y su propio <code>DocumentRoot</code>. Esta funcionalidad se conoce como <strong>Virtual Hosts</strong> (hosts virtuales).</p>
+<div class="highlight"><pre><span></span><code>Apache (una sola instalación)
+├── miweb1.local   →  /var/www/miweb1
+└── miweb2.local   →  /var/www/miweb2
+</code></pre></div>
+<p>Esto permite, por ejemplo, que un mismo servidor aloje varias aplicaciones o varios proyectos de prácticas sin necesidad de instalar Apache varias veces.</p>
+<hr />
+<h3 id="tipos-de-virtual-hosts">Tipos de Virtual Hosts<a class="headerlink" href="#tipos-de-virtual-hosts" title="Permanent link">&para;</a></h3>
+<p>Apache admite dos formas principales de distinguir entre sitios:</p>
+<p><strong>Basados en IP</strong></p>
+<p>Cada sitio se asocia a una dirección IP diferente del servidor.</p>
+<p>Requiere disponer de varias IP configuradas en la máquina, por lo que es menos habitual en entornos de prácticas.</p>
+<p><strong>Basados en nombre (name-based)</strong></p>
+<p>Todos los sitios comparten la misma dirección IP y el mismo puerto. Apache distingue entre ellos utilizando la cabecera <code>Host</code> que envía el navegador en cada petición HTTP.</p>
+<p>Es el mecanismo más utilizado actualmente y el que emplearemos en este apartado.</p>
+<div class="highlight"><pre><span></span><code>Navegador
+   │
+   │ Host: miweb1.local
+   ▼
+Apache (misma IP, puerto 80)
+   │
+   ├── ¿Host = miweb1.local?  →  /var/www/miweb1
+   └── ¿Host = miweb2.local?  →  /var/www/miweb2
+</code></pre></div>
+<hr />
+<h3 id="preparar-los-directorios-de-cada-sitio">Preparar los directorios de cada sitio<a class="headerlink" href="#preparar-los-directorios-de-cada-sitio" title="Permanent link">&para;</a></h3>
+<p>Creamos un directorio independiente para cada sitio web:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/miweb1/public_html
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/miweb2/public_html
+</code></pre></div>
+<p>Creamos una página de prueba en cada uno, para poder diferenciarlos visualmente:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"&lt;h1&gt;Sitio 1: miweb1.local&lt;/h1&gt;"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/var/www/miweb1/public_html/index.html
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"&lt;h1&gt;Sitio 2: miweb2.local&lt;/h1&gt;"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/var/www/miweb2/public_html/index.html
+</code></pre></div>
+<p>Asignamos permisos adecuados:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="nv">$USER</span>:<span class="nv">$USER</span><span class="w"> </span>/var/www/miweb1/public_html
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="nv">$USER</span>:<span class="nv">$USER</span><span class="w"> </span>/var/www/miweb2/public_html
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/miweb1
+sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/miweb2
+</code></pre></div>
+<hr />
+<h3 id="crear-los-archivos-de-configuracion">Crear los archivos de configuración<a class="headerlink" href="#crear-los-archivos-de-configuracion" title="Permanent link">&para;</a></h3>
+<p>Cada Virtual Host se define en su propio archivo dentro de <code>sites-available</code>.</p>
+<p><strong>Sitio 1</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/miweb1.conf
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>miweb1.local
+<span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>admin@miweb1.local
+<span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/miweb1/public_html</span>
+
+<span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/miweb1_error.log
+<span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/miweb1_access.log<span class="w"> </span>combined
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+<p><strong>Sitio 2</strong></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/apache2/sites-available/miweb2.conf
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">ServerName</span><span class="w"> </span>miweb2.local
+<span class="w">    </span><span class="nb">ServerAdmin</span><span class="w"> </span>admin@miweb2.local
+<span class="w">    </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/miweb2/public_html</span>
+
+<span class="w">    </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/miweb2_error.log
+<span class="w">    </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/miweb2_access.log<span class="w"> </span>combined
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="explicacion-de-las-directivas_1">Explicación de las directivas<a class="headerlink" href="#explicacion-de-las-directivas_1" title="Permanent link">&para;</a></h3>
+<p><strong>ServerName</strong></p>
+<p>Indica el dominio que identifica a este Virtual Host. Es la directiva clave: Apache la compara con la cabecera <code>Host</code> de cada petición para decidir qué sitio debe responder.</p>
+<p><strong>DocumentRoot</strong></p>
+<p>Directorio raíz desde el que se publican los recursos de ese sitio concreto (ya estudiado en el apartado 2.6).</p>
+<p><strong>ErrorLog y CustomLog</strong></p>
+<p>Permiten que cada sitio tenga sus propios registros de errores y accesos, en lugar de compartir los registros globales de Apache. Esto facilita mucho el diagnóstico cuando se administran varios sitios a la vez.</p>
+<hr />
+<h3 id="activar-los-sitios">Activar los sitios<a class="headerlink" href="#activar-los-sitios" title="Permanent link">&para;</a></h3>
+<p>Utilizamos la herramienta ya conocida <code>a2ensite</code>:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2ensite<span class="w"> </span>miweb1.conf
+sudo<span class="w"> </span>a2ensite<span class="w"> </span>miweb2.conf
+</code></pre></div>
+<p>Es recomendable desactivar el sitio por defecto para evitar confusiones durante las pruebas:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>a2dissite<span class="w"> </span><span class="m">000</span>-default.conf
+</code></pre></div>
+<p>Validamos la configuración y aplicamos los cambios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>configtest
+sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
+</code></pre></div>
+<hr />
+<h3 id="resolucion-de-nombres-local">Resolución de nombres local<a class="headerlink" href="#resolucion-de-nombres-local" title="Permanent link">&para;</a></h3>
+<p>Como <code>miweb1.local</code> y <code>miweb2.local</code> no son dominios reales registrados en Internet, necesitamos indicarle a nuestro propio equipo cómo resolverlos. Esto se hace editando el fichero <code>hosts</code>:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/hosts
+</code></pre></div>
+<p>Añadimos las siguientes líneas (sustituyendo la IP si accedemos desde otro equipo de la red):</p>
+<div class="highlight"><pre><span></span><code>127.0.0.1   miweb1.local
+127.0.0.1   miweb2.local
+</code></pre></div>
+<blockquote>
+<p>Este mecanismo recuerda directamente al funcionamiento de DNS estudiado en el Bloque 1: aquí simulamos "a mano", en un único equipo, lo que un servidor DNS real haría para toda una red.</p>
+</blockquote>
+<hr />
+<h3 id="comprobacion">Comprobación<a class="headerlink" href="#comprobacion" title="Permanent link">&para;</a></h3>
+<p>Accedemos desde el navegador a:</p>
+<div class="highlight"><pre><span></span><code>http://miweb1.local
+http://miweb2.local
+</code></pre></div>
+<p>Cada dirección debería mostrar la página correspondiente a su propio <code>DocumentRoot</code>, confirmando que Apache está distinguiendo correctamente ambos sitios a partir del nombre.</p>
+<p>También podemos comprobarlo desde la terminal indicando la cabecera <code>Host</code> manualmente:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Host: miweb1.local"</span><span class="w"> </span>http://localhost
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Host: miweb2.local"</span><span class="w"> </span>http://localhost
+</code></pre></div>
+<hr />
+<h3 id="comprobacion-de-los-registros-independientes">Comprobación de los registros independientes<a class="headerlink" href="#comprobacion-de-los-registros-independientes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/miweb1_access.log
+sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/miweb2_access.log
+</code></pre></div>
+<p>Cada fichero debe reflejar únicamente las peticiones realizadas al sitio correspondiente.</p>
+<hr />
+<h3 id="buenas-practicas_4">Buenas prácticas<a class="headerlink" href="#buenas-practicas_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Utilizar siempre <code>ServerName</code> explícito en cada Virtual Host, para evitar advertencias de Apache al arrancar.</li>
+<li>Mantener un archivo de configuración independiente por sitio dentro de <code>sites-available</code>.</li>
+<li>Usar registros (<code>ErrorLog</code>/<code>CustomLog</code>) separados por sitio en entornos con varias aplicaciones.</li>
+<li>Desactivar el sitio por defecto cuando ya no sea necesario.</li>
+<li>Documentar en <code>/etc/hosts</code> (o en el DNS real, en producción) los nombres utilizados por cada Virtual Host.</li>
+</ul>
+<hr />
+<h3 id="ideas-clave_4">Ideas clave<a class="headerlink" href="#ideas-clave_4" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Explicar qué es un Virtual Host y diferenciar los basados en IP de los basados en nombre.</li>
+<li>Crear y activar varios Virtual Hosts basados en nombre en un mismo servidor Apache.</li>
+<li>Configurar <code>DocumentRoot</code>, <code>ServerName</code> y registros independientes para cada sitio.</li>
+<li>Utilizar el fichero <code>/etc/hosts</code> para resolver nombres de dominio locales de prueba.</li>
+<li>Comprobar mediante navegador y <code>curl</code> que cada Virtual Host responde correctamente.</li>
+</ul>
+<h2 id="213-cortafuegos-apertura-de-puertos-con-ufw">2.13 Cortafuegos: apertura de puertos con ufw<a class="headerlink" href="#213-cortafuegos-apertura-de-puertos-con-ufw" title="Permanent link">&para;</a></h2>
+<p>Instalar y configurar Apache no es suficiente para garantizar que el servidor sea accesible: también es necesario que el <strong>cortafuegos</strong> del sistema permita el tráfico correspondiente.</p>
+<p>En sistemas Debian y Ubuntu, la herramienta más habitual para gestionar el cortafuegos de forma sencilla es <strong>ufw</strong> (<em>Uncomplicated Firewall</em>), una interfaz simplificada sobre <code>iptables</code>.</p>
+<hr />
+<h3 id="comprobar-el-estado-del-cortafuegos">Comprobar el estado del cortafuegos<a class="headerlink" href="#comprobar-el-estado-del-cortafuegos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>status
+</code></pre></div>
+<p>Resultado habitual si aún no se ha activado:</p>
+<div class="highlight"><pre><span></span><code>Status: inactive
+</code></pre></div>
+<p>O bien, si ya está activo:</p>
+<div class="highlight"><pre><span></span><code>Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+</code></pre></div>
+<hr />
+<h3 id="perfiles-de-aplicacion-registrados-por-apache">Perfiles de aplicación registrados por Apache<a class="headerlink" href="#perfiles-de-aplicacion-registrados-por-apache" title="Permanent link">&para;</a></h3>
+<p>Cuando se instala Apache, el propio paquete registra automáticamente varios <strong>perfiles de aplicación</strong> que ufw puede utilizar, evitando tener que recordar números de puerto concretos.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>app<span class="w"> </span>list
+</code></pre></div>
+<p>Salida habitual:</p>
+<div class="highlight"><pre><span></span><code>Available applications:
+  Apache
+  Apache Full
+  Apache Secure
+  OpenSSH
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Puertos que abre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache</td>
+<td>80 (HTTP)</td>
+</tr>
+<tr>
+<td>Apache Secure</td>
+<td>443 (HTTPS)</td>
+</tr>
+<tr>
+<td>Apache Full</td>
+<td>80 y 443 (HTTP y HTTPS)</td>
+</tr>
+</tbody>
+</table>
+<p>Podemos consultar el detalle de un perfil concreto:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>app<span class="w"> </span>info<span class="w"> </span><span class="s2">"Apache Full"</span>
+</code></pre></div>
+<hr />
+<h3 id="permitir-el-trafico-web">Permitir el tráfico web<a class="headerlink" href="#permitir-el-trafico-web" title="Permanent link">&para;</a></h3>
+<p>Lo habitual, una vez configurado HTTPS (apartado 2.10), es permitir ambos puertos a la vez:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="s2">"Apache Full"</span>
+</code></pre></div>
+<p>Si únicamente se está trabajando con HTTP (por ejemplo, en las primeras prácticas antes de configurar el certificado):</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="s2">"Apache"</span>
+</code></pre></div>
+<p>También es posible indicar los puertos directamente, sin depender del perfil registrado:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp
+</code></pre></div>
+<hr />
+<h3 id="no-perder-el-acceso-por-ssh">No perder el acceso por SSH<a class="headerlink" href="#no-perder-el-acceso-por-ssh" title="Permanent link">&para;</a></h3>
+<p>Antes de activar ufw en un servidor al que se accede en remoto, es imprescindible permitir también el tráfico SSH. De lo contrario, se perdería el acceso al propio servidor en el momento de activar el cortafuegos.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>OpenSSH
+</code></pre></div>
+<blockquote>
+<p>Este paso se olvida con frecuencia y es una de las causas más habituales de "bloqueo" accidental de un servidor en prácticas. Conviene comprobar siempre las reglas activas antes de activar ufw.</p>
+</blockquote>
+<hr />
+<h3 id="activar-el-cortafuegos">Activar el cortafuegos<a class="headerlink" href="#activar-el-cortafuegos" title="Permanent link">&para;</a></h3>
+<p>Una vez añadidas las reglas necesarias:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+</code></pre></div>
+<p>El sistema pedirá confirmación, ya que puede interrumpir conexiones activas:</p>
+<div class="highlight"><pre><span></span><code>Command may disrupt existing ssh connections. Proceed with operation (y|n)?
+</code></pre></div>
+<hr />
+<h3 id="comprobar-las-reglas-activas">Comprobar las reglas activas<a class="headerlink" href="#comprobar-las-reglas-activas" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>verbose
+</code></pre></div>
+<p>Ejemplo de salida:</p>
+<div class="highlight"><pre><span></span><code>Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+Apache Full                ALLOW       Anywhere
+</code></pre></div>
+<hr />
+<h3 id="eliminar-una-regla">Eliminar una regla<a class="headerlink" href="#eliminar-una-regla" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>delete<span class="w"> </span>allow<span class="w"> </span><span class="s2">"Apache"</span>
+</code></pre></div>
+<h3 id="desactivar-el-cortafuegos">Desactivar el cortafuegos<a class="headerlink" href="#desactivar-el-cortafuegos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>disable
+</code></pre></div>
+<hr />
+<h3 id="diagnostico-el-problema-es-apache-o-el-cortafuegos">Diagnóstico: ¿el problema es Apache o el cortafuegos?<a class="headerlink" href="#diagnostico-el-problema-es-apache-o-el-cortafuegos" title="Permanent link">&para;</a></h3>
+<p>Cuando un sitio web no es accesible desde otro equipo de la red, conviene aislar si el problema está en Apache o en el cortafuegos.</p>
+<div class="highlight"><pre><span></span><code>¿Responde en localhost?
+   │
+   ├── No  →  Problema en Apache (ver apartado 2.5)
+   │
+   └── Sí  →  ¿Responde desde otro equipo?
+                  │
+                  ├── No  →  Revisar ufw / cortafuegos de red
+                  └── Sí  →  Correcto
+</code></pre></div>
+<p>Comandos útiles para esta comprobación:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost
+sudo<span class="w"> </span>ufw<span class="w"> </span>status
+sudo<span class="w"> </span>ss<span class="w"> </span>-tulpn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">':80|:443'</span>
+</code></pre></div>
+<hr />
+<h3 id="buenas-practicas_5">Buenas prácticas<a class="headerlink" href="#buenas-practicas_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Permitir siempre el acceso SSH antes de activar ufw en un servidor remoto.</li>
+<li>Utilizar los perfiles de aplicación (<code>Apache</code>, <code>Apache Full</code>) en lugar de recordar números de puerto.</li>
+<li>Revisar periódicamente las reglas activas con <code>ufw status verbose</code>.</li>
+<li>Cerrar los puertos que ya no sean necesarios.</li>
+<li>Documentar qué reglas se han añadido y por qué, como parte de la documentación del servidor.</li>
+</ul>
+<hr />
+<h3 id="ideas-clave_5">Ideas clave<a class="headerlink" href="#ideas-clave_5" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Explicar la función de un cortafuegos en la seguridad de un servidor web.</li>
+<li>Consultar el estado y las reglas activas de ufw.</li>
+<li>Permitir el tráfico HTTP y HTTPS mediante los perfiles de aplicación de Apache.</li>
+<li>Evitar la pérdida de acceso remoto al activar ufw, permitiendo antes el tráfico SSH.</li>
+<li>Diagnosticar si un problema de acceso se debe a Apache o al cortafuegos.</li>
+</ul>
+<h2 id="214-documentacion-de-las-practicas-realizadas">2.14 Documentación de las prácticas realizadas<a class="headerlink" href="#214-documentacion-de-las-practicas-realizadas" title="Permanent link">&para;</a></h2>
+<p>El último criterio de evaluación del RA1 exige explícitamente que <strong>se documenten los procedimientos realizados</strong>. No basta con que un servidor funcione: en un entorno profesional, cualquier configuración debe quedar registrada para que pueda mantenerse, auditarse o reproducirse por otra persona (o por uno mismo, meses después).</p>
+<hr />
+<h3 id="por-que-documentar">¿Por qué documentar?<a class="headerlink" href="#por-que-documentar" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Permite reproducir la configuración en otro servidor.</li>
+<li>Facilita el diagnóstico de problemas futuros.</li>
+<li>Es imprescindible para el trabajo en equipo.</li>
+<li>Suele ser un requisito explícito en la evaluación de las prácticas.</li>
+<li>Es una competencia profesional en sí misma, no solo un "extra".</li>
+</ul>
+<hr />
+<h3 id="que-debe-incluir-una-buena-documentacion-tecnica">Qué debe incluir una buena documentación técnica<a class="headerlink" href="#que-debe-incluir-una-buena-documentacion-tecnica" title="Permanent link">&para;</a></h3>
+<p>Como mínimo, cada práctica debería recoger:</p>
+<ol>
+<li><strong>Objetivo</strong>: qué se quería conseguir.</li>
+<li><strong>Entorno de partida</strong>: sistema operativo, versión, IP o nombre del equipo.</li>
+<li><strong>Pasos realizados</strong>: comandos ejecutados, en orden, con una breve explicación de cada uno.</li>
+<li><strong>Configuración aplicada</strong>: fragmentos relevantes de los ficheros modificados.</li>
+<li><strong>Comprobaciones realizadas</strong>: cómo se ha verificado que todo funciona.</li>
+<li><strong>Problemas encontrados y solución</strong>: cualquier incidencia relevante durante el proceso.</li>
+</ol>
+<hr />
+<h3 id="plantilla-basica">Plantilla básica<a class="headerlink" href="#plantilla-basica" title="Permanent link">&para;</a></h3>
+<p>A continuación se propone una plantilla sencilla, en formato Markdown, que puede reutilizarse en cada práctica de este módulo:</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Práctica: [título de la práctica]</span>
+
+<span class="gu">## Objetivo</span>
+[Qué se quiere conseguir con esta práctica]
+
+<span class="gu">## Entorno</span>
+<span class="k">-</span><span class="w"> </span>Sistema operativo:
+<span class="k">-</span><span class="w"> </span>Dirección IP / nombre del equipo:
+<span class="k">-</span><span class="w"> </span>Software instalado previamente:
+
+<span class="gu">## Procedimiento</span>
+
+<span class="gu">### 1. [Primer paso]</span>
+Comando(s) ejecutado(s):
+<span class="sb">```bash</span>
+comando<span class="w"> </span>--opcion
+<span class="sb">```</span>
+Explicación breve de qué hace y por qué es necesario.
+
+<span class="gu">### 2. [Segundo paso]</span>
+...
+
+<span class="gu">## Configuración aplicada</span>
+Fragmento del fichero modificado (indicando la ruta):
+
+<span class="sb">```apache</span>
+<span class="c"># /etc/apache2/sites-available/ejemplo.conf</span>
+...
+<span class="sb">```</span>
+
+<span class="gu">## Comprobación</span>
+Cómo se ha verificado que la práctica funciona correctamente
+(capturas, salida de comandos, código de estado HTTP, etc.).
+
+<span class="gu">## Incidencias</span>
+Problemas encontrados durante la práctica y cómo se resolvieron.
+
+<span class="gu">## Conclusiones</span>
+Qué se ha aprendido o qué se haría de forma diferente.
+</code></pre></div>
+<hr />
+<h3 id="ejemplo-aplicado-resumido">Ejemplo aplicado (resumido)<a class="headerlink" href="#ejemplo-aplicado-resumido" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="gh"># Práctica: Instalación y aseguramiento de Apache</span>
+
+<span class="gu">## Objetivo</span>
+Instalar Apache HTTP Server en Debian, comprobar su funcionamiento
+y proteger el acceso al puerto mediante ufw.
+
+<span class="gu">## Entorno</span>
+<span class="k">-</span><span class="w"> </span>Sistema operativo: Debian 12
+<span class="k">-</span><span class="w"> </span>Dirección IP: 192.168.1.100
+
+<span class="gu">## Procedimiento</span>
+
+<span class="gu">### 1. Instalación del servidor web</span>
+<span class="sb">```bash</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+<span class="sb">```</span>
+Instala Apache junto con sus dependencias básicas.
+
+<span class="gu">### 2. Comprobación del servicio</span>
+<span class="sb">```bash</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+<span class="sb">```</span>
+Resultado: Active (running).
+
+<span class="gu">### 3. Apertura del cortafuegos</span>
+<span class="sb">```bash</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>OpenSSH
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="s2">"Apache Full"</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+<span class="sb">```</span>
+
+<span class="gu">## Comprobación</span>
+Acceso desde navegador a http://192.168.1.100 → se muestra
+la página de bienvenida de Apache.
+
+<span class="gu">## Incidencias</span>
+Ninguna.
+
+<span class="gu">## Conclusiones</span>
+La instalación de Apache es sencilla, pero es fundamental no
+olvidar la configuración del cortafuegos para no dejar el
+servidor inaccesible ni innecesariamente expuesto.
+</code></pre></div>
+<hr />
+<h3 id="herramientas-utiles-para-documentar">Herramientas útiles para documentar<a class="headerlink" href="#herramientas-utiles-para-documentar" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Markdown</strong>: formato ligero, legible tanto en texto plano como renderizado; es el recomendado para este módulo.</li>
+<li><strong>Capturas de pantalla</strong>: útiles para mostrar resultados visuales (páginas web, mensajes de error).</li>
+<li><strong>Control de versiones (Git)</strong>: permite llevar un historial de cambios en la propia documentación y en los ficheros de configuración.</li>
+<li><strong>Diagramas simples</strong>: como los utilizados a lo largo de estos apuntes, ayudan a explicar arquitecturas y flujos.</li>
+</ul>
+<blockquote>
+<p>No es necesario redactar un documento extenso para cada comando: la clave es que cualquier persona (incluido uno mismo, tiempo después) pueda reproducir el proceso siguiendo la documentación.</p>
+</blockquote>
+<hr />
+<h3 id="buenas-practicas_6">Buenas prácticas<a class="headerlink" href="#buenas-practicas_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Documentar a la vez que se trabaja, no al final de memoria.</li>
+<li>Incluir siempre los comandos exactos utilizados, no una descripción vaga.</li>
+<li>Explicar el <em>porqué</em> de cada decisión de configuración, no solo el <em>qué</em>.</li>
+<li>Guardar la documentación junto con el resto del material de la práctica.</li>
+<li>Mantener un formato consistente entre todas las prácticas del módulo.</li>
+</ul>
+<hr />
+<h3 id="ideas-clave_6">Ideas clave<a class="headerlink" href="#ideas-clave_6" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Explicar por qué documentar los procedimientos es un criterio de evaluación explícito del RA1.</li>
+<li>Identificar los elementos mínimos que debe incluir una documentación técnica.</li>
+<li>Aplicar una plantilla estructurada para documentar una práctica de instalación o configuración.</li>
+<li>Utilizar Markdown como herramienta de documentación técnica en este módulo.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

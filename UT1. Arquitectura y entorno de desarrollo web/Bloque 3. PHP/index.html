@@ -1,0 +1,2946 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Bloque%202.%20Apache/">
+      
+      
+        <link rel="next" href="../Bloque%204.%20MariaDB/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Bloque 3. PHP - Repositorio materiales Wordpress de IAW ASIR</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-instalacion-e-integracion-de-php" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-header__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Repositorio materiales Wordpress de IAW ASIR
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bloque 3. PHP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Repositorio materiales Wordpress de IAW ASIR" class="md-nav__button md-logo" aria-label="Repositorio materiales Wordpress de IAW ASIR" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Repositorio materiales Wordpress de IAW ASIR
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Administración y Usuario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Administración y Usuario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/a%29%20Wordpress.com%20y%20.org/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diferencias entre WordPress.com y WordPress.org
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/b%29%20Terminolog%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminología Común en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/c%29%20Backend%20y%20Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comprendiendo el Backend y Frontend en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/d%29%20Editor%20Gutenberg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    El Editor Gutenberg en WordPress (2025)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/e%29%20Workflow%20de%20publicaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow de Publicación de Entradas en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/f%29%20Men%C3%BAs%20Wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de Menús en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/h%29%20Contenido%20multiling%C3%BCe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de Polylang en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Administraci%C3%B3n%20y%20Usuario/i%29%20Roles%20y%20capacidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles y Capacidades en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes Sistemas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes Sistemas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/Kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPress sobre Kubernetes (Minikube) en EC2 — Paso a paso**
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/a%29%20Instalaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación de WordPress en un Servidor Debian/Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/b%29%20Sistema%20de%20archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Archivos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/c%29%20El%20htaccess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de .htaccess en Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/d%29%20Configuraci%C3%B3n%20inicial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración Inicial de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/e%29%20Crons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crons en WordPress: WP-Cron y Crontab del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/f%29%20Estructura%20BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estructura Básica de la Base de Datos de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/g%29%20Actualizaciones%20wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema de Actualización de WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/g%29%20Internacionalizaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Internacionalización en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/h%29%20Requisitos%20hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos de Hardware para WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/i%29%20Licencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licencias de Uso en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/j%29%20WP-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso de WP-CLI en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20Sistemas/k%29%20Copias%20de%20seguridad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copias de Seguridad en WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuntes modificacion CMS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apuntes modificacion CMS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/a%29%20Teor%C3%ADa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ¿Qué es un hook en WordPress?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/b%29%20Plugin%20Code%20Snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    b) Plugin Code Snippets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/c%29%20Actions%20y%20Filter%20m%C3%A1s%20comunes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACTIONS más comunes (acciones)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/1.%20Modificar%20Hello%20Dolly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Modificar Hello Dolly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/2.%20A%C3%B1adir%20texto%20al%20final%20de%20las%20entradas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Añadir texto al final de las entradas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/3.%20Men%C3%BA%20en%20el%20admin%20con%20texto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Menú en el admin con texto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Apuntes%20modificacion%20CMS/Actividades/4.%20Modificar%20comportamiento%20login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Modificar comportamiento login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1. Arquitectura y entorno de desarrollo web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1. Arquitectura y entorno de desarrollo web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bloque%201.%20Aplicaciones%20web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 1. Aplicaciones web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bloque%202.%20Apache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1. Entornos de desarrollo web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 3. PHP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 3. PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-instalacion-e-integracion-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Instalación e integración de PHP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Instalación e integración de PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es PHP?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php-dentro-de-una-aplicacion-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PHP dentro de una aplicación web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paquetes-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paquetes principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-de-la-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificación de la instalación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-la-integracion-con-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación de la integración con Apache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-un-archivo-php-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de un archivo PHP de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-funcion-phpinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La función phpinfo()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-de-configuracion-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivo de configuración principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubicacion-de-los-archivos-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubicación de los archivos PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferencia-entre-html-y-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferencia entre HTML y PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensiones-habituales-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensiones habituales de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php-fpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PHP-FPM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mod_php-frente-a-php-fpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mod_php frente a PHP-FPM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cual-utilizaremos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cuál utilizaremos?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas habituales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-con-la-arquitectura-multicapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con la arquitectura multicapa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pruebas-de-funcionamiento-con-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Pruebas de funcionamiento con PHP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Pruebas de funcionamiento con PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-de-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos de las pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primera-prueba-phpinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primera prueba: phpinfo()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segunda-prueba-salida-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segunda prueba: salida de texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tercera-prueba-fecha-y-hora-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tercera prueba: fecha y hora del servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuarta-prueba-variables-y-operaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuarta prueba: variables y operaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quinta-prueba-informacion-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quinta prueba: información del servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-de-extensiones-instaladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación de extensiones instaladas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-desde-la-linea-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación desde la línea de comandos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-de-la-configuracion-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta de la configuración de PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostico-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnóstico de errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-del-archivo-phpinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eliminación del archivo phpinfo()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-de-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista de verificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-conexion-con-bases-de-datos-mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Conexión con bases de datos (MariaDB)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Conexión con bases de datos (MariaDB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extension-necesaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensión necesaria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-con-mysqli-orientado-a-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexión con MySQLi (orientado a objetos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-de-datos-con-mysqli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta de datos con MySQLi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-con-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexión con PDO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consulta-de-datos-con-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consulta de datos con PDO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysqli-frente-a-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQLi frente a PDO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sentencias-preparadas-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sentencias preparadas y seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Sentencias preparadas y seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-inseguro-no-utilizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo inseguro (NO utilizar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-sentencias-preparadas-con-mysqli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución: sentencias preparadas con MySQLi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-sentencias-preparadas-con-pdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución: sentencias preparadas con PDO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-prueba-de-integracion-completa-apache-php-mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Prueba de integración completa: Apache + PHP + MariaDB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Prueba de integración completa: Apache + PHP + MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-la-base-de-datos-y-los-datos-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear la base de datos y los datos de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-el-usuario-de-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear el usuario de la aplicación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-la-pagina-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear la página PHP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bloque%204.%20MariaDB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Bases de datos con MariaDB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../borrar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borrar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Bloque 3. PHP</h1>
+
+<h2 id="1-instalacion-e-integracion-de-php">1. Instalación e integración de PHP<a class="headerlink" href="#1-instalacion-e-integracion-de-php" title="Permanent link">&para;</a></h2>
+<p>Hasta este momento hemos utilizado Apache para servir recursos estáticos como páginas HTML, imágenes o documentos.</p>
+<p>Sin embargo, las aplicaciones web modernas necesitan generar contenidos dinámicos, procesar formularios, gestionar usuarios y acceder a bases de datos.</p>
+<p>Para ello es necesario utilizar un lenguaje de programación capaz de ejecutarse en el servidor.</p>
+<p>Durante este módulo utilizaremos <strong>PHP</strong>, uno de los lenguajes más utilizados en el desarrollo de aplicaciones web.</p>
+<p>Algunas aplicaciones populares desarrolladas en PHP son:</p>
+<ul>
+<li>Moodle.</li>
+<li>WordPress.</li>
+<li>Nextcloud.</li>
+<li>phpMyAdmin.</li>
+<li>MediaWiki.</li>
+</ul>
+<hr />
+<h3 id="que-es-php">¿Qué es PHP?<a class="headerlink" href="#que-es-php" title="Permanent link">&para;</a></h3>
+<p>PHP (<em>PHP: Hypertext Preprocessor</em>) es un lenguaje de programación ampliamente utilizado para el desarrollo de aplicaciones web y scripts ejecutados en el servidor.</p>
+<p>Su principal característica es que el código se ejecuta en el servidor y no en el navegador del usuario.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s2">"&lt;h1&gt;Hola ASIR&lt;/h1&gt;"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>El usuario nunca recibe el código PHP.</p>
+<p>Lo que recibe es el resultado generado tras su ejecución:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola ASIR<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="php-dentro-de-una-aplicacion-web">PHP dentro de una aplicación web<a class="headerlink" href="#php-dentro-de-una-aplicacion-web" title="Permanent link">&para;</a></h3>
+<p>Cuando un usuario solicita un recurso PHP, Apache no puede enviarlo directamente al navegador.</p>
+<p>En su lugar, Apache delega el procesamiento del archivo en el intérprete de PHP.</p>
+<div class="highlight"><pre><span></span><code>Cliente web
+   │
+   ▼
+Apache
+   │
+   ▼
+PHP
+   │
+   │ Genera HTML
+   ▼
+Apache
+   │
+   ▼
+Cliente web
+</code></pre></div>
+<p>Este mecanismo permite generar contenido dinámico adaptado a cada usuario.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Mostrar información personalizada.</li>
+<li>Gestionar sesiones.</li>
+<li>Procesar formularios.</li>
+<li>Acceder a bases de datos.</li>
+</ul>
+<hr />
+<h3 id="instalacion-de-php">Instalación de PHP<a class="headerlink" href="#instalacion-de-php" title="Permanent link">&para;</a></h3>
+<p>En sistemas Debian y Ubuntu, PHP puede instalarse utilizando el gestor de paquetes APT.</p>
+<p>Antes de instalar nuevos paquetes es recomendable actualizar la información de los repositorios:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<p>La instalación básica puede realizarse mediante:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php
+</code></pre></div>
+<p>Este metapaquete instala la versión recomendada por la distribución junto con los componentes básicos necesarios para trabajar con PHP.</p>
+<p>Una vez finalizada la instalación es recomendable reiniciar Apache:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<hr />
+<h3 id="paquetes-principales">Paquetes principales<a class="headerlink" href="#paquetes-principales" title="Permanent link">&para;</a></h3>
+<p>Tras la instalación suelen añadirse varios paquetes relacionados.</p>
+<p><strong>php</strong></p>
+<p>Metapaquete principal.</p>
+<p>Instala la versión recomendada de PHP para la distribución.</p>
+<p><strong>php-cli</strong></p>
+<p>Permite ejecutar scripts PHP desde la línea de comandos.</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>fichero.php
+</code></pre></div>
+<p><strong>php-common</strong></p>
+<p>Incluye bibliotecas y componentes comunes utilizados por PHP.</p>
+<p><strong>libapache2-mod-php</strong></p>
+<p>Permite integrar PHP directamente dentro de Apache mediante el módulo <code>mod_php</code>.</p>
+<p>Gracias a esta integración Apache puede procesar archivos PHP y enviar al navegador únicamente el contenido generado.</p>
+<hr />
+<h3 id="verificacion-de-la-instalacion">Verificación de la instalación<a class="headerlink" href="#verificacion-de-la-instalacion" title="Permanent link">&para;</a></h3>
+<p>Podemos comprobar la versión instalada mediante:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-v
+</code></pre></div>
+<p>Resultado esperado:</p>
+<div class="highlight"><pre><span></span><code>PHP 8.x.x
+</code></pre></div>
+<p>La versión exacta dependerá de la distribución utilizada.</p>
+<hr />
+<h3 id="comprobacion-de-la-integracion-con-apache">Comprobación de la integración con Apache<a class="headerlink" href="#comprobacion-de-la-integracion-con-apache" title="Permanent link">&para;</a></h3>
+<p>También podemos comprobar que Apache tiene cargado el módulo PHP:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>php
+</code></pre></div>
+<p>Resultado habitual:</p>
+<div class="highlight"><pre><span></span><code>php_module
+</code></pre></div>
+<p>Si aparece este módulo significa que Apache está preparado para ejecutar código PHP mediante <code>mod_php</code>.</p>
+<hr />
+<h3 id="creacion-de-un-archivo-php-de-prueba">Creación de un archivo PHP de prueba<a class="headerlink" href="#creacion-de-un-archivo-php-de-prueba" title="Permanent link">&para;</a></h3>
+<p>Crear el fichero:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/info.php
+</code></pre></div>
+<p>Contenido:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Guardar el archivo y acceder desde el navegador a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/info.php
+</code></pre></div>
+<hr />
+<h3 id="la-funcion-phpinfo">La función phpinfo()<a class="headerlink" href="#la-funcion-phpinfo" title="Permanent link">&para;</a></h3>
+<p>La función:</p>
+<div class="highlight"><pre><span></span><code><span class="x">phpinfo();</span>
+</code></pre></div>
+<p>muestra información detallada sobre el entorno de ejecución de PHP.</p>
+<p>Entre otros datos podemos consultar:</p>
+<ul>
+<li>La versión instalada.</li>
+<li>Las extensiones cargadas.</li>
+<li>Las variables de entorno.</li>
+<li>Los módulos disponibles.</li>
+<li>La configuración utilizada por PHP.</li>
+</ul>
+<p>Si esta página aparece correctamente en el navegador significa que:</p>
+<ul>
+<li>Apache funciona correctamente.</li>
+<li>PHP está instalado.</li>
+<li>Apache y PHP están correctamente integrados.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Navegador
+   │
+   ▼
+info.php
+   │
+   ▼
+Apache
+   │
+   ▼
+PHP
+   │
+   │ Ejecuta phpinfo()
+   ▼
+Respuesta HTML
+</code></pre></div>
+<hr />
+<h3 id="archivo-de-configuracion-principal">Archivo de configuración principal<a class="headerlink" href="#archivo-de-configuracion-principal" title="Permanent link">&para;</a></h3>
+<p>PHP dispone de un archivo principal de configuración denominado:</p>
+<div class="highlight"><pre><span></span><code>php.ini
+</code></pre></div>
+<p>En Debian suele encontrarse en una ruta similar a:</p>
+<div class="highlight"><pre><span></span><code>/etc/php/8.x/apache2/php.ini
+</code></pre></div>
+<p>Este fichero permite configurar aspectos como:</p>
+<ul>
+<li>Límite de memoria.</li>
+<li>Zona horaria.</li>
+<li>Tamaño máximo de subida de archivos.</li>
+<li>Visualización de errores.</li>
+<li>Extensiones utilizadas.</li>
+</ul>
+<p>Más adelante modificaremos algunos de estos parámetros para adaptar PHP a distintas aplicaciones web.</p>
+<hr />
+<h3 id="ubicacion-de-los-archivos-php">Ubicación de los archivos PHP<a class="headerlink" href="#ubicacion-de-los-archivos-php" title="Permanent link">&para;</a></h3>
+<p>Los archivos PHP pueden almacenarse en cualquier directorio publicado por Apache.</p>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>/var/www/html
+</code></pre></div>
+<p>Archivos habituales:</p>
+<div class="highlight"><pre><span></span><code>index.php
+login.php
+usuarios.php
+</code></pre></div>
+<p>Cuando Apache recibe una solicitud para uno de estos archivos, delega su procesamiento en PHP antes de devolver la respuesta al navegador.</p>
+<hr />
+<h3 id="diferencia-entre-html-y-php">Diferencia entre HTML y PHP<a class="headerlink" href="#diferencia-entre-html-y-php" title="Permanent link">&para;</a></h3>
+<p>Supongamos dos archivos.</p>
+<p><strong>Archivo HTML</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola ASIR<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Apache envía directamente el contenido al navegador.</p>
+<p><strong>Archivo PHP</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s2">"&lt;h1&gt;Hola ASIR&lt;/h1&gt;"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Apache delega la ejecución en PHP.</p>
+<p>El navegador recibe exactamente el mismo resultado:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola ASIR<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>pero el proceso realizado en el servidor es distinto.</p>
+<hr />
+<h3 id="extensiones-habituales-de-php">Extensiones habituales de PHP<a class="headerlink" href="#extensiones-habituales-de-php" title="Permanent link">&para;</a></h3>
+<p>PHP puede ampliarse mediante extensiones que añaden funcionalidades específicas.</p>
+<p><strong>php-mysql</strong></p>
+<p>Permite conectar aplicaciones PHP con bases de datos MariaDB y MySQL.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-mysql
+</code></pre></div>
+<p><strong>php-gd</strong></p>
+<p>Permite trabajar con imágenes.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-gd
+</code></pre></div>
+<p><strong>php-xml</strong></p>
+<p>Permite procesar documentos XML.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-xml
+</code></pre></div>
+<p><strong>php-curl</strong></p>
+<p>Permite realizar conexiones a servicios externos.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-curl
+</code></pre></div>
+<p>Las aplicaciones web suelen requerir distintas extensiones. La documentación de cada aplicación indica cuáles son necesarias.</p>
+<hr />
+<h3 id="php-fpm">PHP-FPM<a class="headerlink" href="#php-fpm" title="Permanent link">&para;</a></h3>
+<p>En instalaciones modernas es frecuente utilizar <strong>PHP-FPM</strong> (<em>PHP FastCGI Process Manager</em>).</p>
+<p>Puede instalarse mediante:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-fpm
+</code></pre></div>
+<p>PHP-FPM ejecuta PHP como un servicio independiente de Apache.</p>
+<p>La arquitectura pasa a ser:</p>
+<div class="highlight"><pre><span></span><code>Cliente web
+   │
+   ▼
+Apache
+   │
+   ▼
+PHP-FPM
+   │
+   ▼
+Aplicación PHP
+</code></pre></div>
+<p>Esta separación ofrece ventajas en:</p>
+<ul>
+<li>Rendimiento.</li>
+<li>Escalabilidad.</li>
+<li>Gestión de recursos.</li>
+<li>Seguridad.</li>
+</ul>
+<hr />
+<h3 id="mod_php-frente-a-php-fpm">mod_php frente a PHP-FPM<a class="headerlink" href="#mod_php-frente-a-php-fpm" title="Permanent link">&para;</a></h3>
+<p>Existen dos formas habituales de integrar Apache y PHP.</p>
+<p><strong>mod_php</strong></p>
+<div class="highlight"><pre><span></span><code>Apache
+└── PHP integrado
+</code></pre></div>
+<p>Ventajas:</p>
+<ul>
+<li>Configuración sencilla.</li>
+<li>Fácil de aprender.</li>
+<li>Adecuado para entornos de desarrollo.</li>
+</ul>
+<p>Inconvenientes:</p>
+<ul>
+<li>Mayor consumo de memoria.</li>
+<li>Menor flexibilidad.</li>
+</ul>
+<p><strong>PHP-FPM</strong></p>
+<div class="highlight"><pre><span></span><code>Apache
+   │
+   ▼
+PHP-FPM
+</code></pre></div>
+<p>Ventajas:</p>
+<ul>
+<li>Mejor rendimiento.</li>
+<li>Menor consumo de recursos.</li>
+<li>Mayor escalabilidad.</li>
+<li>Separación clara entre servidor web y motor de aplicación.</li>
+</ul>
+<p>Inconvenientes:</p>
+<ul>
+<li>Configuración más compleja.</li>
+</ul>
+<hr />
+<h3 id="cual-utilizaremos">¿Cuál utilizaremos?<a class="headerlink" href="#cual-utilizaremos" title="Permanent link">&para;</a></h3>
+<p>Durante las primeras prácticas utilizaremos normalmente la integración clásica basada en:</p>
+<div class="highlight"><pre><span></span><code>Apache
+└── mod_php
+</code></pre></div>
+<p>porque resulta más sencilla para comprender el funcionamiento de PHP.</p>
+<p>No obstante, es importante conocer que muchos entornos profesionales utilizan:</p>
+<div class="highlight"><pre><span></span><code>Apache + PHP-FPM
+</code></pre></div>
+<p>o incluso:</p>
+<div class="highlight"><pre><span></span><code>Nginx + PHP-FPM
+</code></pre></div>
+<p>debido a sus ventajas de rendimiento.</p>
+<hr />
+<h3 id="problemas-habituales">Problemas habituales<a class="headerlink" href="#problemas-habituales" title="Permanent link">&para;</a></h3>
+<p><strong>El código PHP aparece en pantalla</strong></p>
+<p>Si al acceder a un archivo PHP se muestra el código fuente:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>en lugar del resultado generado, PHP no está configurado correctamente.</p>
+<p>Comprobar:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>php
+</code></pre></div>
+<p>y verificar que aparece:</p>
+<div class="highlight"><pre><span></span><code>php_module
+</code></pre></div>
+<p><strong>Página en blanco</strong></p>
+<p>Puede deberse a:</p>
+<ul>
+<li>Errores de programación.</li>
+<li>Problemas de configuración.</li>
+<li>Extensiones no instaladas.</li>
+</ul>
+<p>Revisar:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/error.log
+</code></pre></div>
+<p><strong>Archivo no encontrado</strong></p>
+<p>Comprobar:</p>
+<ul>
+<li>Ruta correcta.</li>
+<li>Nombre del fichero.</li>
+<li>Permisos de acceso.</li>
+<li>Ubicación dentro del DocumentRoot.</li>
+</ul>
+<hr />
+<h3 id="relacion-con-la-arquitectura-multicapa">Relación con la arquitectura multicapa<a class="headerlink" href="#relacion-con-la-arquitectura-multicapa" title="Permanent link">&para;</a></h3>
+<p>Dentro de una arquitectura web típica:</p>
+<div class="highlight"><pre><span></span><code>Cliente
+   │
+   ▼
+Apache
+   │
+   ▼
+PHP
+   │
+   ▼
+MariaDB
+</code></pre></div>
+<p>cada componente desempeña una función diferente:</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apache</td>
+<td>Servidor web</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>Lógica de aplicación</td>
+</tr>
+<tr>
+<td>MariaDB</td>
+<td>Almacenamiento de datos</td>
+</tr>
+</tbody>
+</table>
+<p>Esta será la arquitectura básica utilizada durante gran parte del módulo.</p>
+<hr />
+<h3 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verificar siempre la instalación mediante <code>phpinfo()</code>.</li>
+<li>Eliminar el archivo <code>info.php</code> una vez finalizadas las pruebas.</li>
+<li>Mantener PHP actualizado.</li>
+<li>Instalar únicamente las extensiones necesarias.</li>
+<li>Revisar periódicamente los registros de errores.</li>
+<li>Documentar las extensiones instaladas.</li>
+</ul>
+<blockquote>
+<p>En un servidor real no es recomendable mantener accesible públicamente la página <code>phpinfo()</code>, ya que proporciona información detallada sobre la configuración del sistema.</p>
+</blockquote>
+<hr />
+<h2 id="2-pruebas-de-funcionamiento-con-php">2. Pruebas de funcionamiento con PHP<a class="headerlink" href="#2-pruebas-de-funcionamiento-con-php" title="Permanent link">&para;</a></h2>
+<p>Una vez instalado PHP e integrado con Apache, es necesario comprobar que el entorno funciona correctamente antes de comenzar a desarrollar aplicaciones web.</p>
+<p>Las pruebas de funcionamiento permiten verificar que:</p>
+<ul>
+<li>Apache está procesando correctamente los archivos PHP.</li>
+<li>El intérprete PHP funciona adecuadamente.</li>
+<li>Las extensiones instaladas están disponibles.</li>
+<li>No existen errores de configuración.</li>
+<li>El entorno está preparado para el desarrollo de aplicaciones web.</li>
+</ul>
+<hr />
+<h3 id="objetivos-de-las-pruebas">Objetivos de las pruebas<a class="headerlink" href="#objetivos-de-las-pruebas" title="Permanent link">&para;</a></h3>
+<p>Antes de continuar con el desarrollo debemos asegurarnos de que:</p>
+<ul>
+<li>Los archivos PHP se ejecutan correctamente.</li>
+<li>No se muestran errores de configuración.</li>
+<li>Apache y PHP trabajan conjuntamente.</li>
+<li>El servidor devuelve las respuestas esperadas.</li>
+</ul>
+<p>Una instalación aparentemente correcta puede ocultar problemas que solo se detectan al ejecutar código PHP.</p>
+<hr />
+<h3 id="primera-prueba-phpinfo">Primera prueba: phpinfo()<a class="headerlink" href="#primera-prueba-phpinfo" title="Permanent link">&para;</a></h3>
+<p>La comprobación más habitual consiste en utilizar la función:</p>
+<div class="highlight"><pre><span></span><code><span class="x">phpinfo();</span>
+</code></pre></div>
+<p>Crear el archivo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/info.php
+</code></pre></div>
+<p>Contenido:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Acceder desde el navegador a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/info.php
+</code></pre></div>
+<p>Si todo funciona correctamente aparecerá una página con información detallada sobre PHP.</p>
+<p>Esta prueba confirma que:</p>
+<ul>
+<li>Apache funciona.</li>
+<li>PHP está instalado.</li>
+<li>Apache ejecuta correctamente los scripts PHP.</li>
+</ul>
+<hr />
+<h3 id="segunda-prueba-salida-de-texto">Segunda prueba: salida de texto<a class="headerlink" href="#segunda-prueba-salida-de-texto" title="Permanent link">&para;</a></h3>
+<p>Una vez verificada la instalación conviene realizar una prueba sencilla utilizando código propio.</p>
+<p>Crear el archivo:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/prueba.php
+</code></pre></div>
+<p>Contenido:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">echo</span> <span class="s2">"&lt;h1&gt;PHP funciona correctamente&lt;/h1&gt;"</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Acceder a:</p>
+<div class="highlight"><pre><span></span><code>http://localhost/prueba.php
+</code></pre></div>
+<p>Resultado esperado:</p>
+<div class="highlight"><pre><span></span><code>PHP funciona correctamente
+</code></pre></div>
+<p>Si el navegador muestra el código PHP en lugar del mensaje generado, existe un problema de integración entre Apache y PHP.</p>
+<hr />
+<h3 id="tercera-prueba-fecha-y-hora-del-servidor">Tercera prueba: fecha y hora del servidor<a class="headerlink" href="#tercera-prueba-fecha-y-hora-del-servidor" title="Permanent link">&para;</a></h3>
+<p>Una de las ventajas de PHP es la posibilidad de generar contenido dinámico.</p>
+<p>Modificar el archivo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">echo</span> <span class="s2">"&lt;h1&gt;Servidor operativo&lt;/h1&gt;"</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;p&gt;Fecha y hora: "</span> <span class="o">.</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"d/m/Y H:i:s"</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Cada vez que se recargue la página aparecerá una hora diferente.</p>
+<p>Esta prueba demuestra que el código se ejecuta en el servidor antes de enviarse al navegador.</p>
+<hr />
+<h3 id="cuarta-prueba-variables-y-operaciones">Cuarta prueba: variables y operaciones<a class="headerlink" href="#cuarta-prueba-variables-y-operaciones" title="Permanent link">&para;</a></h3>
+<p>Crear el archivo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+<span class="k">echo</span> <span class="s2">"&lt;p&gt;Suma: "</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">+</span> <span class="nv">$b</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Resultado esperado:</p>
+<div class="highlight"><pre><span></span><code>Suma: 30
+</code></pre></div>
+<p>Con esta prueba comprobamos que PHP interpreta correctamente variables y expresiones.</p>
+<hr />
+<h3 id="quinta-prueba-informacion-del-servidor">Quinta prueba: información del servidor<a class="headerlink" href="#quinta-prueba-informacion-del-servidor" title="Permanent link">&para;</a></h3>
+<p>PHP proporciona información sobre la petición y el entorno mediante variables predefinidas.</p>
+<p>Crear el archivo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">echo</span> <span class="s2">"&lt;p&gt;Servidor: "</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'SERVER_NAME'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">"&lt;p&gt;Software: "</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'SERVER_SOFTWARE'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;"</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Esta prueba permite observar cómo PHP puede acceder a información proporcionada por Apache.</p>
+<hr />
+<h3 id="comprobacion-de-extensiones-instaladas">Comprobación de extensiones instaladas<a class="headerlink" href="#comprobacion-de-extensiones-instaladas" title="Permanent link">&para;</a></h3>
+<p>Podemos verificar qué extensiones están disponibles mediante:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-m
+</code></pre></div>
+<p>La salida mostrará una lista similar a:</p>
+<div class="highlight"><pre><span></span><code>curl
+gd
+mysqli
+pdo_mysql
+xml
+</code></pre></div>
+<p>Esta comprobación resulta muy útil antes de instalar aplicaciones como Moodle o WordPress.</p>
+<hr />
+<h3 id="comprobacion-desde-la-linea-de-comandos">Comprobación desde la línea de comandos<a class="headerlink" href="#comprobacion-desde-la-linea-de-comandos" title="Permanent link">&para;</a></h3>
+<p>PHP también puede ejecutarse sin utilizar Apache.</p>
+<p>Crear el archivo:</p>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>prueba.php
+</code></pre></div>
+<p>Contenido:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">echo</span> <span class="s2">"Hola desde PHP</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Ejecutar:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>prueba.php
+</code></pre></div>
+<p>Resultado:</p>
+<div class="highlight"><pre><span></span><code>Hola desde PHP
+</code></pre></div>
+<p>Esto confirma que el intérprete PHP funciona correctamente desde la consola.</p>
+<hr />
+<h3 id="consulta-de-la-configuracion-de-php">Consulta de la configuración de PHP<a class="headerlink" href="#consulta-de-la-configuracion-de-php" title="Permanent link">&para;</a></h3>
+<p>Podemos consultar la configuración activa mediante:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>--ini
+</code></pre></div>
+<p>Resultado típico:</p>
+<div class="highlight"><pre><span></span><code>Loaded Configuration File: /etc/php/8.x/apache2/php.ini
+</code></pre></div>
+<p>También podemos consultar parámetros concretos:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-i<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>memory_limit
+</code></pre></div>
+<p>o</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-i<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>upload_max_filesize
+</code></pre></div>
+<hr />
+<h3 id="diagnostico-de-errores">Diagnóstico de errores<a class="headerlink" href="#diagnostico-de-errores" title="Permanent link">&para;</a></h3>
+<p>Durante las pruebas pueden aparecer distintos problemas.</p>
+<p><strong>Se muestra el código PHP en el navegador</strong></p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s2">"Hola"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Posibles causas:</p>
+<ul>
+<li>PHP no está instalado.</li>
+<li>El módulo PHP no está cargado.</li>
+<li>Apache no se ha reiniciado tras la instalación.</li>
+</ul>
+<p>Comprobar:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>php
+</code></pre></div>
+<p><strong>Página completamente en blanco</strong></p>
+<p>Posibles causas:</p>
+<ul>
+<li>Error en el script.</li>
+<li>Configuración incorrecta de PHP.</li>
+<li>Extensiones faltantes.</li>
+</ul>
+<p>Consultar:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/error.log
+</code></pre></div>
+<p><strong>Error 500 Internal Server Error</strong></p>
+<p>Suele indicar un problema durante la ejecución del script.</p>
+<p>Comprobar:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/error.log
+</code></pre></div>
+<p>para localizar la causa concreta.</p>
+<hr />
+<h3 id="eliminacion-del-archivo-phpinfo">Eliminación del archivo phpinfo()<a class="headerlink" href="#eliminacion-del-archivo-phpinfo" title="Permanent link">&para;</a></h3>
+<p>Una vez finalizadas las pruebas es recomendable eliminar el archivo:</p>
+<div class="highlight"><pre><span></span><code>info.php
+</code></pre></div>
+<p>ya que proporciona información detallada sobre el servidor.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>rm<span class="w"> </span>/var/www/html/info.php
+</code></pre></div>
+<p>En entornos de producción este archivo nunca debería permanecer accesible.</p>
+<hr />
+<h3 id="lista-de-verificacion">Lista de verificación<a class="headerlink" href="#lista-de-verificacion" title="Permanent link">&para;</a></h3>
+<p>Antes de continuar con la integración de bases de datos conviene verificar:</p>
+<ul>
+<li>[ ] PHP está instalado.</li>
+<li>[ ] Apache ejecuta correctamente scripts PHP.</li>
+<li>[ ] <code>phpinfo()</code> funciona.</li>
+<li>[ ] Las páginas PHP generan contenido dinámico.</li>
+<li>[ ] Las extensiones necesarias están disponibles.</li>
+<li>[ ] No existen errores en los registros.</li>
+<li>[ ] El archivo <code>info.php</code> ha sido eliminado tras las pruebas.</li>
+</ul>
+<hr />
+<h3 id="ideas-clave">Ideas clave<a class="headerlink" href="#ideas-clave" title="Permanent link">&para;</a></h3>
+<p>Al finalizar este apartado debes ser capaz de:</p>
+<ul>
+<li>Verificar la correcta integración entre Apache y PHP.</li>
+<li>Crear y ejecutar scripts PHP sencillos.</li>
+<li>Utilizar <code>phpinfo()</code> para diagnosticar problemas.</li>
+<li>Comprobar las extensiones instaladas.</li>
+<li>Ejecutar PHP desde la línea de comandos.</li>
+<li>Consultar la configuración de PHP.</li>
+<li>Diagnosticar errores habituales durante la ejecución de scripts.</li>
+<li>Aplicar una metodología sistemática de pruebas del entorno PHP.</li>
+</ul>
+<hr />
+<h2 id="3-conexion-con-bases-de-datos-mariadb">3. Conexión con bases de datos (MariaDB)<a class="headerlink" href="#3-conexion-con-bases-de-datos-mariadb" title="Permanent link">&para;</a></h2>
+<p>Una vez instalado MariaDB (ver el bloque correspondiente) y comprobado que funciona correctamente, el siguiente paso es conectar una aplicación PHP con la base de datos. Esto es lo que realmente cierra el ciclo completo del stack LAMP.</p>
+<p>PHP ofrece principalmente dos formas de conectarse a MariaDB/MySQL: la extensión <strong>MySQLi</strong> y la capa de acceso a datos <strong>PDO</strong>.</p>
+<h3 id="extension-necesaria">Extensión necesaria<a class="headerlink" href="#extension-necesaria" title="Permanent link">&para;</a></h3>
+<p>Ambas requieren tener instalada la extensión correspondiente (ya vista en el Bloque 2):</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php-mysql
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<p>Podemos comprobar que la extensión está cargada:</p>
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mysqli
+</code></pre></div>
+<h3 id="conexion-con-mysqli-orientado-a-objetos">Conexión con MySQLi (orientado a objetos)<a class="headerlink" href="#conexion-con-mysqli-orientado-a-objetos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">;</span>
+<span class="nv">$usuario</span>  <span class="o">=</span> <span class="s2">"appweb"</span><span class="p">;</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="s2">"contraseña_segura"</span><span class="p">;</span>
+<span class="nv">$bd</span>       <span class="o">=</span> <span class="s2">"tienda"</span><span class="p">;</span>
+
+<span class="nv">$conexion</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="nv">$servidor</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$bd</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">connect_error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">"Error de conexión: "</span> <span class="o">.</span> <span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">connect_error</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="s2">"Conexión establecida correctamente."</span><span class="p">;</span>
+
+<span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="consulta-de-datos-con-mysqli">Consulta de datos con MySQLi<a class="headerlink" href="#consulta-de-datos-con-mysqli" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$conexion</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"appweb"</span><span class="p">,</span> <span class="s2">"contraseña_segura"</span><span class="p">,</span> <span class="s2">"tienda"</span><span class="p">);</span>
+
+<span class="nv">$resultado</span> <span class="o">=</span> <span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT nombre, precio FROM productos"</span><span class="p">);</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$fila</span> <span class="o">=</span> <span class="nv">$resultado</span><span class="o">-&gt;</span><span class="na">fetch_assoc</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" - "</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'precio'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" €&lt;/p&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="conexion-con-pdo">Conexión con PDO<a class="headerlink" href="#conexion-con-pdo" title="Permanent link">&para;</a></h3>
+<p>PDO ofrece una interfaz común válida para distintos motores de bases de datos, no solo MariaDB/MySQL.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$servidor</span> <span class="o">=</span> <span class="s2">"mysql:host=localhost;dbname=tienda;charset=utf8mb4"</span><span class="p">;</span>
+<span class="nv">$usuario</span>  <span class="o">=</span> <span class="s2">"appweb"</span><span class="p">;</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="s2">"contraseña_segura"</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="nv">$servidor</span><span class="p">,</span> <span class="nv">$usuario</span><span class="p">,</span> <span class="nv">$password</span><span class="p">);</span>
+    <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+    <span class="k">echo</span> <span class="s2">"Conexión establecida correctamente."</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">"Error de conexión: "</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="consulta-de-datos-con-pdo">Consulta de datos con PDO<a class="headerlink" href="#consulta-de-datos-con-pdo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=localhost;dbname=tienda;charset=utf8mb4"</span><span class="p">,</span> <span class="s2">"appweb"</span><span class="p">,</span> <span class="s2">"contraseña_segura"</span><span class="p">);</span>
+
+<span class="nv">$consulta</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT nombre, precio FROM productos"</span><span class="p">);</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$consulta</span> <span class="k">as</span> <span class="nv">$fila</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" - "</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'precio'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" €&lt;/p&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="mysqli-frente-a-pdo">MySQLi frente a PDO<a class="headerlink" href="#mysqli-frente-a-pdo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>MySQLi</th>
+<th>PDO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motores soportados</td>
+<td>Solo MySQL/MariaDB</td>
+<td>Varios (MySQL, PostgreSQL, SQLite...)</td>
+</tr>
+<tr>
+<td>Estilo de programación</td>
+<td>Procedimental u orientado a objetos</td>
+<td>Orientado a objetos</td>
+</tr>
+<tr>
+<td>Sentencias preparadas</td>
+<td>Sí</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Uso recomendado</td>
+<td>Aplicaciones ligadas a MySQL/MariaDB</td>
+<td>Aplicaciones que puedan cambiar de motor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-sentencias-preparadas-y-seguridad">4. Sentencias preparadas y seguridad<a class="headerlink" href="#4-sentencias-preparadas-y-seguridad" title="Permanent link">&para;</a></h2>
+<p>Construir consultas SQL concatenando directamente datos introducidos por el usuario es una práctica insegura, ya que expone la aplicación a ataques de <strong>inyección SQL</strong>.</p>
+<h3 id="ejemplo-inseguro-no-utilizar">Ejemplo inseguro (NO utilizar)<a class="headerlink" href="#ejemplo-inseguro-no-utilizar" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Código vulnerable a inyección SQL. Solo con fines ilustrativos.</span>
+<span class="nv">$usuario</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">'usuario'</span><span class="p">];</span>
+<span class="nv">$consulta</span> <span class="o">=</span> <span class="s2">"SELECT * FROM usuarios WHERE nombre = '</span><span class="si">$usuario</span><span class="s2">'"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Un usuario malicioso podría manipular el parámetro <code>usuario</code> para alterar el significado de la consulta.</p>
+<h3 id="solucion-sentencias-preparadas-con-mysqli">Solución: sentencias preparadas con MySQLi<a class="headerlink" href="#solucion-sentencias-preparadas-con-mysqli" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$conexion</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="s2">"localhost"</span><span class="p">,</span> <span class="s2">"appweb"</span><span class="p">,</span> <span class="s2">"contraseña_segura"</span><span class="p">,</span> <span class="s2">"tienda"</span><span class="p">);</span>
+
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT nombre, precio FROM productos WHERE nombre = ?"</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">bind_param</span><span class="p">(</span><span class="s2">"s"</span><span class="p">,</span> <span class="nv">$nombreBuscado</span><span class="p">);</span>
+
+<span class="nv">$nombreBuscado</span> <span class="o">=</span> <span class="s2">"Teclado"</span><span class="p">;</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+
+<span class="nv">$resultado</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">get_result</span><span class="p">();</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$fila</span> <span class="o">=</span> <span class="nv">$resultado</span><span class="o">-&gt;</span><span class="na">fetch_assoc</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" - "</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'precio'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" €&lt;/p&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
+<span class="nv">$conexion</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="solucion-sentencias-preparadas-con-pdo">Solución: sentencias preparadas con PDO<a class="headerlink" href="#solucion-sentencias-preparadas-con-pdo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=localhost;dbname=tienda;charset=utf8mb4"</span><span class="p">,</span> <span class="s2">"appweb"</span><span class="p">,</span> <span class="s2">"contraseña_segura"</span><span class="p">);</span>
+
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"SELECT nombre, precio FROM productos WHERE nombre = :nombre"</span><span class="p">);</span>
+<span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">'nombre'</span> <span class="o">=&gt;</span> <span class="s1">'Teclado'</span><span class="p">]);</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$stmt</span> <span class="k">as</span> <span class="nv">$fila</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" - "</span> <span class="o">.</span> <span class="nv">$fila</span><span class="p">[</span><span class="s1">'precio'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" €&lt;/p&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<p>Las sentencias preparadas separan el código SQL de los datos, de forma que estos últimos nunca se interpretan como parte de la consulta.</p>
+<blockquote>
+<p>Esta es una de las primeras buenas prácticas de seguridad que debe interiorizar cualquier persona que desarrolle o administre aplicaciones web con acceso a bases de datos.</p>
+</blockquote>
+<hr />
+<h2 id="5-prueba-de-integracion-completa-apache-php-mariadb">5. Prueba de integración completa: Apache + PHP + MariaDB<a class="headerlink" href="#5-prueba-de-integracion-completa-apache-php-mariadb" title="Permanent link">&para;</a></h2>
+<p>Para comprobar que todo el stack funciona correctamente de extremo a extremo, podemos crear una pequeña página de prueba.</p>
+<h3 id="crear-la-base-de-datos-y-los-datos-de-prueba">Crear la base de datos y los datos de prueba<a class="headerlink" href="#crear-la-base-de-datos-y-los-datos-de-prueba" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">prueba_lamp</span><span class="p">;</span>
+<span class="n">USE</span><span class="w"> </span><span class="n">prueba_lamp</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">mensajes</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">texto</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+<span class="p">);</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">mensajes</span><span class="w"> </span><span class="p">(</span><span class="n">texto</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'Apache, PHP y MariaDB funcionan correctamente'</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="crear-el-usuario-de-la-aplicacion">Crear el usuario de la aplicación<a class="headerlink" href="#crear-el-usuario-de-la-aplicacion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'lampuser'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">'lamp1234'</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">prueba_lamp</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'lampuser'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
+<span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="crear-la-pagina-php">Crear la página PHP<a class="headerlink" href="#crear-la-pagina-php" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/prueba_lamp.php
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:host=localhost;dbname=prueba_lamp;charset=utf8mb4"</span><span class="p">,</span> <span class="s2">"lampuser"</span><span class="p">,</span> <span class="s2">"lamp1234"</span><span class="p">);</span>
+<span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+
+<span class="nv">$resultado</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"SELECT texto FROM mensajes"</span><span class="p">);</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$resultado</span> <span class="k">as</span> <span class="nv">$fila</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"&lt;h1&gt;"</span> <span class="o">.</span> <span class="nb">htmlspecialchars</span><span class="p">(</span><span class="nv">$fila</span><span class="p">[</span><span class="s1">'texto'</span><span class="p">])</span> <span class="o">.</span> <span class="s2">"&lt;/h1&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div>
+<h3 id="comprobacion">Comprobación<a class="headerlink" href="#comprobacion" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>http://localhost/prueba_lamp.php
+</code></pre></div>
+<p>Si el navegador muestra el mensaje almacenado en la base de datos, todo el stack está correctamente instalado, configurado e integrado:</p>
+<div class="highlight"><pre><span></span><code>Cliente web  →  Apache  →  PHP  →  MariaDB  →  Apache  →  Cliente web
+</code></pre></div>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "navigation.expand", "toc.integrate", "content.code.copy", "content.tabs.link", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
