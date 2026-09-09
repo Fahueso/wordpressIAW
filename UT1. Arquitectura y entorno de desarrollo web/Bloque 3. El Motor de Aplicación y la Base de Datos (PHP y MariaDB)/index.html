@@ -12,8 +12,6 @@
         <link rel="prev" href="../Bloque%202.%20Entornos%20de%20Desarrollo%20y%20Servidores%20Web/">
       
       
-        <link rel="next" href="../Bloque%203.%20PHP/">
-      
       
         
       
@@ -1340,62 +1338,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Bloque%201.%20Aplicaciones%20web2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Bloque 1. Aplicaciones web
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%202.%20Apache/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.1. Entornos de desarrollo web
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Bloque%202.%20Entornos%20de%20Desarrollo%20y%20Servidores%20Web/" class="md-nav__link">
         
   
@@ -1601,17 +1543,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#administracion-basica-mediante-consola" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Administración Básica mediante Consola
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1765,62 +1696,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%203.%20PHP/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Bloque 3. PHP
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%204.%20MariaDB/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. Bases de datos con MariaDB
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1899,16 +1774,17 @@ Tras la instalación, es obligatorio reiniciar Apache para que reconozca la inte
 </code></pre></div>
 Se gestiona mediante <code>systemctl</code> (<code>start</code>, <code>stop</code>, <code>restart</code>, <code>status</code>) y se comprueba la versión con <code>mariadb --version</code>.</p>
 <h3 id="seguridad-inicial-mysql_secure_installation">Seguridad Inicial: mysql_secure_installation<a class="headerlink" href="#seguridad-inicial-mysql_secure_installation" title="Permanent link">&para;</a></h3>
-<p>Es obligatorio ejecutar el script de seguridad para evitar compromisos:
+<p>Para asegurar el servidor de base de datos, es obligatorio ejecutar el script de seguridad. El objetivo no es configurar una cuenta para el uso diario, sino <strong>blindar el acceso administrativo</strong> y eliminar vulnerabilidades por defecto:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql_secure_installation
 </code></pre></div>
-Este asistente permite: establecer la contraseña de <code>root</code>, eliminar usuarios anónimos, deshabilitar el acceso remoto de root y borrar la base de datos de prueba.</p>
-<h3 id="administracion-basica-mediante-consola">Administración Básica mediante Consola<a class="headerlink" href="#administracion-basica-mediante-consola" title="Permanent link">&para;</a></h3>
-<p>Accedemos con <code>sudo mariadb -u root -p</code>. Operaciones fundamentales:
-*   <strong>Bases de datos:</strong> <code>CREATE DATABASE tienda;</code> y <code>SHOW DATABASES;</code>.
-*   <strong>Selección:</strong> <code>USE tienda;</code>.
-*   <strong>Tablas:</strong> <code>CREATE TABLE productos (id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100) NOT NULL, precio DECIMAL(10,2) NOT NULL);</code>.
-*   <strong>Datos:</strong> <code>INSERT INTO productos (nombre, precio) VALUES ('Teclado', 25.90);</code> y <code>SELECT * FROM productos;</code>.</p>
+<p>Este asistente permite:</p>
+<ul>
+<li><strong>Establecer una contraseña para root:</strong> Para evitar que cualquier usuario con acceso al sistema pueda entrar fácilmente al SGBD.</li>
+<li><strong>Eliminar usuarios anónimos:</strong> Para que nadie pueda entrar sin identificarse.</li>
+<li><strong>Deshabilitar el acceso remoto de root:</strong> Para que la cuenta administrativa solo sea accesible desde el propio servidor (localhost).</li>
+<li><strong>Borrar la base de datos de prueba:</strong> Para eliminar datos innecesarios que podrían dar pistas sobre la estructura del sistema.</li>
+</ul>
+<p><strong>Importante:</strong> Una vez ejecutado este script, la cuenta de <code>root</code> queda reservada únicamente para tareas de mantenimiento crítico. Para el funcionamiento de cualquier aplicación web, es obligatorio crear un usuario específico con privilegios limitados (ver apartado 3.5)</p>
 <hr />
 <h2 id="35-usuarios-privilegios-y-herramientas-graficas">3.5. Usuarios, Privilegios y Herramientas Gráficas<a class="headerlink" href="#35-usuarios-privilegios-y-herramientas-graficas" title="Permanent link">&para;</a></h2>
 <h3 id="gestion-de-usuarios-y-seguridad">Gestión de Usuarios y Seguridad<a class="headerlink" href="#gestion-de-usuarios-y-seguridad" title="Permanent link">&para;</a></h3>

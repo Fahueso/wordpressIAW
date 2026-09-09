@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Bloque%202.%20Apache/">
+        <link rel="prev" href="../Bloque%201.%20Aplicaciones%20web/">
       
       
         <link rel="next" href="../Bloque%203.%20El%20Motor%20de%20Aplicaci%C3%B3n%20y%20la%20Base%20de%20Datos%20%28PHP%20y%20MariaDB%29/">
@@ -1337,62 +1337,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%201.%20Aplicaciones%20web2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Bloque 1. Aplicaciones web
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%202.%20Apache/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2.1. Entornos de desarrollo web
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1837,62 +1781,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%203.%20PHP/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Bloque 3. PHP
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bloque%204.%20MariaDB/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. Bases de datos con MariaDB
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1930,7 +1818,8 @@
 <h3 id="el-concepto-de-stack-de-desarrollo">El concepto de "Stack" de desarrollo<a class="headerlink" href="#el-concepto-de-stack-de-desarrollo" title="Permanent link">&para;</a></h3>
 <p>Para que una aplicación web funcione, necesita varios componentes trabajando conjuntamente. A este conjunto de tecnologías se le llama <strong>stack</strong>. Los más habituales son:
 *   <strong>Stack LAMP:</strong> Compuesto por Linux (Sistema Operativo), Apache (Servidor Web), MariaDB o MySQL (Base de Datos) y PHP (Lenguaje de programación). Es el stack sobre el que corren aplicaciones como WordPress, Moodle o Nextcloud.
-*   <strong>Stack LEMP:</strong> Es una alternativa donde se sustituye Apache por <strong>Nginx</strong> (pronunciado <em>Engine-X</em>). La principal diferencia radica en cómo el servidor gestiona las conexiones y el rendimiento.</p>
+ *   <strong>Stack LEMP:</strong> Es una alternativa donde se sustituye Apache por <strong>Nginx</strong> (pronunciado <em>Engine-X</em>). La principal diferencia radica en cómo el servidor gestiona las conexiones y el rendimiento.</p>
+<p>![[Pasted image 20260909173157.png]]</p>
 <h3 id="aislamiento-virtualizacion-y-contenedores">Aislamiento: Virtualización y Contenedores<a class="headerlink" href="#aislamiento-virtualizacion-y-contenedores" title="Permanent link">&para;</a></h3>
 <p>Para evitar conflictos entre versiones de software y mantener el sistema limpio, utilizamos técnicas de aislamiento:
 *   <strong>Virtualización:</strong> Permite ejecutar varios sistemas operativos independientes sobre un mismo equipo físico mediante máquinas virtuales. Ofrece un aislamiento total y permite crear "instantáneas" (snapshots) para restaurar el sistema a un estado anterior. Sin embargo, consume mucha memoria y almacenamiento, y el arranque es lento ya que requiere un SO completo por cada máquina.
@@ -1995,12 +1884,19 @@
 2.  <strong>Basados en nombre:</strong> Todos comparten la misma IP y puerto, pero Apache distingue el sitio mediante la cabecera <code>Host</code> de la petición.</p>
 <p>Para configurar un Virtual Host, creamos un archivo en <code>sites-available</code> con las directivas <code>ServerName</code> (el dominio, ej. <code>miweb1.local</code>) y <code>DocumentRoot</code> (la carpeta del sitio). También es recomendable definir <code>ErrorLog</code> y <code>CustomLog</code> independientes para cada sitio. Para que el navegador reconozca estos dominios locales, debemos añadirlos al archivo <code>/etc/hosts</code>.</p>
 <h3 id="directorios-personales-mod_userdir">Directorios Personales (<code>mod_userdir</code>)<a class="headerlink" href="#directorios-personales-mod_userdir" title="Permanent link">&para;</a></h3>
-<p>Este módulo permite que cada usuario tenga su propio espacio web en <code>/home/usuario/public_html</code>, accesible mediante <code>http://localhost/~usuario</code>. 
-Para activarlo:
-1.  <code>sudo a2enmod userdir</code> $\rightarrow$ <code>sudo systemctl reload apache2</code>.
-2.  El usuario crea su carpeta: <code>mkdir ~/public_html</code>.
-3.  Se asignan permisos: <code>chmod 755 ~/public_html</code>.</p>
-<p><strong>Nota de seguridad:</strong> En Debian, la ejecución de PHP en estos directorios suele estar desactivada por defecto en el archivo de configuración de PHP para evitar riesgos de seguridad en el home del usuario.</p>
+<p>Este módulo permite que cada usuario del sistema tenga su propio espacio web independiente en <code>/home/usuario/public_html</code>, accesible mediante la URL <code>http://localhost/~usuario</code>. Es muy útil en entornos educativos para que cada alumno despliegue sus pruebas sin interferir con los demás.</p>
+<p><strong>Procedimiento de activación:</strong></p>
+<ol>
+<li><strong>Habilitar el módulo:</strong> <code>sudo a2enmod userdir</code> $\rightarrow$ <code>sudo systemctl reload apache2</code>.</li>
+<li><strong>Crear el espacio web:</strong> El usuario debe crear la carpeta específica en su home: <code>mkdir ~/public_html</code>.</li>
+<li><strong>Asignar permisos:</strong> Para que Apache pueda leer el contenido, la carpeta debe tener permisos de lectura y ejecución: <code>chmod 755 ~/public_html</code>.</li>
+</ol>
+<p><strong>Importante: La ejecución de PHP en directorios personales</strong> Por defecto, en Debian y Ubuntu, la ejecución de scripts PHP está <strong>desactivada</strong> dentro de los directorios personales por razones de seguridad (para evitar que un usuario ejecute código malicioso en el home de otro). Si al acceder a <code>~usuario/index.php</code> el navegador descarga el archivo o muestra el código fuente en lugar de ejecutarlo, es necesario habilitarlo manualmente:</p>
+<ol>
+<li>Editar el archivo de configuración del módulo PHP: <code>sudo nano /etc/apache2/mods-enabled/php8.x.conf</code> (sustituir <code>8.x</code> por la versión instalada).</li>
+<li>Localizar el bloque que contiene la directiva <code>&lt;IfModule mod_userdir.c&gt;</code> y <strong>comentar</strong> la línea <code>php_admin_value engine Off</code> añadiendo un <code>#</code> al principio: <code># php_admin_value engine Off</code></li>
+<li>Guardar los cambios y reiniciar el servidor: <code>sudo systemctl restart apache2</code>.</li>
+</ol>
 <hr />
 <h2 id="27-seguridad-y-control-de-accesos">2.7. Seguridad y Control de Accesos<a class="headerlink" href="#27-seguridad-y-control-de-accesos" title="Permanent link">&para;</a></h2>
 <h3 id="autenticacion-y-autorizacion">Autenticación y Autorización<a class="headerlink" href="#autenticacion-y-autorizacion" title="Permanent link">&para;</a></h3>
