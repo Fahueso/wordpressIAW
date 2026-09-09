@@ -14,7 +14,9 @@ En el desarrollo de software, es habitual realizar cambios constantes, corregir 
 ### El concepto de "Stack" de desarrollo
 Para que una aplicación web funcione, necesita varios componentes trabajando conjuntamente. A este conjunto de tecnologías se le llama **stack**. Los más habituales son:
 *   **Stack LAMP:** Compuesto por Linux (Sistema Operativo), Apache (Servidor Web), MariaDB o MySQL (Base de Datos) y PHP (Lenguaje de programación). Es el stack sobre el que corren aplicaciones como WordPress, Moodle o Nextcloud.
-*   **Stack LEMP:** Es una alternativa donde se sustituye Apache por **Nginx** (pronunciado *Engine-X*). La principal diferencia radica en cómo el servidor gestiona las conexiones y el rendimiento.
+ *   **Stack LEMP:** Es una alternativa donde se sustituye Apache por **Nginx** (pronunciado *Engine-X*). La principal diferencia radica en cómo el servidor gestiona las conexiones y el rendimiento.
+
+![[Pasted image 20260909173157.png]]
 
 ### Aislamiento: Virtualización y Contenedores
 Para evitar conflictos entre versiones de software y mantener el sistema limpio, utilizamos técnicas de aislamiento:
@@ -107,13 +109,20 @@ Un único servidor puede alojar múltiples sitios web independientes. Esto se ha
 Para configurar un Virtual Host, creamos un archivo en `sites-available` con las directivas `ServerName` (el dominio, ej. `miweb1.local`) y `DocumentRoot` (la carpeta del sitio). También es recomendable definir `ErrorLog` y `CustomLog` independientes para cada sitio. Para que el navegador reconozca estos dominios locales, debemos añadirlos al archivo `/etc/hosts`.
 
 ### Directorios Personales (`mod_userdir`)
-Este módulo permite que cada usuario tenga su propio espacio web en `/home/usuario/public_html`, accesible mediante `http://localhost/~usuario`. 
-Para activarlo:
-1.  `sudo a2enmod userdir` $\rightarrow$ `sudo systemctl reload apache2`.
-2.  El usuario crea su carpeta: `mkdir ~/public_html`.
-3.  Se asignan permisos: `chmod 755 ~/public_html`.
 
-**Nota de seguridad:** En Debian, la ejecución de PHP en estos directorios suele estar desactivada por defecto en el archivo de configuración de PHP para evitar riesgos de seguridad en el home del usuario.
+Este módulo permite que cada usuario del sistema tenga su propio espacio web independiente en `/home/usuario/public_html`, accesible mediante la URL `http://localhost/~usuario`. Es muy útil en entornos educativos para que cada alumno despliegue sus pruebas sin interferir con los demás.
+
+**Procedimiento de activación:**
+
+1. **Habilitar el módulo:** `sudo a2enmod userdir` $\rightarrow$ `sudo systemctl reload apache2`.
+2. **Crear el espacio web:** El usuario debe crear la carpeta específica en su home: `mkdir ~/public_html`.
+3. **Asignar permisos:** Para que Apache pueda leer el contenido, la carpeta debe tener permisos de lectura y ejecución: `chmod 755 ~/public_html`.
+
+**Importante: La ejecución de PHP en directorios personales** Por defecto, en Debian y Ubuntu, la ejecución de scripts PHP está **desactivada** dentro de los directorios personales por razones de seguridad (para evitar que un usuario ejecute código malicioso en el home de otro). Si al acceder a `~usuario/index.php` el navegador descarga el archivo o muestra el código fuente en lugar de ejecutarlo, es necesario habilitarlo manualmente:
+
+1. Editar el archivo de configuración del módulo PHP: `sudo nano /etc/apache2/mods-enabled/php8.x.conf` (sustituir `8.x` por la versión instalada).
+2. Localizar el bloque que contiene la directiva `<IfModule mod_userdir.c>` y **comentar** la línea `php_admin_value engine Off` añadiendo un `#` al principio: `# php_admin_value engine Off`
+3. Guardar los cambios y reiniciar el servidor: `sudo systemctl restart apache2`.
 
 ---
 

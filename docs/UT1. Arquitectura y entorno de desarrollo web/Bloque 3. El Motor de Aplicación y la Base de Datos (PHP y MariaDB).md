@@ -79,18 +79,21 @@ sudo apt install mariadb-server
 Se gestiona mediante `systemctl` (`start`, `stop`, `restart`, `status`) y se comprueba la versión con `mariadb --version`.
 
 ### Seguridad Inicial: mysql_secure_installation
-Es obligatorio ejecutar el script de seguridad para evitar compromisos:
+
+Para asegurar el servidor de base de datos, es obligatorio ejecutar el script de seguridad. El objetivo no es configurar una cuenta para el uso diario, sino **blindar el acceso administrativo** y eliminar vulnerabilidades por defecto:
+
 ```bash
 sudo mysql_secure_installation
 ```
-Este asistente permite: establecer la contraseña de `root`, eliminar usuarios anónimos, deshabilitar el acceso remoto de root y borrar la base de datos de prueba.
 
-### Administración Básica mediante Consola
-Accedemos con `sudo mariadb -u root -p`. Operaciones fundamentales:
-*   **Bases de datos:** `CREATE DATABASE tienda;` y `SHOW DATABASES;`.
-*   **Selección:** `USE tienda;`.
-*   **Tablas:** `CREATE TABLE productos (id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100) NOT NULL, precio DECIMAL(10,2) NOT NULL);`.
-*   **Datos:** `INSERT INTO productos (nombre, precio) VALUES ('Teclado', 25.90);` y `SELECT * FROM productos;`.
+Este asistente permite:
+
+- **Establecer una contraseña para root:** Para evitar que cualquier usuario con acceso al sistema pueda entrar fácilmente al SGBD.
+- **Eliminar usuarios anónimos:** Para que nadie pueda entrar sin identificarse.
+- **Deshabilitar el acceso remoto de root:** Para que la cuenta administrativa solo sea accesible desde el propio servidor (localhost).
+- **Borrar la base de datos de prueba:** Para eliminar datos innecesarios que podrían dar pistas sobre la estructura del sistema.
+
+**Importante:** Una vez ejecutado este script, la cuenta de `root` queda reservada únicamente para tareas de mantenimiento crítico. Para el funcionamiento de cualquier aplicación web, es obligatorio crear un usuario específico con privilegios limitados (ver apartado 3.5)
 
 ---
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web2.md",
+                "file": "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bloque 1. Aplicaciones web2"
+              "title": "Bloque 1. Aplicaciones web"
             }
           },
           {
@@ -202,12 +202,14 @@
   },
   "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
-    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web.md",
-    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web2.md",
-    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 3. El Motor de Aplicación y la Base de Datos (PHP y MariaDB).md",
-    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 3. PHP.md",
-    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 4. MariaDB.md",
     "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 2. Entornos de Desarrollo y Servidores Web.md",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 3. El Motor de Aplicación y la Base de Datos (PHP y MariaDB).md",
+    "attachments/Pasted image 20260909173157.png",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web.md",
+    "attachments/Pasted image 20260909173108.png",
+    "attachments/Pasted image 20260909172945.png",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 4. MariaDB.md",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 3. PHP.md",
     "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 2. Apache.md",
     "attachments/Pasted image 20260901183448.png",
     "attachments/Pasted image 20260901183307.png",
@@ -244,9 +246,6 @@
     "site/Apuntes Sistemas/j) WP-CLI/index.html",
     "site/Apuntes Sistemas/j) WP-CLI",
     "site/assets/images/favicon.png",
-    "site/attachments/Pasted image 20251210231415.png",
-    "site/attachments/Pasted image 20251210231347.png",
-    "site/attachments/Pasted image 20251210231318.png",
     "docs/Apuntes Sistemas/h) TODO Requisitos hardware.md"
   ]
 }
