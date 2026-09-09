@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web.md",
+                "file": "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bloque 1. Aplicaciones web"
+              "title": "Bloque 1. Aplicaciones web2"
             }
           },
           {
@@ -200,13 +200,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67b79ffd1baea192",
+  "active": "b3d5b28c376fed49",
   "lastOpenFiles": [
-    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 2. Apache.md",
     "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web.md",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 1. Aplicaciones web2.md",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 3. El Motor de Aplicación y la Base de Datos (PHP y MariaDB).md",
     "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 3. PHP.md",
-    "docs/UT1. Arquitectura y entorno de desarrollo web/borrar.md",
     "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 4. MariaDB.md",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 2. Entornos de Desarrollo y Servidores Web.md",
+    "docs/UT1. Arquitectura y entorno de desarrollo web/Bloque 2. Apache.md",
     "attachments/Pasted image 20260901183448.png",
     "attachments/Pasted image 20260901183307.png",
     "attachments/Pasted image 20260901183152.png",
@@ -245,8 +247,6 @@
     "site/attachments/Pasted image 20251210231415.png",
     "site/attachments/Pasted image 20251210231347.png",
     "site/attachments/Pasted image 20251210231318.png",
-    "docs/Apuntes Sistemas/h) TODO Requisitos hardware.md",
-    "docs/Apuntes Administración y Usuario/i) Roles y capacidades.md",
-    "docs/Apuntes Sistemas/b) Sistema de archivos.md"
+    "docs/Apuntes Sistemas/h) TODO Requisitos hardware.md"
   ]
 }
