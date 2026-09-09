@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../Bloque%203.%20PHP/">
+        <link rel="prev" href="../Bloque%202.%20Apache/">
       
+      
+        <link rel="next" href="../Bloque%203.%20El%20Motor%20de%20Aplicaci%C3%B3n%20y%20la%20Base%20de%20Datos%20%28PHP%20y%20MariaDB%29/">
       
       
         
@@ -21,7 +23,7 @@
     
     
       
-        <title>1. Bases de datos con MariaDB - Repositorio materiales Wordpress de IAW ASIR</title>
+        <title>Bloque 2: Entornos de Desarrollo y Servidores Web - Repositorio materiales Wordpress de IAW ASIR</title>
       
     
     
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-bases-de-datos-con-mariadb" class="md-skip">
+        <a href="#bloque-2-entornos-de-desarrollo-y-servidores-web" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Bases de datos con MariaDB
+              Bloque 2: Entornos de Desarrollo y Servidores Web
             
           </span>
         </div>
@@ -1391,10 +1393,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Bloque%202.%20Entornos%20de%20Desarrollo%20y%20Servidores%20Web/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 2: Entornos de Desarrollo y Servidores Web
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1410,6 +1439,371 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-introduccion-a-los-entornos-de-desarrollo-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Introducción a los Entornos de Desarrollo Web
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Introducción a los Entornos de Desarrollo Web">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-necesidad-de-diferentes-entornos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La necesidad de diferentes entornos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-concepto-de-stack-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El concepto de "Stack" de desarrollo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aislamiento-virtualizacion-y-contenedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aislamiento: Virtualización y Contenedores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-servidores-web-analisis-y-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Servidores Web: Análisis y Comparativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-apache-http-server-y-su-arquitectura-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. Apache HTTP Server y su Arquitectura Modular
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3. Apache HTTP Server y su Arquitectura Modular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-sistema-de-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El sistema de módulos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modulos-habituales-y-sus-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulos habituales y sus funciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-instalacion-y-gestion-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. Instalación y Gestión del Servidor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4. Instalación y Gestión del Servidor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control del servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacion-y-diagnostico-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificación y Diagnóstico Inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-configuracion-detallada-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. Configuración Detallada de Apache
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5. Configuración Detallada de Apache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-sitios-y-configuraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de Sitios y Configuraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-documentroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El DocumentRoot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-funcionalidades-avanzadas-de-alojamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. Funcionalidades Avanzadas de Alojamiento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6. Funcionalidades Avanzadas de Alojamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-hosts-hosts-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Hosts (Hosts Virtuales)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directorios-personales-mod_userdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directorios Personales (mod_userdir)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-seguridad-y-control-de-accesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. Seguridad y Control de Accesos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7. Seguridad y Control de Accesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autenticacion-y-autorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autenticación y Autorización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-y-cifrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS y Cifrado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cortafuegos-con-ufw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cortafuegos con UFW
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-plataformas-integradas-y-documentacion-profesional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. Plataformas Integradas y Documentación Profesional
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8. Plataformas Integradas y Documentación Profesional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternativas-de-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternativas de Despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-documentacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La Documentación Técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-diagnostico-y-resolucion-de-problemas-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9. Diagnóstico y Resolución de Problemas (Troubleshooting)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9. Diagnóstico y Resolución de Problemas (Troubleshooting)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-flujo-de-diagnostico-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El flujo de diagnóstico básico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-comunes-y-sus-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas comunes y sus soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1475,37 +1869,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. Bases de datos con MariaDB
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Bloque%204.%20MariaDB/" class="md-nav__link">
         
   
   
@@ -1521,442 +1888,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#11-instalacion-de-mariadb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Instalación de MariaDB
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.1 Instalación de MariaDB">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#requisitos-previos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requisitos previos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#instalacion-del-paquete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instalación del paquete
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comprobacion-del-servicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprobación del servicio
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comprobacion-de-la-version-instalada" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprobación de la versión instalada
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-seguridad-basica-de-la-instalacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Seguridad básica de la instalación
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.2 Seguridad básica de la instalación">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#el-script-mysql_secure_installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El script mysql_secure_installation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-acceso-al-cliente-de-mariadb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3 Acceso al cliente de MariaDB
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14-operaciones-basicas-de-administracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4 Operaciones básicas de administración
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4 Operaciones básicas de administración">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-una-base-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Crear una base de datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#listar-las-bases-de-datos-existentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Listar las bases de datos existentes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#seleccionar-una-base-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Seleccionar una base de datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-una-tabla" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Crear una tabla
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#insertar-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Insertar datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consultar-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Consultar datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15-usuarios-y-privilegios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5 Usuarios y privilegios
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5 Usuarios y privilegios">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-usuario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Crear un usuario
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conceder-privilegios-sobre-una-base-de-datos-concreta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conceder privilegios sobre una base de datos concreta
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aplicar-los-cambios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Aplicar los cambios
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comprobar-los-privilegios-de-un-usuario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comprobar los privilegios de un usuario
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#revocar-privilegios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Revocar privilegios
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eliminar-un-usuario" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Eliminar un usuario
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16-phpmyadmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.6 phpMyAdmin
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.6 phpMyAdmin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instalacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instalación
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acceso" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Acceso
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17-copias-de-seguridad-basicas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.7 Copias de seguridad básicas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.7 Copias de seguridad básicas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exportar-una-base-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exportar una base de datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#restaurar-una-base-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Restaurar una base de datos
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18-resolucion-de-problemas-habituales" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.8 Resolución de problemas habituales
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.8 Resolución de problemas habituales">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mariadb-no-arranca" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MariaDB no arranca
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acceso-denegado-access-denied-for-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Acceso denegado (Access denied for user)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php-no-puede-conectar-con-mariadb" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PHP no puede conectar con MariaDB
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#el-puerto-de-mariadb-esta-ocupado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        El puerto de MariaDB está ocupado
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#19-buenas-practicas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.9 Buenas prácticas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1986,235 +1917,146 @@
 
 
 
-<h1 id="1-bases-de-datos-con-mariadb">1. Bases de datos con MariaDB<a class="headerlink" href="#1-bases-de-datos-con-mariadb" title="Permanent link">&para;</a></h1>
-<p>En los bloques anteriores hemos preparado el servidor web (Apache) y el motor de aplicación (PHP). El último componente del stack LAMP que nos queda por instalar es el <strong>sistema gestor de bases de datos</strong>.</p>
-<p>Sin este componente, Apache y PHP pueden generar contenido dinámico, pero no pueden almacenar información de forma permanente: usuarios, cursos, productos, mensajes, etc.</p>
-<p>En este módulo utilizaremos <strong>MariaDB</strong>, un SGBD compatible con MySQL y muy extendido en distribuciones Linux como Debian y Ubuntu.</p>
-<div class="highlight"><pre><span></span><code>Cliente web
-   │
-   ▼
-Apache
-   │
-   ▼
-PHP
-   │
-   ▼
-MariaDB
-</code></pre></div>
+<h1 id="bloque-2-entornos-de-desarrollo-y-servidores-web">Bloque 2: Entornos de Desarrollo y Servidores Web<a class="headerlink" href="#bloque-2-entornos-de-desarrollo-y-servidores-web" title="Permanent link">&para;</a></h1>
+<h2 id="21-introduccion-a-los-entornos-de-desarrollo-web">2.1. Introducción a los Entornos de Desarrollo Web<a class="headerlink" href="#21-introduccion-a-los-entornos-de-desarrollo-web" title="Permanent link">&para;</a></h2>
+<p>Antes de comenzar a desarrollar aplicaciones web, es imprescindible disponer de un entorno de trabajo adecuado. Definimos un <strong>entorno de desarrollo web</strong> como el conjunto de herramientas, servicios y configuraciones que permiten desarrollar, probar y desplegar aplicaciones. En este módulo, nuestro trabajo se centrará en tecnologías fundamentales como los servidores Apache o Nginx, el lenguaje PHP y el sistema de gestión de bases de datos MariaDB. El objetivo final es que el alumno sea capaz de montar un entorno que reproduzca, en la medida de lo posible, las condiciones reales donde se ejecutará la aplicación.</p>
+<h3 id="la-necesidad-de-diferentes-entornos">La necesidad de diferentes entornos<a class="headerlink" href="#la-necesidad-de-diferentes-entornos" title="Permanent link">&para;</a></h3>
+<p>En el desarrollo de software, es habitual realizar cambios constantes, corregir errores y experimentar con nuevas funcionalidades. Si estas modificaciones se hicieran directamente sobre la aplicación que utilizan los usuarios finales, cualquier error podría provocar interrupciones del servicio o, en el peor de los casos, la pérdida de información. Por esta razón, las organizaciones implementan un ciclo de vida dividido en tres entornos:</p>
+<ol>
+<li><strong>Entorno de Desarrollo:</strong> Es el espacio utilizado por desarrolladores y administradores para crear y modificar la aplicación. Aquí se programan las funciones, se corrigen errores y se realizan las primeras pruebas. Un equipo de desarrollo típico suele contar con Apache, PHP, MariaDB, el sistema de control de versiones Git y un editor de código como Visual Studio Code. Sus ventajas son la configuración sencilla y la libertad de experimentación sin afectar a nadie, aunque su principal inconveniente es que puede diferir ligeramente del entorno final.</li>
+<li><strong>Entorno de Pruebas (Staging o Preproducción):</strong> Su objetivo es validar que la aplicación funciona correctamente antes del lanzamiento. Aquí se realizan pruebas funcionales, comprobaciones de seguridad y verificaciones de despliegue. Es un entorno espejo de la producción, pero sin usuarios reales.</li>
+<li><strong>Entorno de Producción:</strong> Es el entorno final donde residen los usuarios. Ejemplos de esto serían el portal web de una empresa o la plataforma Aules de la Generalitat Valenciana. En esta etapa, los pilares fundamentales son la disponibilidad, la estabilidad, la seguridad y el rendimiento. Cualquier cambio aquí debe estar estrictamente controlado.</li>
+</ol>
+<h3 id="el-concepto-de-stack-de-desarrollo">El concepto de "Stack" de desarrollo<a class="headerlink" href="#el-concepto-de-stack-de-desarrollo" title="Permanent link">&para;</a></h3>
+<p>Para que una aplicación web funcione, necesita varios componentes trabajando conjuntamente. A este conjunto de tecnologías se le llama <strong>stack</strong>. Los más habituales son:
+*   <strong>Stack LAMP:</strong> Compuesto por Linux (Sistema Operativo), Apache (Servidor Web), MariaDB o MySQL (Base de Datos) y PHP (Lenguaje de programación). Es el stack sobre el que corren aplicaciones como WordPress, Moodle o Nextcloud.
+*   <strong>Stack LEMP:</strong> Es una alternativa donde se sustituye Apache por <strong>Nginx</strong> (pronunciado <em>Engine-X</em>). La principal diferencia radica en cómo el servidor gestiona las conexiones y el rendimiento.</p>
+<h3 id="aislamiento-virtualizacion-y-contenedores">Aislamiento: Virtualización y Contenedores<a class="headerlink" href="#aislamiento-virtualizacion-y-contenedores" title="Permanent link">&para;</a></h3>
+<p>Para evitar conflictos entre versiones de software y mantener el sistema limpio, utilizamos técnicas de aislamiento:
+*   <strong>Virtualización:</strong> Permite ejecutar varios sistemas operativos independientes sobre un mismo equipo físico mediante máquinas virtuales. Ofrece un aislamiento total y permite crear "instantáneas" (snapshots) para restaurar el sistema a un estado anterior. Sin embargo, consume mucha memoria y almacenamiento, y el arranque es lento ya que requiere un SO completo por cada máquina.
+*   <strong>Contenedores:</strong> Son una alternativa más ligera. En lugar de virtualizar el SO completo, comparten el núcleo del sistema anfitrión y ejecutan solo la aplicación y sus dependencias. Esto permite un arranque casi instantáneo y un consumo de recursos mínimo.
+*   <strong>Docker:</strong> Es la tecnología de contenedores más utilizada hoy en día. Permite crear y distribuir aplicaciones mediante contenedores independientes (por ejemplo, un contenedor para Apache, otro para PHP y otro para MariaDB), facilitando que el entorno sea idéntico en cualquier equipo.</p>
 <hr />
-<h2 id="11-instalacion-de-mariadb">1.1 Instalación de MariaDB<a class="headerlink" href="#11-instalacion-de-mariadb" title="Permanent link">&para;</a></h2>
-<h3 id="requisitos-previos">Requisitos previos<a class="headerlink" href="#requisitos-previos" title="Permanent link">&para;</a></h3>
-<p>Como en instalaciones anteriores, es recomendable actualizar la información de los repositorios antes de instalar software nuevo:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</code></pre></div>
-<h3 id="instalacion-del-paquete">Instalación del paquete<a class="headerlink" href="#instalacion-del-paquete" title="Permanent link">&para;</a></h3>
-<p>MariaDB se distribuye en Debian y Ubuntu mediante el paquete:</p>
-<div class="highlight"><pre><span></span><code>mariadb-server
-</code></pre></div>
-<p>La instalación se realiza con:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mariadb-server
-</code></pre></div>
-<p>Este paquete instala tanto el servidor de bases de datos como el cliente de línea de comandos necesario para administrarlo.</p>
-<h3 id="comprobacion-del-servicio">Comprobación del servicio<a class="headerlink" href="#comprobacion-del-servicio" title="Permanent link">&para;</a></h3>
-<p>Tras la instalación, MariaDB suele arrancar automáticamente como servicio gestionado por systemd.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mariadb
-</code></pre></div>
-<p>Resultado esperado:</p>
-<div class="highlight"><pre><span></span><code>Active: active (running)
-</code></pre></div>
-<p>Al igual que con Apache, disponemos de los comandos habituales de gestión del servicio:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>mariadb
-sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>mariadb
-sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mariadb
-sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>mariadb
-</code></pre></div>
-<h3 id="comprobacion-de-la-version-instalada">Comprobación de la versión instalada<a class="headerlink" href="#comprobacion-de-la-version-instalada" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>mariadb<span class="w"> </span>--version
-</code></pre></div>
-<p>Ejemplo de resultado:</p>
-<div class="highlight"><pre><span></span><code>mariadb  Ver 15.1 Distrib 10.x.x-MariaDB
-</code></pre></div>
+<h2 id="22-servidores-web-analisis-y-comparativa">2.2. Servidores Web: Análisis y Comparativa<a class="headerlink" href="#22-servidores-web-analisis-y-comparativa" title="Permanent link">&para;</a></h2>
+<p>El servidor web es el software encargado de procesar las peticiones HTTP de los usuarios y entregarles el contenido solicitado. Aunque existen muchas opciones, destacan tres principales:</p>
+<p><strong>Apache HTTP Server</strong> es un proyecto de software libre desarrollado por la Apache Software Foundation. Es extremadamente popular en entornos educativos y empresariales debido a su estabilidad, su arquitectura modular y la inmensa cantidad de documentación disponible. Es la base del stack LAMP que utilizaremos en este módulo.</p>
+<p><strong>Nginx</strong> fue diseñado específicamente para ofrecer un alto rendimiento y un bajo consumo de memoria. Utiliza una arquitectura basada en eventos que le permite gestionar un número masivo de conexiones simultáneas, por lo que se usa frecuentemente como balanceador de carga o proxy inverso.</p>
+<p><strong>Microsoft IIS (Internet Information Services)</strong> es el servidor desarrollado por Microsoft para Windows Server. Su gran ventaja es la integración total con el ecosistema de Microsoft, como Active Directory y el soporte nativo para aplicaciones ASP.NET.</p>
 <hr />
-<h2 id="12-seguridad-basica-de-la-instalacion">1.2 Seguridad básica de la instalación<a class="headerlink" href="#12-seguridad-basica-de-la-instalacion" title="Permanent link">&para;</a></h2>
-<p>Una instalación recién realizada de MariaDB no está configurada de forma segura por defecto. Por ello, el propio paquete incluye un script de configuración inicial.</p>
-<h3 id="el-script-mysql_secure_installation">El script mysql_secure_installation<a class="headerlink" href="#el-script-mysql_secure_installation" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql_secure_installation
-</code></pre></div>
-<p>Este asistente interactivo permite, entre otras cosas:</p>
+<h2 id="23-apache-http-server-y-su-arquitectura-modular">2.3. Apache HTTP Server y su Arquitectura Modular<a class="headerlink" href="#23-apache-http-server-y-su-arquitectura-modular" title="Permanent link">&para;</a></h2>
+<p>Apache ha mantenido su popularidad desde los años 90 gracias a su flexibilidad. Sus funciones son muy diversas: desde publicar páginas estáticas y servir imágenes, hasta ejecutar aplicaciones PHP, gestionar conexiones seguras HTTPS, autenticar usuarios y redirigir peticiones.</p>
+<h3 id="el-sistema-de-modulos">El sistema de módulos<a class="headerlink" href="#el-sistema-de-modulos" title="Permanent link">&para;</a></h3>
+<p>La clave del éxito de Apache es su <strong>arquitectura modular</strong>. El servidor tiene un núcleo reducido y las funcionalidades adicionales se añaden mediante módulos que pueden activarse o desactivarse. Esto permite que el servidor sea ligero y seguro, ya que solo cargamos lo que necesitamos, reduciendo así la "superficie de ataque" para posibles hackers.</p>
+<p>En los sistemas Debian y Ubuntu, los módulos se organizan de la siguiente manera:
+*   Los módulos disponibles se almacenan en <code>/etc/apache2/mods-available</code>.
+*   Cuando activamos un módulo, Apache crea un enlace simbólico en <code>/etc/apache2/mods-enabled</code>.</p>
+<p>Para gestionar estos módulos, disponemos de herramientas específicas:
+*   <strong>Activar un módulo:</strong> <code>sudo a2enmod nombre_modulo</code> (ej. <code>sudo a2enmod rewrite</code>).
+*   <strong>Desactivar un módulo:</strong> <code>sudo a2dismod nombre_modulo</code>.
+*   <strong>Consultar módulos activos:</strong> <code>sudo apache2ctl -M</code>.</p>
+<h3 id="modulos-habituales-y-sus-funciones">Módulos habituales y sus funciones<a class="headerlink" href="#modulos-habituales-y-sus-funciones" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Establecer una contraseña para el usuario <code>root</code> de la base de datos.</li>
-<li>Eliminar usuarios anónimos.</li>
-<li>Deshabilitar el acceso remoto del usuario <code>root</code>.</li>
-<li>Eliminar la base de datos de prueba (<code>test</code>).</li>
-<li>Recargar los privilegios para aplicar los cambios inmediatamente.</li>
+<li><code>mod_alias</code>: Permite crear alias para acceder a directorios mediante rutas diferentes.</li>
+<li><code>mod_dir</code>: Gestiona las páginas predeterminadas de un directorio (como <code>index.html</code> o <code>index.php</code>).</li>
+<li><code>mod_autoindex</code>: Genera listados de archivos cuando no existe una página de inicio.</li>
+<li><code>mod_rewrite</code>: Permite modificar y reescribir URLs, transformando una ruta compleja como <code>producto.php?id=25</code> en una amigable como <code>/productos/25</code>.</li>
+<li><code>mod_ssl</code>: Imprescindible para habilitar HTTPS, cifrar comunicaciones y usar certificados digitales.</li>
+<li><code>mod_userdir</code>: Permite que cada usuario del sistema tenga su propio espacio web personal.</li>
+<li><strong>Módulos de autenticación:</strong> <code>mod_auth_basic</code>, <code>mod_authn_*</code> y <code>mod_authz_*</code>, que sirven para solicitar contraseñas y restringir el acceso a recursos.</li>
 </ul>
-<p>Durante el proceso se realizan preguntas similares a:</p>
-<div class="highlight"><pre><span></span><code>Set root password? [Y/n]
-Remove anonymous users? [Y/n]
-Disallow root login remotely? [Y/n]
-Remove test database and access to it? [Y/n]
-Reload privilege tables now? [Y/n]
-</code></pre></div>
-<blockquote>
-<p>Es importante no saltarse este paso: una instalación de MariaDB sin asegurar es una de las causas más habituales de compromisos de seguridad en servidores web.</p>
-</blockquote>
 <hr />
-<h2 id="13-acceso-al-cliente-de-mariadb">1.3 Acceso al cliente de MariaDB<a class="headerlink" href="#13-acceso-al-cliente-de-mariadb" title="Permanent link">&para;</a></h2>
-<p>Una vez asegurada la instalación, podemos acceder a la consola de administración:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mariadb<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
-</code></pre></div>
-<p>El sistema solicitará la contraseña establecida en el paso anterior.</p>
-<p>Si el acceso es correcto, aparecerá un prompt similar a:</p>
-<div class="highlight"><pre><span></span><code>MariaDB [(none)]&gt;
-</code></pre></div>
-<p>Desde aquí podemos ejecutar sentencias SQL directamente sobre el servidor.</p>
-<p>Para salir de la consola:</p>
-<div class="highlight"><pre><span></span><code><span class="n">EXIT</span><span class="p">;</span>
-</code></pre></div>
+<h2 id="24-instalacion-y-gestion-del-servidor">2.4. Instalación y Gestión del Servidor<a class="headerlink" href="#24-instalacion-y-gestion-del-servidor" title="Permanent link">&para;</a></h2>
+<p>En Debian, la instalación se realiza mediante el gestor de paquetes APT con el comando <code>sudo apt install apache2</code>. Durante este proceso, se instalan también componentes auxiliares: <code>apache2-data</code> (con iconos y páginas de error) y <code>apache2-utils</code> (que incluye herramientas como <code>ab</code> para pruebas de rendimiento y <code>htpasswd</code> para gestionar usuarios).</p>
+<h3 id="control-del-servicio">Control del servicio<a class="headerlink" href="#control-del-servicio" title="Permanent link">&para;</a></h3>
+<p>El servidor se gestiona mediante <code>systemd</code> con los siguientes comandos:
+*   <code>sudo systemctl start apache2</code> (Iniciar)
+*   <code>sudo systemctl stop apache2</code> (Detener)
+*   <code>sudo systemctl restart apache2</code> (Reiniciar el servicio por completo)
+*   <code>sudo systemctl reload apache2</code> (Recargar la configuración sin interrumpir el servicio)
+*   <code>sudo systemctl status apache2</code> (Consultar el estado)</p>
+<h3 id="verificacion-y-diagnostico-inicial">Verificación y Diagnóstico Inicial<a class="headerlink" href="#verificacion-y-diagnostico-inicial" title="Permanent link">&para;</a></h3>
+<p>Para comprobar que Apache funciona, podemos acceder a <code>http://localhost</code> o a la dirección IP del equipo (obtenida con <code>hostname -I</code> o <code>ip addr</code>). También podemos usar la terminal con <code>curl http://localhost</code> o <code>wget -O - http://localhost</code>.</p>
 <hr />
-<h2 id="14-operaciones-basicas-de-administracion">1.4 Operaciones básicas de administración<a class="headerlink" href="#14-operaciones-basicas-de-administracion" title="Permanent link">&para;</a></h2>
-<h3 id="crear-una-base-de-datos">Crear una base de datos<a class="headerlink" href="#crear-una-base-de-datos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">tienda</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="listar-las-bases-de-datos-existentes">Listar las bases de datos existentes<a class="headerlink" href="#listar-las-bases-de-datos-existentes" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span>
-</code></pre></div>
-<p>Resultado habitual:</p>
-<div class="highlight"><pre><span></span><code>+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| tienda             |
-+--------------------+
-</code></pre></div>
-<h3 id="seleccionar-una-base-de-datos">Seleccionar una base de datos<a class="headerlink" href="#seleccionar-una-base-de-datos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="n">tienda</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="crear-una-tabla">Crear una tabla<a class="headerlink" href="#crear-una-tabla" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="n">precio</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
-<span class="p">);</span>
-</code></pre></div>
-<h3 id="insertar-datos">Insertar datos<a class="headerlink" href="#insertar-datos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'Teclado'</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">.</span><span class="mi">90</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">productos</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">'Ratón'</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">.</span><span class="mi">50</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="consultar-datos">Consultar datos<a class="headerlink" href="#consultar-datos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">productos</span><span class="p">;</span>
-</code></pre></div>
-<p>Estas operaciones corresponden al <strong>CRUD</strong> (Create, Read, Update, Delete) ya estudiado en el Bloque 1 al hablar de bases de datos en aplicaciones web.</p>
+<h2 id="25-configuracion-detallada-de-apache">2.5. Configuración Detallada de Apache<a class="headerlink" href="#25-configuracion-detallada-de-apache" title="Permanent link">&para;</a></h2>
+<p>La configuración de Apache en Debian es jerárquica. El archivo principal es <code>/etc/apache2/apache2.conf</code>, donde se definen los parámetros globales. Los puertos de escucha se configuran en <code>/etc/apache2/ports.conf</code> mediante la directiva <code>Listen 80</code>.</p>
+<h3 id="gestion-de-sitios-y-configuraciones">Gestión de Sitios y Configuraciones<a class="headerlink" href="#gestion-de-sitios-y-configuraciones" title="Permanent link">&para;</a></h3>
+<p>Apache separa los sitios definidos de los sitios activos:
+*   <strong>Sitios disponibles:</strong> <code>/etc/apache2/sites-available</code>. Aquí se guarda la configuración de cada web. El archivo <code>000-default.conf</code> es el sitio por defecto.
+*   <strong>Sitios activos:</strong> <code>/etc/apache2/sites-enabled</code>. Contiene enlaces a los sitios que Apache debe cargar al arrancar.
+*   <strong>Comandos:</strong> <code>sudo a2ensite</code> para activar y <code>sudo a2dissite</code> para desactivar.</p>
+<p>De igual forma, existen las configuraciones generales en <code>conf-available</code> y <code>conf-enabled</code>, gestionadas con <code>a2enconf</code> y <code>a2disconf</code>.</p>
+<h3 id="el-documentroot">El DocumentRoot<a class="headerlink" href="#el-documentroot" title="Permanent link">&para;</a></h3>
+<p>Cada sitio necesita un directorio donde guardar sus archivos públicos, llamado <strong>DocumentRoot</strong>. Por defecto es <code>/var/www/html</code>. Si un usuario pide <code>index.html</code>, Apache lo buscará exactamente en esa ruta.</p>
 <hr />
-<h2 id="15-usuarios-y-privilegios">1.5 Usuarios y privilegios<a class="headerlink" href="#15-usuarios-y-privilegios" title="Permanent link">&para;</a></h2>
-<p>Por motivos de seguridad, <strong>las aplicaciones web nunca deben conectarse a la base de datos utilizando el usuario <code>root</code></strong>.</p>
-<p>Lo habitual es crear un usuario específico con permisos limitados a la base de datos que necesita utilizar.</p>
-<h3 id="crear-un-usuario">Crear un usuario<a class="headerlink" href="#crear-un-usuario" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'appweb'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">'contraseña_segura'</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="conceder-privilegios-sobre-una-base-de-datos-concreta">Conceder privilegios sobre una base de datos concreta<a class="headerlink" href="#conceder-privilegios-sobre-una-base-de-datos-concreta" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">tienda</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'appweb'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="aplicar-los-cambios">Aplicar los cambios<a class="headerlink" href="#aplicar-los-cambios" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="comprobar-los-privilegios-de-un-usuario">Comprobar los privilegios de un usuario<a class="headerlink" href="#comprobar-los-privilegios-de-un-usuario" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">GRANTS</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="s1">'appweb'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="revocar-privilegios">Revocar privilegios<a class="headerlink" href="#revocar-privilegios" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">REVOKE</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">tienda</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">'appweb'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="eliminar-un-usuario">Eliminar un usuario<a class="headerlink" href="#eliminar-un-usuario" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'appweb'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
-</code></pre></div>
+<h2 id="26-funcionalidades-avanzadas-de-alojamiento">2.6. Funcionalidades Avanzadas de Alojamiento<a class="headerlink" href="#26-funcionalidades-avanzadas-de-alojamiento" title="Permanent link">&para;</a></h2>
+<h3 id="virtual-hosts-hosts-virtuales">Virtual Hosts (Hosts Virtuales)<a class="headerlink" href="#virtual-hosts-hosts-virtuales" title="Permanent link">&para;</a></h3>
+<p>Un único servidor puede alojar múltiples sitios web independientes. Esto se hace mediante Virtual Hosts. Existen dos tipos:
+1.  <strong>Basados en IP:</strong> Cada sitio tiene su propia IP (poco común).
+2.  <strong>Basados en nombre:</strong> Todos comparten la misma IP y puerto, pero Apache distingue el sitio mediante la cabecera <code>Host</code> de la petición.</p>
+<p>Para configurar un Virtual Host, creamos un archivo en <code>sites-available</code> con las directivas <code>ServerName</code> (el dominio, ej. <code>miweb1.local</code>) y <code>DocumentRoot</code> (la carpeta del sitio). También es recomendable definir <code>ErrorLog</code> y <code>CustomLog</code> independientes para cada sitio. Para que el navegador reconozca estos dominios locales, debemos añadirlos al archivo <code>/etc/hosts</code>.</p>
+<h3 id="directorios-personales-mod_userdir">Directorios Personales (<code>mod_userdir</code>)<a class="headerlink" href="#directorios-personales-mod_userdir" title="Permanent link">&para;</a></h3>
+<p>Este módulo permite que cada usuario tenga su propio espacio web en <code>/home/usuario/public_html</code>, accesible mediante <code>http://localhost/~usuario</code>. 
+Para activarlo:
+1.  <code>sudo a2enmod userdir</code> $\rightarrow$ <code>sudo systemctl reload apache2</code>.
+2.  El usuario crea su carpeta: <code>mkdir ~/public_html</code>.
+3.  Se asignan permisos: <code>chmod 755 ~/public_html</code>.</p>
+<p><strong>Nota de seguridad:</strong> En Debian, la ejecución de PHP en estos directorios suele estar desactivada por defecto en el archivo de configuración de PHP para evitar riesgos de seguridad en el home del usuario.</p>
 <hr />
-<h2 id="16-phpmyadmin">1.6 phpMyAdmin<a class="headerlink" href="#16-phpmyadmin" title="Permanent link">&para;</a></h2>
-<p>Administrar bases de datos mediante la consola es fundamental para comprender su funcionamiento, pero en el día a día resulta habitual utilizar una herramienta gráfica.</p>
-<p><strong>phpMyAdmin</strong> es una aplicación web escrita en PHP que permite administrar bases de datos MariaDB o MySQL desde el navegador.</p>
-<p>De hecho, phpMyAdmin es en sí misma un buen ejemplo práctico de aplicación del stack LAMP completo:</p>
-<div class="highlight"><pre><span></span><code>Cliente web
-   │
-   ▼
-Apache
-   │
-   ▼
-PHP
-   │
-   ▼
-MariaDB
-</code></pre></div>
-<h3 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>phpmyadmin
-</code></pre></div>
-<p>Durante la instalación, el asistente preguntará:</p>
-<ul>
-<li>Qué servidor web se debe configurar automáticamente (seleccionar <code>apache2</code>).</li>
-<li>Si se desea configurar una base de datos para phpMyAdmin mediante <code>dbconfig-common</code>.</li>
-<li>La contraseña de administrador de MariaDB.</li>
-</ul>
-<h3 id="acceso">Acceso<a class="headerlink" href="#acceso" title="Permanent link">&para;</a></h3>
-<p>Una vez finalizada la instalación, phpMyAdmin suele quedar accesible en:</p>
-<div class="highlight"><pre><span></span><code>http://localhost/phpmyadmin
-</code></pre></div>
-<p>Si el asistente no configuró Apache automáticamente, puede ser necesario habilitar la configuración manualmente:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/phpmyadmin/apache.conf<span class="w"> </span>/etc/apache2/conf-available/phpmyadmin.conf
-sudo<span class="w"> </span>a2enconf<span class="w"> </span>phpmyadmin
-sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>apache2
-</code></pre></div>
-<blockquote>
-<p>Al igual que con <code>phpinfo()</code>, en un entorno de producción real conviene restringir el acceso a phpMyAdmin (por IP, autenticación adicional o directamente eliminarlo) para reducir la superficie de ataque.</p>
-</blockquote>
+<h2 id="27-seguridad-y-control-de-accesos">2.7. Seguridad y Control de Accesos<a class="headerlink" href="#27-seguridad-y-control-de-accesos" title="Permanent link">&para;</a></h2>
+<h3 id="autenticacion-y-autorizacion">Autenticación y Autorización<a class="headerlink" href="#autenticacion-y-autorizacion" title="Permanent link">&para;</a></h3>
+<p>La <strong>autenticación</strong> verifica la identidad (¿quién eres?), mientras que la <strong>autorización</strong> define los permisos (¿qué puedes hacer?). </p>
+<p>La <strong>Autenticación Básica</strong> se implementa con <code>mod_auth_basic</code>. Primero creamos el archivo de contraseñas con <code>sudo htpasswd -c /etc/apache2/.htpasswd usuario</code>. Luego, en la configuración del directorio, añadimos:
+*   <code>AuthType Basic</code>
+*   <code>AuthName "Mensaje de aviso"</code>
+*   <code>AuthUserFile /etc/apache2/.htpasswd</code>
+*   <code>Require valid-user</code> (o un usuario específico).</p>
+<p>También podemos restringir el acceso por dirección IP usando la directiva <code>Require ip 192.168.1.0/24</code>.</p>
+<h3 id="https-y-cifrado">HTTPS y Cifrado<a class="headerlink" href="#https-y-cifrado" title="Permanent link">&para;</a></h3>
+<p>Para proteger la información, activamos <code>mod_ssl</code> y el sitio <code>default-ssl</code>. En desarrollo, generamos un certificado autofirmado con:
+<code>sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt</code>.
+En producción, se utilizan certificados de autoridades como <strong>Let's Encrypt</strong>.</p>
+<h3 id="cortafuegos-con-ufw">Cortafuegos con UFW<a class="headerlink" href="#cortafuegos-con-ufw" title="Permanent link">&para;</a></h3>
+<p>Para que el servidor sea accesible, usamos <code>ufw</code>. Los perfiles disponibles son:
+*   <code>Apache</code>: Puerto 80.
+*   <code>Apache Secure</code>: Puerto 443.
+*   <code>Apache Full</code>: Ambos puertos.
+<strong>Regla de oro:</strong> Siempre ejecutar <code>sudo ufw allow OpenSSH</code> antes de <code>sudo ufw enable</code> para evitar quedar bloqueados fuera del servidor.</p>
 <hr />
-<h2 id="17-copias-de-seguridad-basicas">1.7 Copias de seguridad básicas<a class="headerlink" href="#17-copias-de-seguridad-basicas" title="Permanent link">&para;</a></h2>
-<p>Aunque las copias de seguridad se estudiarán con más detalle en otros módulos, es importante conocer las herramientas básicas que ofrece MariaDB.</p>
-<h3 id="exportar-una-base-de-datos">Exportar una base de datos<a class="headerlink" href="#exportar-una-base-de-datos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tienda<span class="w"> </span>&gt;<span class="w"> </span>tienda_backup.sql
-</code></pre></div>
-<h3 id="restaurar-una-base-de-datos">Restaurar una base de datos<a class="headerlink" href="#restaurar-una-base-de-datos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>tienda<span class="w"> </span>&lt;<span class="w"> </span>tienda_backup.sql
-</code></pre></div>
-<p>Estas herramientas resultan útiles antes de realizar cambios importantes en la estructura de una base de datos, o como parte de la documentación de un proyecto.</p>
+<h2 id="28-plataformas-integradas-y-documentacion-profesional">2.8. Plataformas Integradas y Documentación Profesional<a class="headerlink" href="#28-plataformas-integradas-y-documentacion-profesional" title="Permanent link">&para;</a></h2>
+<h3 id="alternativas-de-despliegue">Alternativas de Despliegue<a class="headerlink" href="#alternativas-de-despliegue" title="Permanent link">&para;</a></h3>
+<p>Para agilizar el desarrollo, existen plataformas integradas:
+*   <strong>XAMPP:</strong> Instala Apache, PHP y MariaDB en un solo paquete. Es rápido pero su configuración difiere de un servidor real.
+*   <strong>Docker Compose:</strong> Permite definir todo el stack en un archivo <code>docker-compose.yml</code>. Es la opción profesional, ya que garantiza que el entorno sea idéntico en cualquier máquina.</p>
+<h3 id="la-documentacion-tecnica">La Documentación Técnica<a class="headerlink" href="#la-documentacion-tecnica" title="Permanent link">&para;</a></h3>
+<p>Documentar es un criterio de evaluación obligatorio. Una documentación profesional debe permitir que cualquier técnico reproduzca el sistema. Debe seguir una estructura: <strong>Objetivo, Entorno, Procedimiento, Configuración, Comprobación e Incidencias</strong>.</p>
 <hr />
-<h2 id="18-resolucion-de-problemas-habituales">1.8 Resolución de problemas habituales<a class="headerlink" href="#18-resolucion-de-problemas-habituales" title="Permanent link">&para;</a></h2>
-<h3 id="mariadb-no-arranca">MariaDB no arranca<a class="headerlink" href="#mariadb-no-arranca" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mariadb
-sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>mariadb
-</code></pre></div>
-<h3 id="acceso-denegado-access-denied-for-user">Acceso denegado (Access denied for user)<a class="headerlink" href="#acceso-denegado-access-denied-for-user" title="Permanent link">&para;</a></h3>
-<p>Suele deberse a:</p>
-<ul>
-<li>Contraseña incorrecta.</li>
-<li>Usuario sin privilegios sobre la base de datos.</li>
-<li>Usuario definido para un host distinto de <code>localhost</code>.</li>
-</ul>
-<p>Comprobar los privilegios:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">GRANTS</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="s1">'usuario'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
-</code></pre></div>
-<h3 id="php-no-puede-conectar-con-mariadb">PHP no puede conectar con MariaDB<a class="headerlink" href="#php-no-puede-conectar-con-mariadb" title="Permanent link">&para;</a></h3>
-<p>Comprobar que la extensión está instalada y cargada:</p>
-<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>mysqli
-sudo<span class="w"> </span>apache2ctl<span class="w"> </span>-M<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>php
-</code></pre></div>
-<p>Revisar el registro de errores de Apache:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>/var/log/apache2/error.log
-</code></pre></div>
-<h3 id="el-puerto-de-mariadb-esta-ocupado">El puerto de MariaDB está ocupado<a class="headerlink" href="#el-puerto-de-mariadb-esta-ocupado" title="Permanent link">&para;</a></h3>
-<p>Por defecto MariaDB escucha en el puerto 3306:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ss<span class="w"> </span>-tulpn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:3306
-</code></pre></div>
-<hr />
-<h2 id="19-buenas-practicas">1.9 Buenas prácticas<a class="headerlink" href="#19-buenas-practicas" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Ejecutar siempre <code>mysql_secure_installation</code> tras la instalación.</li>
-<li>No utilizar el usuario <code>root</code> de la base de datos en las aplicaciones.</li>
-<li>Crear un usuario específico con privilegios mínimos para cada aplicación.</li>
-<li>Utilizar siempre sentencias preparadas para evitar inyección SQL.</li>
-<li>Restringir el acceso a herramientas como phpMyAdmin.</li>
-<li>Realizar copias de seguridad periódicas con <code>mysqldump</code>.</li>
-<li>Revisar los registros ante cualquier error de conexión.</li>
-</ul>
+<h2 id="29-diagnostico-y-resolucion-de-problemas-troubleshooting">2.9. Diagnóstico y Resolución de Problemas (Troubleshooting)<a class="headerlink" href="#29-diagnostico-y-resolucion-de-problemas-troubleshooting" title="Permanent link">&para;</a></h2>
+<p>Cuando un servidor web no responde o no muestra el contenido esperado, es fundamental seguir un proceso de descarte lógico para localizar el fallo.</p>
+<h3 id="el-flujo-de-diagnostico-basico">El flujo de diagnóstico básico<a class="headerlink" href="#el-flujo-de-diagnostico-basico" title="Permanent link">&para;</a></h3>
+<p>Si un sitio web no es accesible desde otro equipo de la red, debemos hacernos la siguiente pregunta: <strong>¿Responde el servidor en localhost?</strong>
+*   <strong>Si la respuesta es NO:</strong> El problema está en el servidor Apache. Debemos revisar si el servicio está activo o si hay errores de configuración.
+*   <strong>Si la respuesta es SÍ:</strong> El servidor funciona, pero algo impide que la petición llegue desde el exterior. El problema suele estar en el cortafuegos (<code>ufw</code>) o en la red.</p>
+<h3 id="problemas-comunes-y-sus-soluciones">Problemas comunes y sus soluciones<a class="headerlink" href="#problemas-comunes-y-sus-soluciones" title="Permanent link">&para;</a></h3>
+<p><strong>1. El servidor no arranca tras modificar la configuración</strong>
+Si Apache falla al iniciar después de editar un archivo <code>.conf</code>, el primer paso es validar la sintaxis:
+<code>sudo apache2ctl configtest</code>
+Si hay un error, el comando nos indicará la línea exacta y el archivo donde se encuentra el fallo. Solo cuando el resultado sea <code>Syntax OK</code> debemos intentar reiniciar el servicio.</p>
+<p><strong>2. El puerto 80 está ocupado</strong>
+Apache no puede iniciar si otro programa ya está utilizando el puerto 80. Para identificar qué proceso está bloqueando el puerto, ejecutamos:
+<code>sudo ss -tulpn | grep :80</code>
+Esto nos mostrará el nombre del proceso y su PID, permitiéndonos detenerlo o cambiar el puerto de Apache en <code>ports.conf</code>.</p>
+<p><strong>3. La página no es accesible desde la red (pero sí en localhost)</strong>
+Si <code>curl http://localhost</code> funciona pero el navegador de otro equipo no, debemos revisar el cortafuegos:
+<code>sudo ufw status</code>
+Si el estado es <code>active</code> pero no vemos el perfil de Apache, debemos ejecutar <code>sudo ufw allow "Apache Full"</code>.</p>
+<p><strong>4. Errores de "Forbidden" (403) o "Not Found" (404)</strong>
+Cuando el servidor responde pero da un error de acceso:
+*   <strong>403 Forbidden:</strong> Suele ser un problema de permisos de Linux. Debemos comprobar que el directorio <code>DocumentRoot</code> y sus archivos tengan permisos de lectura y ejecución para el usuario de Apache (<code>www-data</code>). En el caso de los directorios personales, recordar ejecutar <code>chmod 755 ~/public_html</code>.
+*   <strong>404 Not Found:</strong> El archivo solicitado no existe en el <code>DocumentRoot</code> o el nombre del archivo está mal escrito (recordar que en Linux las mayúsculas y minúsculas importan).</p>
+<p><strong>5. Análisis profundo mediante Logs</strong>
+Cuando el error no es evidente, la fuente de verdad son los registros:
+*   <strong>Log de errores (<code>/var/log/apache2/error.log</code>):</strong> Aquí aparecen fallos de módulos, errores de permisos y caídas del servicio. Usar <code>sudo tail -f /var/log/apache2/error.log</code> para ver los errores en tiempo real mientras refrescamos la web.
+*   <strong>Log de accesos (<code>/var/log/apache2/access.log</code>):</strong> Permite ver si la petición del cliente está llegando realmente al servidor y qué código de respuesta está devolviendo Apache.</p>
 
 
 
